@@ -7,9 +7,9 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Hyde
+title:            Christian Carrick
 tagline:          'A Jekyll theme'
-description:      ddd
+description:      
 url:              carrickchristian.github.io
 baseurl:          /
 
