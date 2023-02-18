@@ -1,0 +1,26 @@
+# Dependencies
+gems:             [jekyll-paginate]
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      ddd
+url:              carrickchristian.github.io
+baseurl:          /
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
