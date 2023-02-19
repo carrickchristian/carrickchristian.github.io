@@ -3,28 +3,12 @@ layout: page
 title: Notes
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+I've collected here some expository notes of mine. 
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+* [Homology of representation spheres](https://carrickchristian.github.io/HomologyRepSpheres.pdf). This note explains how to calculate the $E_2$-page of the slice spectral sequences appearing in Real-oriented homotopy theory, working out the case $G=C_4$ in detail.
 
-There are currently two themes built on Poole hehe:
+* [Stacks and Real-oriented homotopy theory](https://carrickchristian.github.io/main.pdf). This is my Ph.D. thesis. It contains various results that appear in my published papers or will appear in papers in preparation. At one point, I had notes on my webpage related to stacks and chromatic homotopy that some people found useful. I have removed these as they have all been subsumed by (and improved in) Chapter 2 of my thesis.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+* Quillen's elementary proofs. My bachelor's thesis is available upon request.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+* [Segal's classifying spaces and spectral sequences](https://carrickchristian.github.io/SegalTalkNotes.pdf). These are old notes I wrote on Segal's classic paper.

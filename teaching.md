@@ -3,28 +3,31 @@ layout: page
 title: Teaching
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Teaching has always been and will remain an important part of my mathematics experience. I have included here various parts of my teaching experience, and my [CV](https://carrickchristian.github.io/CV/pdf) contains additional information. My teaching statement and teaching reviews are also available upon request. 
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Courses
 
-There are currently two themes built on Poole hehe:
+* Math 33a UCLA (Linear Algebra). Spring 2021, Winter 2021.
+* Math 32b UCLA (Multivariable Calculus II). Summer 2020, Winter 2020, Summer 2019 with Enes Ozel, Spring 2018 with Michael Andrews.
+* Math 32a UCLA (Multivariable Calculus I). Winter 2018 with Yannis Angelopoulos.
+* Math 31b UCLA (Calculus II). Spring 2021, Winter 2021, Fall 2020, Spring 2020, Winter 2020, Spring 2019 with Marco Marengon, Winter 2019 with Palina Salanevich, Fall 2018.
+* Math 31a UCLA (Calculus I). Fall 2020, Fall 2019, Spring 2019 with Nadja Hempel, Winter 2019 with Wenpin Tang, Fall 2018 with Nadja Hempel.
+* Math 1a UCLA (Precalculus). Fall 2017 with Paige Greene.
+* Math 131 Harvard (Topology). Fall 2016 with Clifford Taubes. Derek Bok Teaching Award.
+* Math 101 Harvard (Sets, Groups, and Topology). Spring 2016 with Curt McMullen.
+* Math 101 Harvard (Sets, Groups, and Topology). Fall 2016 with Clifford Taubes. Derek Bok Teaching Award.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+## Seminars
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+I organized several participating seminars and ran Juvitop for a while at UCLA. I've given the syllabi I still have below.
 
-## Setup
+* Computations in Stable Motivic Homotopy, UCLA Participating Seminar Fall 2021. [Syllabus](https://carrickchristian.github.io/MotivicSeminarSyllabus.pdf)
+* Stacks in Chromatic Homotopy, UCLA Participating Seminar Winter 2020. [Syllabus](https://carrickchristian.github.io/StacksSyllabus.pdf)
+* Higher Real $K$-theories and the Slice Spectral Sequence, UCLA Participating Seminar Fall 2020. [Syllabus](https://carrickchristian.github.io/EO_nSyllabus.pdf)
+* Structured Ring Spectra, UCLA Juvitop Winter 2019.
+* Computations in Chromatic Homotopy, UCLA Juvitop Winter 2019.
 
-Some fun facts about the setup of this project include:
+## UCLA Directed Reading Program (DRP)
+* Mentored undergraduates on computations in chromatic homotopy. Winter 2021, Spring 2021.
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
