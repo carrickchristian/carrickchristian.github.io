@@ -3,7 +3,7 @@ layout: page
 title: Teaching
 ---
 
-Teaching has always been and will remain an important part of my mathematics experience. I have included here various parts of my teaching experience, and my [CV](https://carrickchristian.github.io/CV/pdf) contains additional information. My teaching statement and teaching reviews are also available upon request. 
+Teaching has always been and will remain an important part of my mathematics experience. I have included here various parts of my teaching experience, and my [CV](https://carrickchristian.github.io/CV.pdf) contains additional information. My teaching statement and teaching reviews are also available upon request. 
 
 ## Courses
 
