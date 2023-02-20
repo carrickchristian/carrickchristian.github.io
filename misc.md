@@ -7,11 +7,11 @@ title: Misc
 
 I spend a lot of time computing spectral sequences, and the various software available to plot spectral sequences is indispensable. I use Bruner's [ext](https://lists.lehigh.edu/pipermail/algtop-l/2022q3/004498.html) software constantly to compute $Ext_{\mathcal{A}}$ and $Ext_{\mathcal{A}(2)}$ and plot the corresponding Adams charts. I use Hood Chatham's [spectral sequences](https://github.com/hoodmane/js_spectralsequences) package to display spectral sequences in Latex documents.
 
-In a different direction, my brother [Darius Carrick](https://www.dariuscarrick.dev/) and I are working on a React app [ssplot](https://ssplot.netlify.app) to plot bigraded rings from [Macaulay2](http://www2.macaulay2.com/Macaulay2/) output onto a grid using Google charts. This works pretty well if you are just trying to explore a spectral sequence page-by-page without plotting differentials, structure lines, etc.
+In a different direction, my brother [Darius Carrick](https://www.dariuscarrick.dev/) and I are working on a React app [ssplot](https://ssplot.netlify.app) to plot bigraded rings from [Macaulay2](http://www2.macaulay2.com/Macaulay2/) output onto a grid using Google charts. This works pretty well if you are just trying to explore a spectral sequence page-by-page without plotting differentials, structure lines, etc. It works especially well if you are working with trigraded SS's and you want to plot some bigraded plane. For instance, with slice SS's it is easier to describe the pages as $RO(G)$-graded rings, but you would like a plot of the SS in integer stems.
 
 ## Example: Slice$(k_\mathbb{R})$
 
-As an example, let's plot the (integer-graded, i.e. bidegrees $(a+b\sigma,s)$ with $b=0$) pages of the slice spectral sequence for $k_{\mathbb{R}}$. It has $RO(C_2)$-graded $E_2$-page. 
+As an example, let's plot the (integer-graded, i.e. bidegrees $(a+b\sigma,s)$ with $b=0$) pages of the slice spectral sequence for $k_{\mathbb{R}}$. It has $RO(C_2)$-graded $E_2$-page
 
 $$E_2=\mathbb{Z}[a_\sigma,u_{2\sigma},\overline{v}_1]/(2a_\sigma)$$
 
@@ -141,9 +141,9 @@ Paste this into the ssplot box and you get the following picture.
 
 Hovering over the dots will tell you the names of the classes. This spectral sequence has just one differential, $d_3(u_{2\sigma})=a_\sigma^3\overline{v}_1$. Computing homology, we have
 
-$$E_2=\mathbb{Z}[a_\sigma,m_1,u_{2\sigma}^2,\overline{v}_1]/(2a_\sigma,a_\sigma m_1,m_1^2-4u_{2\sigma}^2,a_\sigma^3\overline{v}_1)$$
+$$E_4=\mathbb{Z}[a_\sigma,m_1,u_{2\sigma}^2,\overline{v}_1]/(2a_\sigma,a_\sigma m_1,m_1^2-4u_{2\sigma}^2,a_\sigma^3\overline{v}_1)$$
 
-where $m_1=[2u_{2\sigma}]$. All the algebra generators now are permanent cycles so this is the $E_\infty$-page. We input this into Macaulay2 as follows
+where $m_1=[2u_{2\sigma}]$. All the algebra generators now are permanent cycles, so this is the $E_\infty$-page. We input this into Macaulay2 as follows
 
 <p class="message">
 {% raw %}R = ZZ[a,m,u,v,Degrees=>{{0,-1,1},{2,-2,0},{4,-4,0},{1,1,0}}]/ideal{2*a,a*m,m^2-4*u,a^3*v}{% endraw %}
@@ -153,7 +153,7 @@ Getting a basis through the 50 stem and plugging into ssplot we have the followi
 
 ![EinftykR](/EinftykR.png "EinftykR")
 
-And we can toggle the pages at the top.
+We see the expected 8-fold Bott periodicity. By clicking the bars at the top, we can toggle the pages or display them simultaneously.
 
 
 
