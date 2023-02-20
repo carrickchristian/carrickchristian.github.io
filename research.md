@@ -7,7 +7,7 @@ On this page, I give some motivation for my research and try to explain what the
 
 ## Higher real $K$-theories
 
-In all that follows, we work at the prime $p=2$. Chromatic homotopy theory studies spaces and spectra from the point of view of complex-oriented cohomology theories, those theories that admit Thom isomorphisms for complex vector bundles. On one hand, facts like the nilpotence theorem tell us these theories see quite a lot of information. On the other, for any complex-oriented ring spectrum $R$, the unit map
+In all that follows, we work at the prime $p=2$. Chromatic homotopy theory studies spaces and spectra from the point of view of complex-oriented cohomology theories. On one hand, facts like the nilpotence theorem tell us these theories see quite a lot of information. On the other, for any complex-oriented ring spectrum $R$, the unit map
 
 $$\pi_*S^0\to \pi_*R$$
 
@@ -21,7 +21,7 @@ So if we could compute $$H^*(\mathbb{G}_n;\pi_*E_n)$$, we could say lot about $$
 
 For example, $\mathbb{G}_n$ contains a canonical copy of $C_2$ given by the formal inverse on the formal group. At height 1, there is an equivalence $E_1\simeq KU^{\hat{}}_2$, and the $C_2$-action corresponds to complex conjugation on $KU$, giving an equivalence $E_1^{hC_2}\simeq KO^{\hat{}}_2$. It is straightforward to write down explicit formulas for the action in this case; one finds that $C_2$ acts by multiplication by $-1$ on the Bott class. The ANSS for $KO$ is then isomorphic to the easily computed HFPSS for this $C_2$ action.
 
-It was an observation of Ravenel and Hopkins-Miller that $L_{K(n)}S^0$ is well approximated by $$EO_n(G):=E_n^{hG}$$ for finite subgroups $G\subset\mathbb{G}_n$, and that these *Hopkins-Miller higher real $K$-theories* are more computable. In fact, $$L_{K(1)}S^0$$ has a finite resolution which reduces the computation of $$\pi_*L_{K(1)}S^0$$ to the tractable computation of $$\pi_*KO$$ described above. At the prime $p=3$, Goerss--Henn--Mahowald--Rezk provided a similar finite resolution consisting of $$EO_n(G)$$ spectra related to $TMF$.
+It was an observation of Ravenel and Hopkins-Miller that $L_{K(n)}S^0$ is well approximated by $$EO_n(G):=E_n^{hG}$$ for finite subgroups $G\subset\mathbb{G}_n$, and that these *Hopkins-Miller higher real $K$-theories* are more computable. In fact, $$L_{K(1)}S^0$$ has a finite resolution which reduces the computation of $$\pi_*L_{K(1)}S^0$$ to the tractable computation of $$\pi_*KO$$ described above. At the prime $p=3$, Goerss--Henn--Mahowald--Rezk provided a similar finite resolution of $$L_{K(2)}S^0$$ consisting of $$EO_n(G)$$ spectra related to $TMF$.
 
 ## Hopkins' *From Spectra to Stacks*
 
@@ -56,7 +56,7 @@ The Landweber exact functor theorem tells us that if
 
 $$Spec(R)\to\mathcal{M}_{FG}$$
 
-is a flat map of stacks, then there is a complex-oriented ring spectrum lifting this map along the above construction. We may ask if there's a similar statement replacing $Spec(R)$ with a stack. If
+is a flat map of stacks, then there is a complex-oriented ring spectrum lifting this map along the above construction. We may ask if there's a more general statement replacing $Spec(R)$ with a (non-affine) stack. If
 
 $$\mathcal{N}\to\mathcal{M}_{FG}$$
 
@@ -64,19 +64,19 @@ is an affine, flat map, pulling back the cover $$Spec(MU_*)\to \mathcal{M}_{FG}$
 
 This leads one directly to *derived stacks*, which very roughly speaking is what you would have if you *could* lift the above diagram to the category of $$E_\infty$$-rings. The Goerss-Hopkins-Miller theorem gives this in the $$EO_n$$ case, refining (2) to an appropriate equivalence of derived stacks. Back to $KO$, the fact that the ANSS of $KO$ is isomorphic to the $$C_2$$-HFPSS of $KU$ (not just on the $$E_2$$-page) is phrased in this language as the fact that (1) lifts to an equivalence of derived stacks, and in particular their descent spectral sequences coincide.
 
-This fact about the $EO_n$'s allows one to reverse this construction in many more interesting cases. In particular, the Serre-Tate theorem says that the deformation theory of an elliptic curve is determined by that of its associated $p$-divisible group. This allows one to reduce the construction of a derived stack structure on the map
+This fact about the $EO_n$'s allows one to reverse this construction in many more interesting cases. In particular, the Serre-Tate theorem says that the deformation theory of an elliptic curve is determined by that of its associated $p$-divisible group. This allows one to reduce an essential step in the construction of $TMF$, which comes from a derived stack structure on the map
 
-$$\mathcal{M}_{ell}\to\mathcal{M}_{FG}$$
+$$\mathcal{M}_{ell}\to\mathcal{M}_{FG}$$,
 
-to that of the structure on the stacks $$Spec(\pi_*E_n)/G$$ as above, and this gives the construction of the spectrum of topological modular forms $TMF$.
+to that of the derived stack structure on the stacks $$Spec(\pi_*E_n)/G$$ as above.
 
 ## Connective models
 
-From the point of view of computations, the connective theories $ko$ and $tmf$ are far more useful and important than their periodic versions $KO$, $Tmf$, and $TMF$. For instance, Mahowald showed that $ko\wedge ko$ splits into Brown-Gitler spectra, and he used this to analyze enough of the $ko$-based Adams spectral sequence to prove the height 1 telescope conjecture at $p=2$. Behrens--Hill--Hopkins--Mahowald used $tmf$ to produce a $$v_2^{32}$$ self map on the sphere, and it is a standard technique in computations to use the (known) Hurewicz image of $tmf$ to deduce relations in $$\pi_*S^0$$. 
+From the point of view of computations, the connective theories $ko$ and $tmf$ are far more useful and important than their periodic versions $KO$, $Tmf$, and $TMF$. For instance, Mahowald showed that $ko\wedge ko$ splits into Brown-Gitler spectra, and he used this to analyze enough of the $ko$-based Adams spectral sequence to prove the height 1 telescope conjecture at $p=2$. A similar role is played at height 2 by $tmf$; Behrens--Hill--Hopkins--Mahowald used $tmf$ to produce a $$v_2^{32}$$ self map on the sphere for example. In general, it is a standard technique in computations to use the (known) Hurewicz image of $tmf$ to deduce relations in $$\pi_*S^0$$. 
 
-This is due to the fact that the $$\mathcal{A}_*$$-comodule algebras $$H_*ko$$ and $$H_*tmf$$ are known, and in particular the Adams spectral sequences of $ko$ and $tmf$ have been computed. We remarked above that $$H_*L_{K(n)}S^0=0$$, and unfortunately the same is true for the $$EO_n(G)$$'s, so their Adams spectral sequences carry no information. The ANSS gives a partial fix for this as discussed above, but we would like to be able to compare with both the Adams SS and the ANSS of the sphere.
+This theories are convenient to work with in large part because the $$\mathcal{A}_*$$-comodule algebras $$H_*ko$$ and $$H_*tmf$$ are known, and in particular the Adams spectral sequences of $ko$ and $tmf$ have been completely computed. We remarked above that $$H_*L_{K(n)}S^0=0$$, and the same is true for the $$EO_n(G)$$'s, so again their Adams spectral sequences carry no information. The ANSS gives a partial fix for this as discussed above, but we would like to be able to compare with both the Adams SS and the ANSS of the sphere.
 
-Passing to connective covers does not give a substantial improvement as the homotopy groups of the $$EO_n(G)$$'s are not degreewise finitely generated. One wants good connective models $$eo_n(G)$$'s of the $$EO_n(G)$$'s with strong finiteness properties and computable Adams spectral sequences. We want a connective ring spectrum $eo_n(G)$ such that there is a ring map
+Passing to connective covers does not give a substantial improvement as the homotopy groups of the $$EO_n(G)$$'s are not degreewise finitely generated. One wants smaller theories so that the various corresponding spectral sequences are more sparse: this makes it easier to deduce differentials and show certain classes are permanent cycles, as there is less information to keep track of. A major goal is thus to find good connective models $$eo_n(G)$$'s of the $$EO_n(G)$$'s with strong finiteness properties and computable Adams spectral sequences. One wants a connective ring spectrum $eo_n(G)$ with a ring map
 
 $$eo_n(G)\to EO_n(G)$$
 
@@ -90,7 +90,7 @@ where the stack in the middle satisfies some nice list of algebro-geometric prop
 
 $$Spec(\mathbb{Z}[v_1^{\pm}])/C_2\to\mathcal{M}_{ko}\to\mathcal{M}_{FG}$$
 
-A naive guess for $$\mathcal{M}_{ko}$$ would be $$Spec(\mathbb{Z}[v_1])/C_2$$, but the map $$Spec(\mathbb{Z}[v_1])/C_2\to\mathcal{M}_{FG}$$ is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations in that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{TMF}\to\mathcal{M}_{tmf}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
+A naive guess for $$\mathcal{M}_{ko}$$ would be $$Spec(\mathbb{Z}[v_1])/C_2$$, but the map $$Spec(\mathbb{Z}[v_1])/C_2\to\mathcal{M}_{FG}$$ is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations into that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{TMF}\to\mathcal{M}_{tmf}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
 
 Finally, we would like the $eo_n(G)$'s to be structured ring spectra in some sense, so that we may lift this factorization to a category of derived stacks, as discussed above.
 
@@ -107,7 +107,7 @@ $$
 
 The simplicial diagram on the right lifts to derived (affine) schemes since $E$ and $MU$ are $$E_\infty$$-rings, and so we may define the derived stack structure on $$\mathcal{M}_E$$ by this colimit. Applying this when $E=ko$, the corresponding descent spectral sequence is a spectral sequence converging to $\pi_*ko$. 
 
-If we had the equivalence $$\mathcal{M}_{ko}\simeq Spec(\mathbb{Z}[v_1])/C_2$$, by comparison with the descent spectral sequence for $$\mathcal{M}_{KO}$$, we would see that the descent spectral sequence for $$\mathcal{M}_{ko}$$ coincides with the HFPSS for $ku$ with its complex conjugation action. Here we mean the genuine $C_2$-spectrum $ku$ with its complex conjugation action, i.e. Atiyah's Real $K$-theory $$k_\mathbb{R}$$. But this latter spectral sequence does not converge to $$\pi_*ko$$; in fact 
+If we had the equivalence $$\mathcal{M}_{ko}\simeq Spec(\mathbb{Z}[v_1])/C_2$$, by comparison with the descent spectral sequence for $$\mathcal{M}_{KO}$$, we would see that the descent spectral sequence for $$\mathcal{M}_{ko}$$ coincides with the HFPSS for $ku$ with its complex conjugation action (i.e. Atiyah's Real $K$-theory $$k_\mathbb{R}$$). But this latter spectral sequence does not converge to $$\pi_*ko$$; in fact 
 
 $$ko\not\simeq ku^{hC_2}$$
 
@@ -115,7 +115,7 @@ Rather, $$ko\simeq ku^{C_2}$$, where we take genuine fixed points. That we had t
 
 ## HHR theories
 
-$$k_\mathbb{R}$$ fits into a general class of connective equivariant theories defined by Hill--Hopkins--Ravenel and studied in detail by Beaudry--Hill--Shi--Zeng. These theories come from the context of *Real-oriented homotopy theory*. In short, this is the study of complex orientations in (genuine) $$C_2$$-spectra, where $$\mathbb{C}\mathbb{P}^\infty$$ and $MU$ are given $C_2$-actions via complex conjugation. The resulting $$C_2$$-spectrum $$MU_\mathbb{R}$$ is a $$C_2$$-$$E_\infty$$-ring, and 2-locally it has quotients $$BP_\mathbb{R}$$ and $$BP_\mathbb{R}\langle n\rangle$$ lifting the classical theories; $$k_\mathbb{R}$$ is a form of $$BP_\mathbb{R}\langle 1\rangle$$ for example.
+$$k_\mathbb{R}$$ fits into a general class of connective equivariant theories defined by Hill--Hopkins--Ravenel and studied in detail by Beaudry--Hill--Shi--Zeng. These theories live in the context of *Real-oriented homotopy theory*. In short, this is the study of complex orientations in (genuine) $$C_2$$-spectra, where $$\mathbb{C}\mathbb{P}^\infty$$ and $MU$ are given $C_2$-actions via complex conjugation. The resulting $$C_2$$-spectrum $$MU_\mathbb{R}$$ is a $$C_2$$-$$E_\infty$$-ring, and 2-locally it has quotients $$BP_\mathbb{R}$$ and $$BP_\mathbb{R}\langle n\rangle$$ lifting the classical theories; $$k_\mathbb{R}$$ is a form of $$BP_\mathbb{R}\langle 1\rangle$$ for example.
 
 Hahn-Shi showed that there is a $C_2$-equivariant orientation map $$MU_\mathbb{R}\to E_n$$, where $E_n$ is Morava $E$-theory with its $C_2$-action by the formal inverse on the formal group. It sends $\overline{v}_i$ (equivariant lifts of the classical $v_i$'s) to zero for $i>n$, resulting in an equivariant map $$BP_\mathbb{R}\langle n\rangle\to E_n$$, and hence a map
 
@@ -135,7 +135,9 @@ In an upcoming paper with Mike Hill, we establish the desired finiteness propert
 
 The slice filtration is an instance of a general phenomenon appearing in equivariant homotopy and with $$MU_\mathbb{R}$$ and $$N_{C_2}^GMU_\mathbb{R}$$ in particular. One can deduce information about non-complex-orientable theories like the $$BP^{((G))}\langle m\rangle^G$$'s while still working in a complex-oriented setting; one can work with the complex-oriented $G$-spectrum $$BP^{((G))}\langle m\rangle$$ and then pass to fix points. A prototypical example is the fact that equivariant Bott periodicity for $K_\mathbb{R}$ carries both the $KU$ and $KO$ Bott periodicities.
 
-I have spent a lot of time thinking about chromatic homotopy internal to the equivariant setting in this way. In particular I looked into analogues of the Ravenel conjectures in chromatic homotopy in this setting and showed that forms of the chromatic convergence and smash product theorems hold for localized versions of the $$BP^{((G))}\langle m\rangle$$'s in the Borel-complete setting. Borel-completeness is a somewhat surprising feature in Real-oriented homotopy theory: I showed in fact that $$N_{C_2}^{C_{2^n}}MU_\mathbb{R}$$ is Borel-complete for all $n$, using the slice filtration. This resulted giving a proof of the Segal conjecture for $C_2$ as a surprising corollary, demonstrating how much information these theories hold. This theorem implies that the slice SS and HFPSS of $$N_{C_2}^{C_{2^n}}MU_\mathbb{R}$$ converge to the same thing. These spectral sequences differ greatly on the $E_2$ page, and this can be used to deduce various differentials in both of them. This has consequences for the slice SS's of the truncated theories  $$BP^{((G))}\langle m\rangle$$, which are *not* Borel-complete.
+I have spent a lot of time thinking about chromatic homotopy internal to the equivariant setting in this way. In particular I looked into analogues of the Ravenel conjectures in chromatic homotopy in this setting and showed that forms of the chromatic convergence and smash product theorems hold for localized versions of the $$BP^{((G))}\langle m\rangle$$'s in the Borel-complete setting. Borel-completeness is a somewhat surprising feature in Real-oriented homotopy theory: I showed in fact that $$N_{C_2}^{C_{2^n}}MU_\mathbb{R}$$ is Borel-complete for all $n$, using the slice filtration. This resulted in a proof of the Segal conjecture for $C_2$ as a surprising corollary, demonstrating how much information these theories hold.
+
+This theorem implies in particular that the slice SS and HFPSS of $$N_{C_2}^{C_{2^n}}MU_\mathbb{R}$$ converge to the same thing. These spectral sequences differ dramatically on the $E_2$ page, and this can be used to deduce various differentials in both of them. This has consequences for the slice SS's of the truncated theories  $$BP^{((G))}\langle m\rangle$$, which are *not* Borel-complete.
 
 ## Chromatic numbers
 
@@ -157,7 +159,7 @@ In my thesis I defined the notion of chromatic number for a spectrum $E$:
 
 $$\Phi(E):=\min\{n\ge0\text{ }|\text{  }E\wedge X(n)\text{ is complex orientable}\}$$
 
-where $$X(n)$$ is Ravenel's Thom spectrum $$Thom(\Omega SU(n)\to \Omega SU\simeq BU)$$. This is a straightforward invariant of $E$ that I show is an invariant of $$\mathcal{M}_E$$ which makes precise the sense in which the stackiness of $$\mathcal{M}_E$$ measures the failure of $E$ to be complex-orientable. I use the stack description above to deduce that $$\Phi(E_\mathbb{R}(n)^{C_2})=2^n$$.  
+where $$X(n)$$ is Ravenel's Thom spectrum $$Thom(\Omega SU(n)\to \Omega SU\simeq BU)$$. This is a straightforward invariant of $E$ that I show is in fact an invariant of $$\mathcal{M}_E$$, which makes precise the sense in which the stackiness of $$\mathcal{M}_E$$ measures the failure of $E$ to be complex-orientable. I use the stack description above to deduce for example that $$\Phi(E_\mathbb{R}(n)^{C_2})=2^n$$.  
 
 I am working currently on relating chromatic numbers to a similar integer defined by Bhattacharya-Chatham in terms of orientations of vector bundles. I am also looking into what extent the chromatic number is detected by the Adams spectral sequence and, in particular, chromatic number as a generic property of fp spectra.
 
