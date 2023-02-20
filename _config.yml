@@ -1,13 +1,13 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
+plugins: [jekyll-paginate]
 
 # Permalinks
 permalink:        pretty
 
 # Setup
 title:            Christian Carrick
-tagline:          'A Jekyll theme'
 description:      
 url:              carrickchristian.github.io
 baseurl:          /
