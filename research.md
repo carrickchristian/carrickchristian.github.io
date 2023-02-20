@@ -3,7 +3,7 @@ layout: page
 title: Research
 ---
 
-On this page, I give some motivation for my research and try to explain what the broader goals are, while relating the contents of my papers (both published and in preparation) to these goals. I am interested in a lot of things in homotopy theory--mostly those with an equivariant flavor--but I'll focus here on one of the main strands at the moment in my research: (connective) higher real $K$-theories. I've aimed this discussion at people who are familiar with chromatic homotopy. For a list of my papers, return to the [home](https://carrickchristian.github.io) page.
+On this page, I give some motivation for my research and try to explain what the broader goals are, while relating the contents of my papers (both published and in preparation) to these goals. I am interested in a lot of things in homotopy theory--mostly those with an equivariant flavor--but I'll focus here on one of the main strands in my research at the moment: (connective) higher real $K$-theories. I've aimed this discussion at people who are familiar with chromatic homotopy. For a list of my papers, return to the [home](https://carrickchristian.github.io) page.
 
 ## Higher real $K$-theories
 
@@ -90,13 +90,76 @@ where the stack in the middle satisfies some nice list of algebro-geometric prop
 
 $$Spec(\mathbb{Z}[v_1^{\pm}])/C_2\to\mathcal{M}_{ko}\to\mathcal{M}_{FG}$$
 
-A naive guess for $$\mathcal{M}_{ko}$$ would be $$Spec(\mathbb{Z}[v_1])/C_2$$, but the map $$Spec(\mathbb{Z}[v_1])/C_2\to\mathcal{M}_{FG}$$ is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations in that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{tmf}\to\mathcal{M}_{TMF}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
+A naive guess for $$\mathcal{M}_{ko}$$ would be $$Spec(\mathbb{Z}[v_1])/C_2$$, but the map $$Spec(\mathbb{Z}[v_1])/C_2\to\mathcal{M}_{FG}$$ is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations in that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{TMF}\to\mathcal{M}_{tmf}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
 
 Finally, we would like the $eo_n(G)$'s to be structured ring spectra in some sense, so that we may lift this factorization to a category of derived stacks, as discussed above.
 
 ## The slice filtration
 
-slice(ko), and genuine fixed points. real oriented homotopy theory and hhr. bpgm theories. - smashing localizations paper, cofree theorem and the segal conjecture (lots of slice differentials), bpgm's are fp, homology computations, stacks for bpgms: determined for ER(n)'s in thesis, chromatic measure (working on generic property for fp spectra) moving onto BPRns with lennart.
+Let's return to the wrong guess that $$\mathcal{M}_{ko}\simeq Spec(\mathbb{Z}[v_1])/C_2$$, as it will give us a sense for why genuine equivariant homotopy enters the picture. For any $$E_\infty$$-ring $E$, it is easy to see that $$\mathcal{M}_E$$ has a canonical derived stack refinement whose global sections are the $MU$-nilpotent completion of $E$. Indeed, we may write $$\mathcal{M}_E$$ as a geometric realization
+
+$$
+\begin{align*}
+\mathcal{M}_E&\simeq \big|Spec(MU_*)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Leftarrow Spec(MU_*MU)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Lleftarrow \cdots\big|\\
+&\simeq  \big|Spec(MU_*E)\Leftarrow Spec(MU_*(MU\wedge E))\Lleftarrow\cdots\big|
+\end{align*}
+$$
+
+The simplicial diagram on the right lifts to derived (affine) schemes since $E$ and $MU$ are $$E_\infty$$-rings, and so we may define the derived stack structure on $$\mathcal{M}_E$$ by this colimit. Applying this when $E=ko$, the corresponding descent spectral sequence is a spectral sequence converging to $\pi_*ko$. 
+
+If we had the equivalence $$\mathcal{M}_{ko}\simeq Spec(\mathbb{Z}[v_1])/C_2$$, by comparison with the descent spectral sequence for $$\mathcal{M}_{KO}$$, we would see that the descent spectral sequence for $$\mathcal{M}_{ko}$$ coincides with the HFPSS for $ku$ with its complex conjugation action. Here we mean the genuine $C_2$-spectrum $ku$ with its complex conjugation action, i.e. Atiyah's Real $K$-theory $$k_\mathbb{R}$$. But this latter spectral sequence does not converge to $$\pi_*ko$$; in fact 
+
+$$ko\not\simeq ku^{hC_2}$$
+
+Rather, $$ko\simeq ku^{C_2}$$, where we take genuine fixed points. That we had to pass to the genuine category is reflected in the spectral sequence: *the descent spectral sequence for $$\mathcal{M}_{ko}$$ is the slice spectral sequence for $k_\mathbb{R}$*. This is a fascinating connection for which I do not have a conceptual explanation; one simply observes that the slice SS for $$k_\mathbb{R}$$ coincides with the ANSS for $$ko$$ after computing each separately. I am working on giving a derived algebraic geometry explanation for this and finding other examples where the descent and slice SS's coincide.
+
+## HHR theories
+
+$$k_\mathbb{R}$$ fits into a general class of connective equivariant theories defined by Hill--Hopkins--Ravenel and studied in detail by Beaudry--Hill--Shi--Zeng. These theories come from the context of *Real-oriented homotopy theory*. In short, this is the study of complex orientations in (genuine) $$C_2$$-spectra, where $$\mathbb{C}\mathbb{P}^\infty$$ and $MU$ are given $C_2$-actions via complex conjugation. The resulting $$C_2$$-spectrum $$MU_\mathbb{R}$$ is a $$C_2$$-$$E_\infty$$-ring, and 2-locally it has quotients $$BP_\mathbb{R}$$ and $$BP_\mathbb{R}\langle n\rangle$$ lifting the classical theories; $$k_\mathbb{R}$$ is a form of $$BP_\mathbb{R}\langle 1\rangle$$ for example.
+
+Hahn-Shi showed that there is a $C_2$-equivariant orientation map $$MU_\mathbb{R}\to E_n$$, where $E_n$ is Morava $E$-theory with its $C_2$-action by the formal inverse on the formal group. It sends $\overline{v}_i$ (equivariant lifts of the classical $v_i$'s) to zero for $i>n$, resulting in an equivariant map $$BP_\mathbb{R}\langle n\rangle\to E_n$$, and hence a map
+
+$$BP_\mathbb{R}\langle n\rangle^{C_2}\to EO_n(C_2)$$
+
+This map turns out to be a $K(n)$-local equivalence. More generally, if $C_2\subset G\subset \mathbb{G}_n$, we get by adjunction a $G$-equivariant orientation map 
+
+ $$N_{C_2}^GMU_\mathbb{R}\to E_n$$
+ 
+Beaudry--Hill--Shi--Zeng studied quotients of $$N_{C_2}^GMU_\mathbb{R}$$ when $G=C_{2^n}$, introducing the so-called $$BP^{((G))}\langle m\rangle$$'s generalizing the $$BP_\mathbb{R}\langle n\rangle$$'s, and showed there are $K(h)$-local equivalences
+
+$$BP^{((G))}\langle m\rangle^G\to EO_{h}(G)$$
+
+when $h=2^{n-1}m$. These $$BP^{((G))}\langle m\rangle^G$$'s are thus candidates for $$eo_h(G)$$, and they have the added feature of having a well-understood slice filtration.
+
+In an upcoming paper with Mike Hill, we establish the desired finiteness properties of the $$BP^{((G))}\langle m\rangle^G$$'s, showing that they are fp spectra of type $h$. In our paper on the homological slice spectral sequence, Mike Hill, Doug Ravenel, and I move toward computing the Adams spectral sequence of these theories by introducing a spectral sequence, which we compute completely in the case $G=C_2$ for $m\le 3$.
+
+The slice filtration is an instance of a general phenomenon appearing in equivariant homotopy and with $$MU_\mathbb{R}$$ and $$N_{C_2}^GMU_\mathbb{R}$$ in particular. One can deduce information about non-complex-orientable theories like the $$BP^{((G))}\langle m\rangle^G$$'s while still working in a complex-oriented setting; one can work with the complex-oriented $G$-spectrum $$BP^{((G))}\langle m\rangle$$ and then pass to fix points. A prototypical example is the fact that equivariant Bott periodicity for $K_\mathbb{R}$ carries both the $KU$ and $KO$ Bott periodicities.
+
+I have spent a lot of time thinking about chromatic homotopy internal to the equivariant setting in this way. In particular I looked into analogues of the Ravenel conjectures in chromatic homotopy in this setting and showed that forms of the chromatic convergence and smash product theorems hold for localized versions of the $$BP^{((G))}\langle m\rangle$$'s in the Borel-complete setting. Borel-completeness is a somewhat surprising feature in Real-oriented homotopy theory: I showed in fact that $$N_{C_2}^{C_{2^n}}MU_\mathbb{R}$$ is Borel-complete for all $n$, using the slice filtration. This resulted giving a proof of the Segal conjecture for $C_2$ as a surprising corollary, demonstrating how much information these theories hold. This theorem implies that the slice SS and HFPSS of $$N_{C_2}^{C_{2^n}}MU_\mathbb{R}$$ converge to the same thing. These spectral sequences differ greatly on the $E_2$ page, and this can be used to deduce various differentials in both of them. This has consequences for the slice SS's of the truncated theories  $$BP^{((G))}\langle m\rangle$$, which are *not* Borel-complete.
+
+## Chromatic numbers
+
+Following our discussion above of connective models, it would be good to know some things about the stacks
+
+$$\mathcal{M}_{BP^{((G))}\langle m\rangle^G}$$
+
+We were able to guess the stack for $ko$ from its open substack corresponding to $KO$, so we begin with the localized variants $$(D^{-1}BP^{((G))}\langle m\rangle)^G$$. In my thesis, I gave a complete description of these for $G=C_2$ as quotient stacks:
+
+$$Spec(E(n)_*)/C_2\simeq\mathcal{M}_{E_\mathbb{R}(n)^{C_2}}$$
+
+and gave several modular interpretations of these stacks following those for $KO$ and $Tmf_1(3)$. In an upcoming paper I prove the analogous result for larger groups 
+
+$$Spec(\pi_*^eBP^{((G))}\langle m\rangle)/G\simeq\mathcal{M}_{BP^{((G))}\langle m\rangle^G}$$
+
+and am currently investigating possibilities for the connective stacks. 
+
+In my thesis I defined the notion of chromatic number for a spectrum $E$:
+
+$$\Phi(E):=\min\{n\ge0\text{ }|\text{  }E\wedge X(n)\text{ is complex orientable}\}$$
+
+where $$X(n)$$ is Ravenel's Thom spectrum $$Thom(\Omega SU(n)\to \Omega SU\simeq BU)$$. This is a straightforward invariant of $E$ that I show is an invariant of $$\mathcal{M}_E$$ which makes precise the sense in which the stackiness of $$\mathcal{M}_E$$ measures the failure of $E$ to be complex-orientable. I use the stack description above to deduce that $$\Phi(E_\mathbb{R}(n)^{C_2})=2^n$$.  
+
+I am working currently on relating chromatic numbers to a similar integer defined by Bhattacharya-Chatham in terms of orientations of vector bundles. I am also looking into what extent the chromatic number is detected by the Adams spectral sequence and, in particular, chromatic number as a generic property of fp spectra.
 
 
 
