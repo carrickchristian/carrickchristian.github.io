@@ -9,7 +9,7 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+      {{ site.title }}
     {% else %}
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
@@ -24,8 +24,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/' | relative_url }}public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="{{ '/' | relative_url }}public/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/' | relative_url }}public/apple-touch-icon.png"
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/' | relative_url }}public/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/' | relative_url }}public/favicon-16x16.png">
+<link rel="manifest" href="{{ '/' | relative_url }}public/site.webmanifest">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">

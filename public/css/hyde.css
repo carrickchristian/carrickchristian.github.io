@@ -258,6 +258,7 @@ a.sidebar-nav-item:focus {
     .pic {
         float: none;
         width: 100%;
+	margin: 0;
     }
 }
     
