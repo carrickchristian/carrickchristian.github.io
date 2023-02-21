@@ -248,3 +248,16 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+.pic {
+    float: right;
+    margin: 1rem;
+}
+
+@media (max-width: 48rem) {
+    .pic {
+        float: none;
+        width: 100%;
+    }
+}
+    
