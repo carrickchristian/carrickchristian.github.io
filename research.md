@@ -155,7 +155,7 @@ $$\big(Spec(E(n)_*)/\mathbb{G}_m\big)/C_2\simeq\mathcal{M}_{E_\mathbb{R}(n)^{C_2
 
 and gave several modular interpretations of these stacks following those for $KO$ and $Tmf_1(3)$. In an upcoming paper I prove the analogous result for larger groups 
 
-$$\big(Spec(\pi_*^eBP^{((G))}\langle m\rangle)/\mathbb{G}_m\big)/G\simeq\mathcal{M}_{BP^{((G))}\langle m\rangle^G}$$
+$$\big(Spec(\pi_*^eD^{-1}BP^{((G))}\langle m\rangle)/\mathbb{G}_m\big)/G\simeq\mathcal{M}_{D^{-1}BP^{((G))}\langle m\rangle^G}$$
 
 and am currently investigating possibilities for the connective stacks. 
 
