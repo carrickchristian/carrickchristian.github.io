@@ -25,19 +25,19 @@ It was an observation of Ravenel and Hopkins-Miller that $L_{K(n)}S^0$ is well a
 
 ## Hopkins' *From Spectra to Stacks*
 
-Like $KO$, the $EO_n$ theories are not complex-orientable; as above, we see this as a good thing. Hopkins noticed that we can still study non complex-orientable theories from the point of view of algebraic geometry and formal groups via the following relative Spec construction in stacks. For any ring spectrum $E$, we have a Hopf algebroid $$(MU_*E,MU_*(MU\wedge E))$$ and a resulting map of stacks
+Like $KO$, the $EO_n$ theories are not complex-orientable; as above, we see this as a good thing. Hopkins noticed that we can still study non complex-orientable theories from the point of view of algebraic geometry and formal groups via the following relative Spec construction in stacks. For any ring spectrum $E$, we have a Hopf algebroid $$(MU_*E,MU_*(MU\wedge E))$$ and (modding out by the $$\mathbb{G}_m$$ action) a resulting map of stacks
 
 $$\mathcal{M}_E\to\mathcal{M}_{FG}$$
 
 When $E$ is complex-orientable, this recovers the map
 
-$$Spec(E_*)\to\mathcal{M}_{FG}$$
+$$Spec(E_*)/\mathbb{G}_m\to\mathcal{M}_{FG}$$
 
 classifying the formal group on $$E_*$$ discovered by Quillen. In this language, the fact that the $E_2$-page of the ANSS for $KO$ is isomorphic to that of the $$C_2$$-HFPSS for $KU$ becomes the observation that
 
 $$
 \begin{align}
-\mathcal{M}_{KO}\simeq Spec(KU_*)/C_2
+\mathcal{M}_{KO}\simeq \big(Spec(KU_*)/\mathbb{G}_m\big)/C_2
 \end{align}
 $$
 
@@ -45,7 +45,7 @@ Hopkins provides a modular interpretation of this stack and the map to $\mathcal
 
 $$
 \begin{align}
-\mathcal{M}_{EO_n(G)}\simeq Spec(\pi_*E_n)/G
+\mathcal{M}_{EO_n(G)}\simeq Spec(\pi_0E_n)/G
 \end{align}
 $$
 
@@ -56,19 +56,19 @@ The Landweber exact functor theorem tells us that if
 
 $$Spec(R)\to\mathcal{M}_{FG}$$
 
-is a flat map of stacks, then there is a complex-oriented ring spectrum lifting this map along the above construction. We may ask if there's a more general statement replacing $Spec(R)$ with a (non-affine) stack. If
+is a flat map of stacks, then there is an (even-periodic) complex-oriented ring spectrum lifting this map along the above construction. We may ask if there's a more general statement replacing $Spec(R)$ with a (non-affine) stack. If
 
 $$\mathcal{N}\to\mathcal{M}_{FG}$$
 
-is an affine, flat map, pulling back the cover $$Spec(MU_*)\to \mathcal{M}_{FG}$$ to $$\mathcal{N}$$ gives a cover by affines with flat maps to $$\mathcal{M}_{FG}$$. The corresponding Cech complex gives a cosimplicial diagram of Landweber exact theories. If we could lift this diagram to an infinity category of ring spectra (e.g. the category of $$E_\infty$$-rings), we could take its homotopy limit $E$, and under some mild assumptions, we will have the desired equivalence $$\mathcal{M}_E\simeq\mathcal{N}$$ as stacks over $$\mathcal{M}_{FG}$$.
+is an affine, flat map, pulling back the cover $$Spec(L)\to \mathcal{M}_{FG}$$ to $$\mathcal{N}$$ gives a cover by affines with flat maps to $$\mathcal{M}_{FG}$$. The corresponding Cech complex gives a cosimplicial diagram of Landweber exact theories. If we could lift this diagram to an infinity category of ring spectra (e.g. the category of $$E_\infty$$-rings), we could take its homotopy limit $E$, and under some mild assumptions, we will have the desired equivalence $$\mathcal{M}_E\simeq\mathcal{N}$$ as stacks over $$\mathcal{M}_{FG}$$.
 
 This leads one directly to *derived stacks*, which very roughly speaking is what you would have if you *could* lift the above diagram to the category of $$E_\infty$$-rings. The Goerss-Hopkins-Miller theorem gives this in the $$EO_n$$ case, refining (2) to an appropriate equivalence of derived stacks. Back to $KO$, the fact that the ANSS of $KO$ is isomorphic to the $$C_2$$-HFPSS of $KU$ (not just on the $$E_2$$-page) is phrased in this language as the fact that (1) lifts to an equivalence of derived stacks, and in particular their descent spectral sequences coincide.
 
-This fact about the $EO_n$'s allows one to reverse this construction in many more interesting cases. In particular, the Serre-Tate theorem says that the deformation theory of an elliptic curve is determined by that of its associated $p$-divisible group. This allows one to reduce an essential step in the construction of $TMF$, which comes from a derived stack structure on the map
+This fact about the $EO_n$'s allows one to reverse this construction in many more interesting cases. In particular, the Serre-Tate theorem says that the deformation theory of an elliptic curve is determined by that of its associated $p$-divisible group. This allows one to reduce an essential step in the construction of $TMF$--which comes from a derived stack structure on the map
 
-$$\mathcal{M}_{ell}\to\mathcal{M}_{FG}$$,
+$$\mathcal{M}_{ell}\to\mathcal{M}_{FG}$$
 
-to that of the derived stack structure on the stacks $$Spec(\pi_*E_n)/G$$ as above.
+--to that of the derived stack structure on the stacks $$Spec(\pi_0E_n)/G$$ as above.
 
 ## Connective models
 
@@ -84,30 +84,34 @@ that is a $K(n)$-local equivalence, so that $$eo_n(G)$$ sees the same height $n$
 
 Therefore we ask for conditions also on the ANSS of $eo_n(G)$, or, better, on $$\mathcal{M}_{eo_n(G)}$$. We want the composition $$S^0\to eo_n(G)\to EO_n(G)$$ to give a factorization
 
-$$Spec(\pi_*E_n)/G\to\mathcal{M}_{eo_n(G)}\to\mathcal{M}_{FG}$$
+$$Spec(\pi_0E_n)/G\to\mathcal{M}_{eo_n(G)}\to\mathcal{M}_{FG}$$
 
 where the stack in the middle satisfies some nice list of algebro-geometric properties. It is difficult to say exactly what those should be, and I am working with Lennart Meier currently on this with particular focus on the example $$tmf_0(3)$$. For now, it is best to look back once again at $KO$. Here we have a factorization 
 
-$$Spec(\mathbb{Z}[v_1^{\pm}])/C_2\to\mathcal{M}_{ko}\to\mathcal{M}_{FG}$$
+$$\big(Spec(\mathbb{Z}[v_1^{\pm}])/\mathbb{G}_m\big)/C_2\to\mathcal{M}_{ko}\to\mathcal{M}_{FG}$$
 
-A naive guess for $$\mathcal{M}_{ko}$$ would be $$Spec(\mathbb{Z}[v_1])/C_2$$, but the map $$Spec(\mathbb{Z}[v_1])/C_2\to\mathcal{M}_{FG}$$ is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations into that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{TMF}\to\mathcal{M}_{tmf}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
+A naive guess for $$\mathcal{M}_{ko}$$ would be $$\big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, but the map 
+
+$$\big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2\to\mathcal{M}_{FG}$$
+
+is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations into that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{TMF}\to\mathcal{M}_{tmf}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
 
 Finally, we would like the $eo_n(G)$'s to be structured ring spectra in some sense, so that we may lift this factorization to a category of derived stacks, as discussed above.
 
 ## The slice filtration
 
-Let's return to the wrong guess that $$\mathcal{M}_{ko}\simeq Spec(\mathbb{Z}[v_1])/C_2$$, as it will give us a sense for why genuine equivariant homotopy enters the picture. For any $$E_\infty$$-ring $E$, it is easy to see that $$\mathcal{M}_E$$ has a canonical derived stack refinement whose global sections are the $MU$-nilpotent completion of $E$. Indeed, we may write $$\mathcal{M}_E$$ as a geometric realization
+Let's return to the wrong guess that $$\mathcal{M}_{ko}\simeq \big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, as it will give us a sense for why genuine equivariant homotopy enters the picture. For any $$E_\infty$$-ring $E$, it is easy to see that $$\mathcal{M}_E$$ has a canonical derived stack refinement whose global sections are the $MU$-nilpotent completion of $E$. Indeed, we may write $$\mathcal{M}_E$$ as a geometric realization
 
 $$
 \begin{align*}
-\mathcal{M}_E&\simeq \big|Spec(MU_*)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Leftarrow Spec(MU_*MU)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Lleftarrow \cdots\big|\\
-&\simeq  \big|Spec(MU_*E)\Leftarrow Spec(MU_*(MU\wedge E))\Lleftarrow\cdots\big|
+\mathcal{M}_E&\simeq \big|Spec(MUP_0)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Leftarrow Spec(MUP_0MUP)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Lleftarrow \cdots\big|\\
+&\simeq  \big|Spec(MUP_0E)\Leftarrow Spec(MUP_0(MUP\wedge E))\Lleftarrow\cdots\big|
 \end{align*}
 $$
 
 The simplicial diagram on the right lifts to derived (affine) schemes since $E$ and $MU$ are $$E_\infty$$-rings, and so we may define the derived stack structure on $$\mathcal{M}_E$$ by this colimit. Applying this when $E=ko$, the corresponding descent spectral sequence is a spectral sequence converging to $\pi_*ko$. 
 
-If we had the equivalence $$\mathcal{M}_{ko}\simeq Spec(\mathbb{Z}[v_1])/C_2$$, by comparison with the descent spectral sequence for $$\mathcal{M}_{KO}$$, we would see that the descent spectral sequence for $$\mathcal{M}_{ko}$$ coincides with the HFPSS for $ku$ with its complex conjugation action (i.e. Atiyah's Real $K$-theory $$k_\mathbb{R}$$). But this latter spectral sequence does not converge to $$\pi_*ko$$; in fact 
+If we had the equivalence $$\mathcal{M}_{ko}\simeq \big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, by comparison with the descent spectral sequence for $$\mathcal{M}_{KO}$$, we would see that the descent spectral sequence for $$\mathcal{M}_{ko}$$ coincides with the HFPSS for $ku$ with its complex conjugation action (i.e. Atiyah's Real $K$-theory $$k_\mathbb{R}$$). But this latter spectral sequence does not converge to $$\pi_*ko$$; in fact 
 
 $$ko\not\simeq ku^{hC_2}$$
 
@@ -147,11 +151,11 @@ $$\mathcal{M}_{BP^{((G))}\langle m\rangle^G}$$
 
 We were able to guess the stack for $ko$ from its open substack corresponding to $KO$, so we begin with the localized variants $$(D^{-1}BP^{((G))}\langle m\rangle)^G$$. In my thesis, I gave a complete description of these for $G=C_2$ as quotient stacks:
 
-$$Spec(E(n)_*)/C_2\simeq\mathcal{M}_{E_\mathbb{R}(n)^{C_2}}$$
+$$\big(Spec(E(n)_*)/\mathbb{G}_m\big)/C_2\simeq\mathcal{M}_{E_\mathbb{R}(n)^{C_2}}$$
 
 and gave several modular interpretations of these stacks following those for $KO$ and $Tmf_1(3)$. In an upcoming paper I prove the analogous result for larger groups 
 
-$$Spec(\pi_*^eBP^{((G))}\langle m\rangle)/G\simeq\mathcal{M}_{BP^{((G))}\langle m\rangle^G}$$
+$$\big(Spec(\pi_*^eBP^{((G))}\langle m\rangle)/\mathbb{G}_m\big)/G\simeq\mathcal{M}_{BP^{((G))}\langle m\rangle^G}$$
 
 and am currently investigating possibilities for the connective stacks. 
 
