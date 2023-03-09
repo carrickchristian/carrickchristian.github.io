@@ -62,7 +62,7 @@ $$\mathcal{N}\to\mathcal{M}_{FG}$$
 
 is an affine, flat map, pulling back the cover $$Spec(L)\to \mathcal{M}_{FG}$$ to $$\mathcal{N}$$ gives a cover by affines with flat maps to $$\mathcal{M}_{FG}$$. The corresponding Cech complex gives a cosimplicial diagram of Landweber exact theories. If we could lift this diagram to an infinity category of ring spectra (e.g. the category of $$E_\infty$$-rings), we could take its homotopy limit $E$, and under some mild assumptions, we will have the desired equivalence $$\mathcal{M}_E\simeq\mathcal{N}$$ as stacks over $$\mathcal{M}_{FG}$$.
 
-This leads one directly to *derived stacks*, which very roughly speaking is what you would have if you *could* lift the above diagram to the category of $$E_\infty$$-rings. The Goerss-Hopkins-Miller theorem gives this in the $$EO_n$$ case, refining (2) to an appropriate equivalence of derived stacks. Back to $KO$, the fact that the ANSS of $KO$ is isomorphic to the $$C_2$$-HFPSS of $KU$ (not just on the $$E_2$$-page) is phrased in this language as the fact that (1) lifts to an equivalence of derived stacks, and in particular their descent spectral sequences coincide.
+This leads one directly to *derived stacks*, which very roughly is the sort of structure that would allow one to lift the above diagram to the category of $$E_\infty$$-rings. The Goerss-Hopkins-Miller theorem gives this in the $$EO_n$$ case, refining (2) to an appropriate equivalence of derived stacks. Back to $KO$, the fact that the ANSS of $KO$ is isomorphic to the $$C_2$$-HFPSS of $KU$ (not just on the $$E_2$$-page) is phrased in this language as the fact that (1) lifts to an equivalence of derived stacks, and in particular their descent spectral sequences coincide.
 
 This fact about the $EO_n$'s allows one to reverse this construction in many more interesting cases. In particular, the Serre-Tate theorem says that the deformation theory of an elliptic curve is determined by that of its associated $p$-divisible group. This allows one to reduce an essential step in the construction of $TMF$--which comes from a derived stack structure on the map
 
@@ -100,16 +100,17 @@ Finally, we would like the $eo_n(G)$'s to be structured ring spectra in some sen
 
 ## The slice filtration
 
-Let's return to the wrong guess that $$\mathcal{M}_{ko}\simeq \big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, as it will give us a sense for why genuine equivariant homotopy enters the picture. For any $$E_\infty$$-ring $E$, it is easy to see that $$\mathcal{M}_E$$ has a canonical derived stack refinement whose global sections are the $MU$-nilpotent completion of $E$. Indeed, we may write $$\mathcal{M}_E$$ as a geometric realization
+Let's return to the wrong guess that $$\mathcal{M}_{ko}\simeq \big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, as it will give us a sense for why genuine equivariant homotopy enters the picture. We may write $$\mathcal{M}_{ko}$$ as a geometric realization
 
 $$
-\begin{align*}
-\mathcal{M}_E&\simeq \big|Spec(MUP_0)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Leftarrow Spec(MUP_0MUP)\times_{\mathcal{M}_{FG}}\mathcal{M}_E\Lleftarrow \cdots\big|\\
-&\simeq  \big|Spec(MUP_0E)\Leftarrow Spec(MUP_0(MUP\wedge E))\Lleftarrow\cdots\big|
-\end{align*}
+\mathcal{M}_{ko}\simeq \big|\mathcal{M}_{ku}\Leftarrow \mathcal{M}_{ku}\times_{\mathcal{M}_{ko}}\mathcal{M}_{ku}\Lleftarrow \cdots\big|
 $$
 
-The simplicial diagram on the right lifts to derived (affine) schemes since $E$ and $MU$ are $$E_\infty$$-rings, and so we may define the derived stack structure on $$\mathcal{M}_E$$ by this colimit. Applying this when $E=ko$, the corresponding descent spectral sequence is a spectral sequence converging to $\pi_*ko$. 
+The maps in this simplicial diagram are not etale (in contrast to $$\mathcal{M}_{KO}$$), so we cannot use this to define a derived stack structure on $$\mathcal{M}_{ko}$$. However, the diagram lifts to derived affine schemes, and so we have an associated descent spectral sequence converging to $\pi_*ko$, in this case the SS associated to the cosimplicial spectrum
+
+$$
+ku\Rightarrow ku\otimes_{ko}ku\Rrightarrow \cdots
+$$
 
 If we had the equivalence $$\mathcal{M}_{ko}\simeq \big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, by comparison with the descent spectral sequence for $$\mathcal{M}_{KO}$$, we would see that the descent spectral sequence for $$\mathcal{M}_{ko}$$ coincides with the HFPSS for $ku$ with its complex conjugation action (i.e. Atiyah's Real $K$-theory $$k_\mathbb{R}$$). But this latter spectral sequence does not converge to $$\pi_*ko$$; in fact 
 
