@@ -96,8 +96,6 @@ $$\big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2\to\mathcal{M}_{FG}$$
 
 is not affine, a necessary condition for the maps $$\mathcal{M}_E\to\mathcal{M}_{FG}$$. Hopkins shows instead that the map $$\mathcal{M}_{KO}\to\mathcal{M}_{ko}$$ is the inclusion of the moduli stack of nonsingular quadratic equations into that of all quadratic equations. A similar story holds for $tmf$, where the map $$\mathcal{M}_{TMF}\to\mathcal{M}_{tmf}$$ is the inclusion of the moduli stack of elliptic curves in that of all cubic equations.
 
-Finally, we would like the $eo_n(G)$'s to be structured ring spectra in some sense, so that we may lift this factorization to a category of derived stacks, as discussed above.
-
 ## The slice filtration
 
 Let's return to the wrong guess that $$\mathcal{M}_{ko}\simeq \big(Spec(\mathbb{Z}[v_1])/\mathbb{G}_m\big)/C_2$$, as it will give us a sense for why genuine equivariant homotopy enters the picture. We may write $$\mathcal{M}_{ko}$$ as a geometric realization
