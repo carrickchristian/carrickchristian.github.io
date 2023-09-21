@@ -29,7 +29,7 @@ transfer maps.
 
 ## Tuesday 10 October, 2023
 
-* **Time and Location**: Vrije Universiteit Amsterdam (Seminar Room), 14:00-16:00
+* **Time and Location**: Vrije Universiteit Amsterdam NU Building 9A46, 14:00-16:00
 
 * **Speaker**: Adela Zhang
 
@@ -39,7 +39,7 @@ transfer maps.
 
 ## Tuesday 24 October, 2023
 
-* **Time and Location**: Nijmegen
+* **Time and Location**: Nijmegen Radboud HG00.065 15:30-17:30
 
 * **Speaker**: TBD
  
@@ -49,7 +49,7 @@ transfer maps.
 
 ## Tuesday 7 November, 2023
 
-* **Time and Location**: TBD
+* **Time and Location**: Utrecht Buys Ballot 023 14:00-16:00
 
 * **Speaker**: Jack Davies
 
@@ -59,7 +59,7 @@ transfer maps.
 
 ## Tuesday 21 November, 2023
 
-* **Time and Location**: TBD
+* **Time and Location**: Nijmegen Radboud HG00.308 15:30-17:30
 
 * **Speaker**: Clover May
 
@@ -69,7 +69,7 @@ transfer maps.
 
 ## Tuesday 5 December, 2023
 
-* **Time and Location**: TBD
+* **Time and Location**: Utrecht Minnaert 016 14:00-16:00
 
 * **Speaker**: Elizabeth Tatum
 
@@ -77,11 +77,11 @@ transfer maps.
 
 * **Abstract**: TBD
 
-## Tuesday 16 December, 2023
+## Tuesday 19 December, 2023
 
-* **Time and Location**: TBD
+* **Time and Location**: Utrecht Minnaert 016 14:00-16:00
 
-* **Speaker**: TBD
+* **Speaker**: Shachar Carmeli
 
 * **Title**: TBD
 
