@@ -15,7 +15,7 @@ The schedule for the earlier editions of the seminar can be found [here](https:/
 
 * **Time and Location**: Utrecht BBG119 13:15-15:00
 
-* **Speaker**: Sil Linskens
+* **Speaker**: Sil Linskens (Bonn)
 
 * **Title**: Parametrized (and) higher semiadditivity
 
@@ -31,7 +31,7 @@ transfer maps.
 
 * **Time and Location**: Vrije Universiteit Amsterdam NU Building 9A46, 14:00-16:00
 
-* **Speaker**: Adela Zhang
+* **Speaker**: Adela Zhang (Copenhagen)
 
 * **Title**: TBD
 
@@ -51,7 +51,7 @@ transfer maps.
 
 * **Time and Location**: Utrecht Buys Ballot 023 14:00-16:00
 
-* **Speaker**: Jack Davies
+* **Speaker**: Jack Davies (Bonn)
 
 * **Title**: TBD
  
@@ -61,7 +61,7 @@ transfer maps.
 
 * **Time and Location**: Nijmegen Radboud HG00.308 15:30-17:30
 
-* **Speaker**: Clover May
+* **Speaker**: Clover May (Trondheim)
 
 * **Title**: TBD
 
@@ -71,7 +71,7 @@ transfer maps.
 
 * **Time and Location**: Utrecht Minnaert 016 14:00-16:00
 
-* **Speaker**: Elizabeth Tatum
+* **Speaker**: Elizabeth Tatum (Bonn)
 
 * **Title**: TBD
 
@@ -81,7 +81,7 @@ transfer maps.
 
 * **Time and Location**: Utrecht Minnaert 016 14:00-16:00
 
-* **Speaker**: Shachar Carmeli
+* **Speaker**: Shachar Carmeli (Copenhagen)
 
 * **Title**: TBD
 
