@@ -33,19 +33,21 @@ transfer maps.
 
 * **Speaker**: Adela Zhang (Copenhagen)
 
-* **Title**: TBD
+* **Title**: An equivariant Adams spectral sequence for $tmf(2)$
 
-* **Abstract**: TBD
+* **Abstract**: In this talk, I will explain how to compute the $C_3$-equivariant relative Adams spectral sequence for the Borelification of $tmf(2)$.This yields an entirely algebraic computation of the 3-local homotopy groups of $tmf$. The final answer is well-known of course -- the novelty here is that the rASS is completely determined by it $E_1$-page as a cochain complex of Mackey functors. Explicitly, the input consists of the Hopf algebroid structure on 
+$$\mathbb{F}_3 \otimes_{tmf(2)}\mathbb{F}_3$$ 
+modulo transfer, which is deduced from the structure maps on the equivariant dual Steenrod algebra, as well as the knowledge of the homotopy group of the underlying $tmf(2)$ along with the $C_3-$action.  Then we construct a bifiltration on $tmf(2)$ and use synthetic arguments to deduce the Adams differentials from the associated square of spectral sequences. The rASS degenerates on $E_{12}$ for tridegree reasons and stabilizes to a periodic pattern that essentially lies within a band of slope 1/4. This is joint work with Jeremy Hahn, Andrew Senger, and Foling Zou.
 
 ## Tuesday 24 October, 2023
 
-* **Time and Location**: Nijmegen Radboud HG00.065 15:30-17:30
+* **Time and Location**: Radboud University Nijmegen, Huygensgebouw HG00.065 15:30-17:30
 
-* **Speaker**: TBD
+* **Speaker**: John Greenlees
  
-* **Title**: TBD
+* **Title**: Rational equivariant cohomology theories for compact Lie groups
 
-* **Abstract**: TBD
+* **Abstract**: Several structural questions have emerged at least twice in topology: once in chromatic homotopy theory and once in equivariant topology (completions and localization, fracture squares, Balmer spectra, support, telescope conjecture, sheaves, filtrations, ….). In the chromatic world they arise in hard-core form, and in equivariant topology they reach a benign algebraic manifestation in the rational case. My talk is from this gentler world. The overall project is to build an algebraic model for rational G-equivariant cohomology theories for all compact Lie groups G, and when G is small or abelian this has been done. In general,  the model is expected to take the form of a category of sheaves of modules over a sheaf of rings over the space of closed subgroups of G. The talk will focus on structural features of the expected model for general G such as those above, and feature recent joint work with Balchin and Barthel.
 
 ## Tuesday 7 November, 2023
 
