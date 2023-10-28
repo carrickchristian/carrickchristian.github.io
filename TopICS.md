@@ -51,17 +51,17 @@ modulo transfer, which is deduced from the structure maps on the equivariant dua
 
 ## Tuesday 7 November, 2023
 
-* **Time and Location**: Utrecht Buys Ballot 023 14:00-16:00
+* **Time and Location**: Utrecht BBG023 14:00-16:00
 
 * **Speaker**: Jack Davies (Bonn)
 
-* **Title**: TBD
+* **Title**: Geometric norms on equivariant elliptic cohomology
  
-* **Abstract**: TBD
+* **Abstract**: Inspired by the work of Lurie and others, Gepner—Meier define families of equivariant cohomology theories based on oriented elliptic curves. By construction, these equivariant elliptic cohomologies are multiplicative, but only in a naïve equivariant sense—there is no obvious construction of norm maps on these theories. In this talk, I will describe how to use a moduli interpretation of the geometric fixed points of these equivariant theories due to Gepner—Meier, to construct what we call "geometric norms". Some applications of these geometric norms will also be discussed. This is joint work-in-progress with William Balderrama and Sil Linskens.
 
 ## Tuesday 21 November, 2023
 
-* **Time and Location**: Nijmegen Radboud HG00.308 15:30-17:30
+* **Time and Location**: Radboud University Nijmegen, Huygensgebouw HG00.308 15:30-17:30
 
 * **Speaker**: Clover May (Trondheim)
 
