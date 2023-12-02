@@ -67,7 +67,7 @@ modulo transfer, which is deduced from the structure maps on the equivariant dua
 
 * **Title**: The $RO(\Pi)$-graded cohomology of $B_{C_2}O(1)$
 
-* **Abstract**: Classically the Thom isomorphism relates the cohomology of the Thom space of a vector bundle to the cohomology of its base.  The Thom isomorphism for equivariant vector bundles fails in $RO(G)$-graded cohomology, even for $G=C_2$.  However, Costenoble--Waner developed an $RO(\Pi)$-graded equivariant cohomology theory, extending the usual representation grading $RO(G)$ to representations of the equivariant fundamental groupoid, and they showed the Thom isomorphism holds in this extended grading.  Costenoble recently computed the $RO(\Pi)$-graded cohomology of $B_{C_2}U(1)$, the classifying space for complex $C_2$-line bundles.  In this talk I will describe these different gradings and talk about work in progress computing the $RO(\Pi)$-graded cohomology of $B_{C_2}O(1)$, the classifying space for real $C_2$-line bundles.  This is joint work with Agnés Beaudry, Chloe Lewis, Sabrina Pauli and Elizabeth Tatum.
+* **Abstract**: Classically the Thom isomorphism relates the cohomology of the Thom space of a vector bundle to the cohomology of its base.  The Thom isomorphism for equivariant vector bundles fails in $RO(G)$-graded cohomology, even for $G=C_2$.  However, Costenoble--Waner developed an $RO(\Pi)$-graded equivariant cohomology theory, extending the usual representation grading $RO(G)$ to representations of the equivariant fundamental groupoid, and they showed the Thom isomorphism holds in this extended grading.  Costenoble recently computed the $RO(\Pi)$-graded cohomology of $B_{C_2}U(1)$, the classifying space for complex $C_2$-line bundles.  In this talk I will describe these different gradings and talk about work in progress computing the $RO(\Pi)$-graded cohomology of $B_{C_2}O(1)$, the classifying space for real $C_2$-line bundles.  This is joint work with Agnès Beaudry, Chloe Lewis, Sabrina Pauli and Elizabeth Tatum.
 
 ## Tuesday 5 December, 2023
 
@@ -75,9 +75,15 @@ modulo transfer, which is deduced from the structure maps on the equivariant dua
 
 * **Speaker**: Elizabeth Tatum (Bonn)
 
-* **Title**: TBD
+* **Title**: Equivariant Brown--Gitler spectra and their applications
 
-* **Abstract**: TBD
+* **Abstract**: In recent work, Guchuan Li, Sarah Peterson, and I have
+constructed models for $C_{2}$-equivariant analogues of the integral
+Brown--Gitler spectra. In this talk, I will start by introducing the
+classical Brown--Gitler spectra, and discussing some of their applications.
+After that, I will sketch the construction of the $C_{2}$-equivariant
+integral Brown--Gitler spectra, and discuss the applications we are
+beginning to study.
 
 ## Tuesday 19 December, 2023
 
