@@ -17,7 +17,7 @@ The schedule for the earlier editions of the seminar can be found [here](https:/
 
 **Speakers**:
 
-Jonas McCandless - Bonn University (HG02.032 14:00-15:00)
+Jonas McCandless - Max Planck Institute of Mathematics Bonn (HG02.032 14:00-15:00)
 
 * **Title**: TBD
 
@@ -53,7 +53,7 @@ TBD (15:30-16:30)
 
 * **Abstract**: TBD
 
-Nikolai Konovalov - Bonn University (17:00-18:00)
+Nikolai Konovalov - Max Planck Institute of Mathematics Bonn (17:00-18:00)
 
 * **Title**: TBD
 
