@@ -19,21 +19,21 @@ The schedule for the earlier editions of the seminar can be found [here](https:/
 
 Jonas McCandless - Max Planck Institute of Mathematics Bonn (HG02.032 14:00-15:00)
 
-* **Title**: TBD
+* **Title**: Chromatic vanishing results for TR
 
-* **Abstract**: TBD
+* **Abstract**: Starting with the foundational work of Thomason, there has been an enormous amount of   progress in chromatically localized algebraic K-theory. In this talk, I’ll survey some of this progress and explain how one can leverage these techniques to study chromatically localized TR and TC. The crucial input is the close relationship between TR and Bloch’s spectrum of curves on algebraic K-theory as first observed by Hesselholt. Part of this is joint work with Liam Keenan.
 
 Markus Hausmann - Bonn University (HG00.539 15:30-16:30)
 
-* **Title**: TBD
+* **Title**: The universal property of bordism rings of manifolds with commuting involutions
 
-* **Abstract**: TBD
+* **Abstract**:     My talk concerns bordism rings of compact smooth manifolds equipped with a smooth action by a finite group. I will start by recalling classical results on the subject from the 60's and 70's, mostly due to Conner-Floyd, Boardman, Stong and Alexander. Afterwards I will discuss recent joint work with Stefan Schwede in which we prove an algebraic universal property for the collection of all bordism rings of manifolds with commuting involutions.
 
-Paul Arne Ostvaer - University of Oslo (HG00.539 17:00-18:00)
+Paul Arne Ostvaer - University of Milan (HG00.539 17:00-18:00)
 
-* **Title**: TBD
+* **Title**: Hermitian K-groups and Motives
 
-* **Abstract**: TBD
+* **Abstract**: Hermitian K-theory is closely related to the classical theory of quadratic forms. We will give an overview of recent calculations of higher Hermitian K-groups of fields and rings of integers in number fields through motivic homotopy theory. The answers involve arithmetic data, while the calculational methods are rooted in homotopy theory. Joint work with Haakon Kolderup, Jonas Kylling, and Oliver Roendigs.
 
 ## <ins>Wednesday 13 March, 2024</ins>
 
