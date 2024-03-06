@@ -41,23 +41,23 @@ Paul Arne Ostvaer - University of Milan (HG00.539 17:00-18:00)
 
 **Speakers**:
 
-TBD (14:00-15:00)
+Jaco Ruit - Universiteit Utrecht (14:00-15:00)
 
-* **Title**: TBD
+* **Title**: A unified approach to different flavors of $\infty$-category theory
 
-* **Abstract**: TBD
+* **Abstract**: The language of Joyal and Lurie’s $\infty$-categories has now become an indispensable tool in homotopy theory. However, to encode desirable universal properties, just the theory of $\infty$-categories does not always suffice. Sometimes it is necessary to pass to other flavors, like equivariant, internal, or enriched $\infty$-categories. To illustrate, the universal property of G-spectra is best expressed in its incarnation as a G-equivariant $\infty$-category.  In this talk, I will give an introduction to a framework that is designed to deal with different generalizations of $\infty$-categories via so-called $\infty$-equipments. These equipments give rise to category theories for their objects, incorporating concepts such as (co)limits and pointwise Kan extensions. There are suitable ambient $\infty$-equipments for enriched, internal, and fibered $\infty$-category theory (and combined flavors), and I would like to highlight some examples.
 
-TBD (15:30-16:30)
+Yonatan Harpaz - Université Paris 13 (15:30-16:30)
 
-* **Title**: TBD
+* **Title**: The infinitesimal tangle hypothesis
 
-* **Abstract**: TBD
+* **Abstract**: The tangle hypothesis is a variant of the cobordism hypothesis pertaining to tangles, that is, manifolds and cobordisms between them embedded in Euclidean spaces, and equipped with a suitable type of framing. This elaborate ensemble of geometric data can be assembled into a single higher categorical object, an $E_m$-monoidal $(\infty,n)$-category $Tang^{fr}_{n,m}$, where $n$ is the maximal dimension of the underlying cobordisms, and $m$ is the fixed codimension of the Euclidean embeddings. The tangle hypothesis then asserts that $Tang^{fr}_{n,m}$ is freely generated as an $E_m$-monoidal $(\infty,n)$-category with duals from a single object. A sketch of proof of the tangle hypothesis appears in Lurie's 2009 text, and a conditional argument reducing the tangle hypothesis to another conjecture was later provided by Ayala and Francis, though a complete and formal proof has not yet appeared. In this talk I will describe work with Joost Nuiten which provides an infinitesimal version of this conjecture. More precisely, applying previous work on Quillen cohomology of higher categories we calculate the cotangent complex of $Tang^{fr}_{n,m}$ and show that, in a suitable sense, it is freely generated from a single generator. This can be considered as supporting evidence in the direction of the tangle hypothesis, but also reduces the tangle hypothesis to a statement on the level of $E_m$-monoidal $(n+1,n)$-categories using a form of obstruction theory for higher categories.
 
 Nikolai Konovalov - Max Planck Institute of Mathematics Bonn (17:00-18:00)
 
-* **Title**: TBD
+* **Title**: Algebraic Goodwillie spectral sequence
 
-* **Abstract**: TBD
+* **Abstract**: The spectral Lie operad is the Koszul dual operad to the cocommutative cooperad in the category of spectra. A spectral Lie algebra is an algebra over the spectral Lie operad. M. Behrens and J. Kjaer constructed so-called Dyer-Lashof-Lie power operations acting on the mod-p homology groups of a spectral Lie algebra. However, they computed relations between these operations only for p=2. In my talk, I will explain how to compute the desired relations for any prime by using functor calculus in the category of simplicial restricted Lie algebras. The latter category might be thought of as an algebraic approximation of the category of spaces, and so, algebraic calculations may also be helpful in understanding of the topological Goodwillie spectral sequence. 
 
 ## <ins>Wednesday 10 April, 2024</ins>
 
