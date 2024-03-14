@@ -61,7 +61,7 @@ Nikolai Konovalov - Max Planck Institute of Mathematics Bonn (17:00-18:00)
 
 ## <ins>Wednesday 10 April, 2024</ins>
 
-**Time and Location**: Vrije Universiteit Amsterdam 14:00-18:00
+**Time and Location**: Vrije Universiteit Amsterdam, NU Building 9A46 (Maryam Mirzakhani seminar room), 14:00-18:00
 
 **Speakers**:
 
