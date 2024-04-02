@@ -61,23 +61,23 @@ Nikolai Konovalov - Max Planck Institute of Mathematics Bonn (17:00-18:00)
 
 ## <ins>Wednesday 10 April, 2024</ins>
 
-**Time and Location**: Vrije Universiteit Amsterdam, NU Building 9A46 (Maryam Mirzakhani seminar room), 14:00-18:00
+**Time and Location**: Vrije Universiteit Amsterdam, NU Building 9A46 (Maryam Mirzakhani seminar room), 13:00-17:00
 
 **Speakers**:
 
-Thomas Rot - Vrije Universiteit Amsterdam (14:00-15:00)
+Thomas Rot - Vrije Universiteit Amsterdam (13:00-14:00)
 
 * **Title**: TBD
 
 * **Abstract**: TBD
 
-Julia Semikina - University of Muenster (15:30-16:30)
+Julia Semikina - University of Muenster (14:30-15:30)
 
 * **Title**: TBD
 
 * **Abstract**: TBD
 
-Alice Hedenlund - Uppsala University (17:00-18:00)
+Alice Hedenlund - Uppsala University (16:00-17:00)
 
 * **Title**: TBD
 
@@ -91,7 +91,7 @@ Alice Hedenlund - Uppsala University (17:00-18:00)
 
 **Speakers**:
 
-TBD (13:00-14:00)
+Sven Van Nigtevecht (13:00-14:00)
 
 * **Title**: TBD
 
