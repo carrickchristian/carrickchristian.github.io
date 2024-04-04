@@ -67,21 +67,26 @@ Nikolai Konovalov - Max Planck Institute of Mathematics Bonn (17:00-18:00)
 
 Thomas Rot - Vrije Universiteit Amsterdam (13:00-14:00)
 
-* **Title**: TBD
+* **Title**: Nonlinear proper Fredholm mappings and the stable homotopy groups of spheres
 
-* **Abstract**: TBD
+* **Abstract**: Nonlinear elliptic PDE problems can be described as zero finding problems of non-linear proper Fredholm mappings $f:H\rightarrow H$, where $H$ is an infinite dimensional Hilbert space. In this talk I will classify these mappings up to homotopy in terms of a non-trivial quotient of the stable homotopy groups of spheres. This is joint work with Lauran Toussaint.
 
-Julia Semikina - University of Muenster (14:30-15:30)
 
-* **Title**: TBD
 
-* **Abstract**: TBD
+
+Julia Semikina - Laboratoire Painlévé, University of Lille (14:30-15:30)
+
+* **Title**: Cut-and-paste K-theory of manifolds and cobordisms
+
+* **Abstract**:  The generalized Hilbert’s third problem asks about the invariants preserved under the scissors congruence operation: given a polytope $P$ in $\mathbb{R}^n$, one can cut $P$ into a finite number of smaller polytopes and reassemble these to form $Q$. Kreck, Neumann and Ossa introduced and studied an analogous notion of cut and paste relation for manifolds called the SK-equivalence ("schneiden und kleben" is German for "cut and paste"). In this talk I will explain the construction that will allow us to speak about the "K-theory of manifolds" spectrum. The zeroth homotopy group of the constructed spectrum recovers the classical groups $\mathrm{SK}_n$. I will show how to relate the spectrum to the algebraic $K$-theory of integers, and how this leads to the Euler characteristic and the Kervaire semicharacteristic when restricted to the lower homotopy groups. Further I will describe the connection of our spectrum with the cobordism category.
+
+
 
 Alice Hedenlund - Uppsala University (16:00-17:00)
 
-* **Title**: TBD
+* **Title**: Twisted Floer Homotopy Types From Seiberg-Witten Floer Data
 
-* **Abstract**: TBD
+* **Abstract**: In the 90s, Cohen- Jones, and Segal asked the question of whether various types of Floer homology theories could be upgraded to the homotopy level by constructing stable homotopy types encoding Floer data. They also sketched how one could construct these Floer homotopy types as (pro)spectra in the situation that the infinite-dimensional manifold involved is “trivially polarized”. It has since been realized that the correct home for Floer homotopy types, in the polarized situation, is twisted spectra. This is a generalization of parametrized spectra that one can roughly think of as sections of bundles of categories whose fibre is the category of spectra. The aim of this talk is to give an introduction of Floer homotopy theory and twisted spectra. I will also outline the construction of a circle equivariant twisted spectrum from Seiberg-Witten Floer data associated to a 3-manifold equipped with a complex spin structure. As there are many moving parts to this (Atiyah-Singer index theory, finite-dimensional approximation, Conley index theory etc.), I will try to keep the talk on a conceptual level that will hopefully be accessible to a large audience. This is joint work in progress with S. Behrens and T. Kragh.
 
 
 
