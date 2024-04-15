@@ -11,29 +11,57 @@ The schedule for the earlier editions of the seminar can be found [here](https:/
 
 <div align="center"><font size= "7"><strong><u>Spring 2024 Schedule</u></strong></font></div>
 
-## <ins>Wednesday 28 February, 2024</ins>  
+## <ins>Wednesday 15 May, 2024</ins>
 
-**Time and Location**: Radboud University Nijmegen, Huygensgebouw 14:00-18:00
+**Time and Location**: Utrecht University, Ruppert 114 13:00-17:00
 
 **Speakers**:
 
-Jonas McCandless - Max Planck Institute of Mathematics Bonn (HG02.032 14:00-15:00)
+Sven Van Nigtevecht (13:00-14:00)
 
-* **Title**: Chromatic vanishing results for TR
+* **Title**: TBD
 
-* **Abstract**: Starting with the foundational work of Thomason, there has been an enormous amount of   progress in chromatically localized algebraic K-theory. In this talk, I’ll survey some of this progress and explain how one can leverage these techniques to study chromatically localized TR and TC. The crucial input is the close relationship between TR and Bloch’s spectrum of curves on algebraic K-theory as first observed by Hesselholt. Part of this is joint work with Liam Keenan.
+* **Abstract**: TBD
 
-Markus Hausmann - Bonn University (HG00.539 15:30-16:30)
+Tobias Barthel - Max Planck Institute of Mathematics Bonn (14:30-15:30)
 
-* **Title**: The universal property of bordism rings of manifolds with commuting involutions
+* **Title**: TBD
 
-* **Abstract**:     My talk concerns bordism rings of compact smooth manifolds equipped with a smooth action by a finite group. I will start by recalling classical results on the subject from the 60's and 70's, mostly due to Conner-Floyd, Boardman, Stong and Alexander. Afterwards I will discuss recent joint work with Stefan Schwede in which we prove an algebraic universal property for the collection of all bordism rings of manifolds with commuting involutions.
+* **Abstract**: TBD
 
-Paul Arne Ostvaer - University of Milan (HG00.539 17:00-18:00)
+Manuel Krannich - Karlsruhe Institute of Technology (16:00-17:00)
 
-* **Title**: Hermitian K-groups and Motives
+* **Title**: TBD
 
-* **Abstract**: Hermitian K-theory is closely related to the classical theory of quadratic forms. We will give an overview of recent calculations of higher Hermitian K-groups of fields and rings of integers in number fields through motivic homotopy theory. The answers involve arithmetic data, while the calculational methods are rooted in homotopy theory. Joint work with Haakon Kolderup, Jonas Kylling, and Oliver Roendigs.
+* **Abstract**: TBD
+
+## <ins>Wednesday 10 April, 2024</ins>
+
+**Time and Location**: Vrije Universiteit Amsterdam, NU Building 9A46 (Maryam Mirzakhani seminar room), 13:00-17:00
+
+**Speakers**:
+
+Thomas Rot - Vrije Universiteit Amsterdam (13:00-14:00)
+
+* **Title**: Nonlinear proper Fredholm mappings and the stable homotopy groups of spheres
+
+* **Abstract**: Nonlinear elliptic PDE problems can be described as zero finding problems of non-linear proper Fredholm mappings $f:H\rightarrow H$, where $H$ is an infinite dimensional Hilbert space. In this talk I will classify these mappings up to homotopy in terms of a non-trivial quotient of the stable homotopy groups of spheres. This is joint work with Lauran Toussaint.
+
+
+
+Julia Semikina - Laboratoire Painlévé, University of Lille (14:30-15:30)
+
+* **Title**: Cut-and-paste K-theory of manifolds and cobordisms
+
+* **Abstract**:  The generalized Hilbert’s third problem asks about the invariants preserved under the scissors congruence operation: given a polytope $P$ in $\mathbb{R}^n$, one can cut $P$ into a finite number of smaller polytopes and reassemble these to form $Q$. Kreck, Neumann and Ossa introduced and studied an analogous notion of cut and paste relation for manifolds called the SK-equivalence ("schneiden und kleben" is German for "cut and paste"). In this talk I will explain the construction that will allow us to speak about the "K-theory of manifolds" spectrum. The zeroth homotopy group of the constructed spectrum recovers the classical groups $\mathrm{SK}_n$. I will show how to relate the spectrum to the algebraic $K$-theory of integers, and how this leads to the Euler characteristic and the Kervaire semicharacteristic when restricted to the lower homotopy groups. Further I will describe the connection of our spectrum with the cobordism category.
+
+
+
+Alice Hedenlund - Uppsala University (16:00-17:00)
+
+* **Title**: Twisted Floer Homotopy Types From Seiberg-Witten Floer Data
+
+* **Abstract**: In the 90s, Cohen- Jones, and Segal asked the question of whether various types of Floer homology theories could be upgraded to the homotopy level by constructing stable homotopy types encoding Floer data. They also sketched how one could construct these Floer homotopy types as (pro)spectra in the situation that the infinite-dimensional manifold involved is “trivially polarized”. It has since been realized that the correct home for Floer homotopy types, in the polarized situation, is twisted spectra. This is a generalization of parametrized spectra that one can roughly think of as sections of bundles of categories whose fibre is the category of spectra. The aim of this talk is to give an introduction of Floer homotopy theory and twisted spectra. I will also outline the construction of a circle equivariant twisted spectrum from Seiberg-Witten Floer data associated to a 3-manifold equipped with a complex spin structure. As there are many moving parts to this (Atiyah-Singer index theory, finite-dimensional approximation, Conley index theory etc.), I will try to keep the talk on a conceptual level that will hopefully be accessible to a large audience. This is joint work in progress with S. Behrens and T. Kragh.
 
 ## <ins>Wednesday 13 March, 2024</ins>
 
@@ -59,60 +87,30 @@ Nikolai Konovalov - Max Planck Institute of Mathematics Bonn (17:00-18:00)
 
 * **Abstract**: The spectral Lie operad is the Koszul dual operad to the cocommutative cooperad in the category of spectra. A spectral Lie algebra is an algebra over the spectral Lie operad. M. Behrens and J. Kjaer constructed so-called Dyer-Lashof-Lie power operations acting on the mod-p homology groups of a spectral Lie algebra. However, they computed relations between these operations only for p=2. In my talk, I will explain how to compute the desired relations for any prime by using functor calculus in the category of simplicial restricted Lie algebras. The latter category might be thought of as an algebraic approximation of the category of spaces, and so, algebraic calculations may also be helpful in understanding of the topological Goodwillie spectral sequence. 
 
-## <ins>Wednesday 10 April, 2024</ins>
+## <ins>Wednesday 28 February, 2024</ins>  
 
-**Time and Location**: Vrije Universiteit Amsterdam, NU Building 9A46 (Maryam Mirzakhani seminar room), 13:00-17:00
-
-**Speakers**:
-
-Thomas Rot - Vrije Universiteit Amsterdam (13:00-14:00)
-
-* **Title**: Nonlinear proper Fredholm mappings and the stable homotopy groups of spheres
-
-* **Abstract**: Nonlinear elliptic PDE problems can be described as zero finding problems of non-linear proper Fredholm mappings $f:H\rightarrow H$, where $H$ is an infinite dimensional Hilbert space. In this talk I will classify these mappings up to homotopy in terms of a non-trivial quotient of the stable homotopy groups of spheres. This is joint work with Lauran Toussaint.
-
-
-
-
-Julia Semikina - Laboratoire Painlévé, University of Lille (14:30-15:30)
-
-* **Title**: Cut-and-paste K-theory of manifolds and cobordisms
-
-* **Abstract**:  The generalized Hilbert’s third problem asks about the invariants preserved under the scissors congruence operation: given a polytope $P$ in $\mathbb{R}^n$, one can cut $P$ into a finite number of smaller polytopes and reassemble these to form $Q$. Kreck, Neumann and Ossa introduced and studied an analogous notion of cut and paste relation for manifolds called the SK-equivalence ("schneiden und kleben" is German for "cut and paste"). In this talk I will explain the construction that will allow us to speak about the "K-theory of manifolds" spectrum. The zeroth homotopy group of the constructed spectrum recovers the classical groups $\mathrm{SK}_n$. I will show how to relate the spectrum to the algebraic $K$-theory of integers, and how this leads to the Euler characteristic and the Kervaire semicharacteristic when restricted to the lower homotopy groups. Further I will describe the connection of our spectrum with the cobordism category.
-
-
-
-Alice Hedenlund - Uppsala University (16:00-17:00)
-
-* **Title**: Twisted Floer Homotopy Types From Seiberg-Witten Floer Data
-
-* **Abstract**: In the 90s, Cohen- Jones, and Segal asked the question of whether various types of Floer homology theories could be upgraded to the homotopy level by constructing stable homotopy types encoding Floer data. They also sketched how one could construct these Floer homotopy types as (pro)spectra in the situation that the infinite-dimensional manifold involved is “trivially polarized”. It has since been realized that the correct home for Floer homotopy types, in the polarized situation, is twisted spectra. This is a generalization of parametrized spectra that one can roughly think of as sections of bundles of categories whose fibre is the category of spectra. The aim of this talk is to give an introduction of Floer homotopy theory and twisted spectra. I will also outline the construction of a circle equivariant twisted spectrum from Seiberg-Witten Floer data associated to a 3-manifold equipped with a complex spin structure. As there are many moving parts to this (Atiyah-Singer index theory, finite-dimensional approximation, Conley index theory etc.), I will try to keep the talk on a conceptual level that will hopefully be accessible to a large audience. This is joint work in progress with S. Behrens and T. Kragh.
-
-
-
-## <ins>Wednesday 15 May, 2024</ins>
-
-**Time and Location**: Utrecht University, Ruppert 114 13:00-17:00
+**Time and Location**: Radboud University Nijmegen, Huygensgebouw 14:00-18:00
 
 **Speakers**:
 
-Sven Van Nigtevecht (13:00-14:00)
+Jonas McCandless - Max Planck Institute of Mathematics Bonn (HG02.032 14:00-15:00)
 
-* **Title**: TBD
+* **Title**: Chromatic vanishing results for TR
 
-* **Abstract**: TBD
+* **Abstract**: Starting with the foundational work of Thomason, there has been an enormous amount of   progress in chromatically localized algebraic K-theory. In this talk, I’ll survey some of this progress and explain how one can leverage these techniques to study chromatically localized TR and TC. The crucial input is the close relationship between TR and Bloch’s spectrum of curves on algebraic K-theory as first observed by Hesselholt. Part of this is joint work with Liam Keenan.
 
-Tobias Barthel - Max Planck Institute of Mathematics Bonn (14:30-15:30)
+Markus Hausmann - Bonn University (HG00.539 15:30-16:30)
 
-* **Title**: TBD
+* **Title**: The universal property of bordism rings of manifolds with commuting involutions
 
-* **Abstract**: TBD
+* **Abstract**:     My talk concerns bordism rings of compact smooth manifolds equipped with a smooth action by a finite group. I will start by recalling classical results on the subject from the 60's and 70's, mostly due to Conner-Floyd, Boardman, Stong and Alexander. Afterwards I will discuss recent joint work with Stefan Schwede in which we prove an algebraic universal property for the collection of all bordism rings of manifolds with commuting involutions.
 
-Manuel Krannich - Karlsruhe Institute of Technology (16:00-17:00)
+Paul Arne Ostvaer - University of Milan (HG00.539 17:00-18:00)
 
-* **Title**: TBD
+* **Title**: Hermitian K-groups and Motives
 
-* **Abstract**: TBD
+* **Abstract**: Hermitian K-theory is closely related to the classical theory of quadratic forms. We will give an overview of recent calculations of higher Hermitian K-groups of fields and rings of integers in number fields through motivic homotopy theory. The answers involve arithmetic data, while the calculational methods are rooted in homotopy theory. Joint work with Haakon Kolderup, Jonas Kylling, and Oliver Roendigs.
+
 
 <div align="center"><font size= "7"><strong><u>Fall 2023 Schedule</u></strong></font></div>
 
