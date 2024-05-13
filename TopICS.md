@@ -17,11 +17,11 @@ The schedule for the earlier editions of the seminar can be found [here](https:/
 
 **Speakers**:
 
-Sven Van Nigtevecht (13:00-14:00)
+Sven van Nigtevecht (13:00-14:00)
 
-* **Title**: TBD
+* **Title**: Descent spectral sequences through synthetic spectra
 
-* **Abstract**: TBD
+* **Abstract**: Spectral sequences have proved to be the most fruitful way to understand homotopy groups of spectra, particularly the various flavours of Adams spectral sequences. Sometimes, one can identify an Adams spectral sequence for a spectrum X with a more 'ad hoc' spectral sequence constructed specifically for X, one which may a priori be easier to understand. This gives one greater control over the homotopy groups of X.In this talk, I will use synthetic spectra to give much more structured versions of such identifications. Moreover, in cases where such an identification fails, this synthetic approach still goes through. I will show how in certain cases, one can define a synthetic spectrum that captures such an 'ad hoc' spectral sequence, and obtain from it all the benefits one would have had if such an identification had been possible. The main example is a synthetic spectrum Smf of synthetic modular forms.This is joint work with Christian Carrick and Jack Davies.
 
 Tobias Barthel - Max Planck Institute of Mathematics Bonn (14:30-15:30)
 
@@ -31,9 +31,9 @@ Tobias Barthel - Max Planck Institute of Mathematics Bonn (14:30-15:30)
 
 Manuel Krannich - Karlsruhe Institute of Technology (16:00-17:00)
 
-* **Title**: TBD
+* **Title**: Pontryagin--Weiss classes
 
-* **Abstract**: TBD
+* **Abstract**: Pontryagin classes were originally considered as invariants of real vector bundles, but it was realised in the 60s that they can be defined more generally for Euclidean bundles, that is, fibre bundles whose fibres are homeomorphic to Euclidean space. This led to the question whether the well-known vanishing of large-degree Pontryagin classes for small-dimensional vector bundles continues to hold in the setting of Euclidean bundles. Surprisingly, Weiss proved a few years ago that this often fails, even for bundles over spheres. I will explain a strengthening of this result resulting from joint work with A. Kupers: For every k>0, there exists a 6-dimensional Euclidean fibre bundle over a sphere whose kth Pontryagin class is nontrivial.
 
 ## <ins>Wednesday 10 April, 2024</ins>
 
