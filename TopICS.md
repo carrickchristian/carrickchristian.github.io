@@ -25,9 +25,9 @@ Sven van Nigtevecht (13:00-14:00)
 
 Tobias Barthel - Max Planck Institute of Mathematics Bonn (14:30-15:30)
 
-* **Title**: TBD
+* **Title**: On some recent advances in K(n)-local stable homotopy theory.
 
-* **Abstract**: TBD
+* **Abstract**: After a brief introduction to chromatic homotopy theory, I will report on recent advances in our understanding of some K(n)-local invariants using ideas from p-adic geometry. Joint work, partly in progress, with Schlank, Stapleton, and Weinstein.
 
 Manuel Krannich - Karlsruhe Institute of Technology (16:00-17:00)
 
