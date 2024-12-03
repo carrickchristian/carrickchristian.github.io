@@ -5,7 +5,7 @@ title: TopICS
 
 TopICS is the **Top**ology **I**nter**c**ity **S**eminar joint between Utrecht University, Radboud University - Nijmegen, and Vrije Universiteit Amsterdam (VU).
 
-TopICS is now managed by [Guy Boyde]{https://guyboyde.wordpress.com/topics-schedule-2024-25/}.
+TopICS is now managed by [Guy Boyde](https://guyboyde.wordpress.com/topics-schedule-2024-25/).
 
 If you wish to receive seminar announcements and/or participate in the seminar please subscribe to the [mailing list](https://mailman.science.uu.nl/mailman/listinfo/topics-l).
 
