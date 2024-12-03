@@ -3,10 +3,11 @@ layout: page
 title: Teaching
 ---
 
-Teaching has always been and will remain an important part of my mathematics experience. I have included here various parts of my teaching experience, and my [CV](https://carrickchristian.github.io/CV.pdf) contains additional information. My teaching statement and teaching reviews are also available upon request. 
+Teaching has always been and will remain an important part of my mathematics experience. I have included here various parts of my teaching experience, and my [CV](https://carrickchristian.github.io/cv.pdf) contains additional information. My teaching statement and teaching reviews are also available upon request. 
 
 ## Courses
 
+* Master's seminar Utrecht (Topological K-theory). Spring 2024.
 * Math 33a UCLA (Linear Algebra). Spring 2021, Winter 2021.
 * Math 32b UCLA (Multivariable Calculus II). Summer 2020, Winter 2020, Summer 2019 with Enes Ozel, Spring 2018 with Michael Andrews.
 * Math 32a UCLA (Multivariable Calculus I). Winter 2018 with Yannis Angelopoulos.
