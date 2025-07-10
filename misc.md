@@ -5,9 +5,7 @@ title: Misc
 
 ## Plotting spectral sequences 
 
-I spend a lot of time computing spectral sequences, and the various software available to plot spectral sequences is indispensable. I use Bruner's [ext](https://lists.lehigh.edu/pipermail/algtop-l/2022q3/004498.html) software constantly to compute $Ext_{\mathcal{A}}$ and $Ext_{\mathcal{A}(2)}$ and plot the corresponding Adams charts. I use Hood Chatham's [spectral sequences](https://github.com/hoodmane/js_spectralsequences) package to display spectral sequences in Latex documents.
-
-In a different direction, my brother [Darius Carrick](https://www.dariuscarrick.dev/) and I are working on a React app [ssplot](https://ssplot.netlify.app) to plot bigraded rings from [Macaulay2](http://www2.macaulay2.com/Macaulay2/) output onto a grid using Google charts. This works pretty well if you are just trying to explore a spectral sequence page-by-page without plotting differentials, structure lines, etc., though we plan to add this functionality as well. It works especially well if you are working with trigraded SS's and you want to plot some bigraded plane. For instance, with slice SS's it is easier to describe the pages as $RO(G)$-graded rings, but you would like a plot of the SS in integer stems.
+My brother [Darius Carrick](https://www.dariuscarrick.dev/) and I are working on a React app [ssplot](https://ssplot.netlify.app) to plot bigraded rings from [Macaulay2](http://www2.macaulay2.com/Macaulay2/) output onto a grid using Google charts. This works pretty well if you are just trying to explore a spectral sequence page-by-page without plotting differentials, structure lines, etc., though we plan to add this functionality as well. It works especially well if you are working with trigraded SS's and you want to plot some bigraded plane. For instance, with slice SS's it is easier to describe the pages as $RO(G)$-graded rings, but you would like a plot of the SS in integer stems.
 
 ## Example: Adams spectral sequence for $ko$
 
