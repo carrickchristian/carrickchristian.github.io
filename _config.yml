@@ -6,6 +6,9 @@ plugins: [jekyll-paginate]
 # Permalinks
 permalink:        pretty
 
+body_attrs:
+  class:"theme-base-09"
+
 # Setup
 title:            Christian Carrick
 description:      
