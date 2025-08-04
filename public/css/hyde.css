@@ -172,7 +172,7 @@ a.sidebar-nav-item:focus {
  * Themes
  *
  * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
+41 * within blog posts. To use, add the class of your choosing to the `body`.
  */
 
 /* Base16 (http://chriskempson.github.io/base16/#default) */
@@ -188,11 +188,11 @@ a.sidebar-nav-item:focus {
 
 /* Orange */
 .theme-base-09 .sidebar {
-  background-color: #d28445;
+  background-color: #b3d5e6;
 }
 .theme-base-09 .content a,
 .theme-base-09 .related-posts li a:hover {
-  color: #d28445;
+  color: #b3d5e6;
 }
 
 /* Yellow */
