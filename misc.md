@@ -11,7 +11,7 @@ As an example, I like to use this to look at the Adams $E_2$ pages for the Raven
 
 $$Ext_{\mathcal{A}_*}(\mathbb{F}_2,H_*X(2))\cong Ext_{E(\xi_1)\otimes P(\xi_2,\ldots)}(\mathbb{F}_2,\mathbb{F}_2)$$
 
-(see Section 3 of my paper on chromatic defect) so we need to put in the Hopf algebra $Ext_{E(\xi_1)\otimes P(\xi_2,\ldots)$ and toggle "Use an Fp comodule" off to default to the trivial module $\mathbb{F}_2$ in degree $0$. We put in the generators and relations through a large range, and this looks as follows.
+(see Section 3 of my paper on chromatic defect) so we need to put in the Hopf algebra $E(\xi_1)\otimes P(\xi_2,\ldots)$ and toggle "Use an Fp comodule" off to default to the trivial module $\mathbb{F}_2$ in degree $0$. We put in the generators and relations through a large range, and this looks as follows.
 
 ![X(2)](/X(2).png "X(2)inputl")
 ![X(2)a](/X(2)a.png "X(2)inputal")
