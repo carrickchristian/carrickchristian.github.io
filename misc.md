@@ -3,6 +3,23 @@ layout: page
 title: Misc
 ---
 
+## Ext Resolvers
+
+Gijs Heuts and I recently supervised the bachelors theses of [Chris Vos](www.chrisvos.net/math) and Jacco Hijmans in which they produced a very flexible Ext resolver, which can be found [here](www.chrisvos.net/math). This can take in a Hopf algebra $A$ over a field $k$ given in terms of generators and relations generators and relations and a comodule (algebra) $M$ over $A$ and compute $Ext_{A}(k,M)$. They will likely also develop more functionality soon.
+
+As an example, I like to use this to look at the Adams $E_2$ pages for the Ravenel $X(n)$ spectra. To get the $E_2$ page for $X(2)$, follow this [link](https://www.chrisvos.net/comodules-web/) to the resolver webpage and click "Resolve View". There is a change of rings isomorphism
+
+$$Ext_{\mathcal{A}_*}(\mathbb{F}_2,H_*X(2))\cong Ext_{E(\xi_1)\otimes P(\xi_2,\ldots)}(\mathbb{F}_2,\mathbb{F}_2)$$
+
+(see Section 3 of my paper on chromatic defect) so we need to put in the Hopf algebra $Ext_{E(\xi_1)\otimes P(\xi_2,\ldots)$ and toggle "Use an Fp comodule" off to default to the trivial module $\mathbb{F}_2$ in degree $0$. We put in the generators and relations through a large range, and this looks as follows.
+
+![X(2)](/X(2).png "X(2)inputl")
+![X(2)a](/X(2)a.png "X(2)inputal")
+
+Setting the filtration index to 20 and the maximum stem to 60, we click "Resolve" and get the following picture. You can toggle which primitive structure lines to use by clicking on "Lines" to make the picture less busy, and for this I turned off all except $h_0,h_1,h_2$.
+
+![X(2)b](/X(2)b.png "X(2)chart")
+
 ## Plotting spectral sequences 
 
 My brother [Darius Carrick](https://www.dariuscarrick.dev/) and I are working on a React app [ssplot](https://ssplot.netlify.app) to plot bigraded rings from [Macaulay2](http://www2.macaulay2.com/Macaulay2/) output onto a grid using Google charts. This works pretty well if you are just trying to explore a spectral sequence page-by-page without plotting differentials, structure lines, etc., though we plan to add this functionality as well. It works especially well if you are working with trigraded SS's and you want to plot some bigraded plane. For instance, with slice SS's it is easier to describe the pages as $RO(G)$-graded rings, but you would like a plot of the SS in integer stems.
