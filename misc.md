@@ -5,7 +5,7 @@ title: Misc
 
 ## Ext Resolvers
 
-Gijs Heuts and I recently supervised the bachelors theses of [Chris Vos](www.chrisvos.net/math) and Jacco Hijmans in which they produced a very flexible Ext resolver, which can be found [here](www.chrisvos.net/math). This can take in a Hopf algebra $A$ over a field $k$ given in terms of generators and relations and a comodule (algebra) $M$ over $A$ and compute $Ext_{A}(k,M)$. They will likely also develop more functionality soon.
+Gijs Heuts and I recently supervised the bachelors theses of [Chris Vos](https://www.chrisvos.net/math) and Jacco Hijmans in which they produced a very flexible Ext resolver, which can be found [here](https://www.chrisvos.net/math). This can take in a Hopf algebra $A$ over a field $k$ given in terms of generators and relations and a comodule (algebra) $M$ over $A$ and compute $Ext_{A}(k,M)$. They will likely also develop more functionality soon.
 
 As an example, I like to use this to look at the Adams $E_2$ pages for the Ravenel $X(n)$ spectra. To get the $E_2$ page for $X(2)$, follow this [link](https://www.chrisvos.net/comodules-web/) to the resolver webpage and click "Resolve View". There is a change of rings isomorphism
 
