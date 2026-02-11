@@ -5,6 +5,8 @@ title: Notes
 
 I've collected here some expository notes of mine. 
 
+* [Filtered Techniques](https://carrickchristian.github.io/SmfTalk-7.pdf). These are slides from my talk on techniques in filtered and synthetic spectra as a part of a [lecture series](https://www.mpim-bonn.mpg.de/node/15121) at the Max Planck Institute.
+
 * [Homology of representation spheres](https://carrickchristian.github.io/HomologyRepSpheres.pdf). This note explains how to calculate the $E_2$-page of the slice spectral sequences appearing in Real-oriented homotopy theory, working out the case $G=C_4$ in detail.
 
 * [Stacks and Real-oriented homotopy theory](https://carrickchristian.github.io/main.pdf). This is my Ph.D. thesis. It contains various results that appear in my published papers or will appear in papers in preparation. At one point, I had notes on my webpage related to stacks and chromatic homotopy that some people found useful. I have removed these as they have all been subsumed by (and improved in) Chapter 2 of my thesis.
