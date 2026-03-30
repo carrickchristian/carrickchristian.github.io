@@ -7,6 +7,7 @@ Teaching has always been and will remain an important part of my mathematics exp
 
 ## Courses
 
+* Mini-course Bonn (Real-oriented homotopy theory and the theorems of Hill-Hopkins-Ravenel). Winter 2026. Recordings [here](https://www.youtube.com/playlist?list=PLMQB-RxVZvGtygaks_4Z6iyX9vC5hKKCe).
 * Master's seminar Utrecht (Topological K-theory). Spring 2024.
 * Math 33a UCLA (Linear Algebra). Spring 2021, Winter 2021.
 * Math 32b UCLA (Multivariable Calculus II). Summer 2020, Winter 2020, Summer 2019 with Enes Ozel, Spring 2018 with Michael Andrews.
