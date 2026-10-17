@@ -22,5 +22,4 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
-  - "Claude outputs"
   - README.md
