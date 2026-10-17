@@ -2,16 +2,15 @@
 layout: page
 title: Teaching
 nav_order: 2
-lede: Teaching has always been and will remain an important part of my mathematics experience. My teaching statement and teaching reviews are available upon request, and my <a href="/cv.pdf">CV</a> has more detail.
+lede: Teaching has always been and will remain an important part of my mathematics experience. My teaching statement and teaching reviews are available upon request, and my <a href="/cv.pdf" target="_blank" rel="noopener">CV</a> has more detail.
 ---
 
 <section class="feature feature-now">
   <p class="kicker">Currently teaching &middot; Winter 2026/27</p>
   <h3>Algebraic Topology I</h3>
-  <p>I am the instructor for <b>Algebraic Topology I (V4D1)</b> at the Universität Bonn this semester, co-taught with <a href="https://www.math.uni-bonn.de/people/hausmann/">Markus Hausmann</a>. I lecture the first half: the Serre spectral sequence and its applications, Serre classes, rational homotopy groups of spheres, and Steenrod squares.</p>
+  <p>I am the instructor for <b>Algebraic Topology I (V4D1)</b> at the Universität Bonn this semester, co-taught with <a href="https://www.math.uni-bonn.de/people/hausmann/">Markus Hausmann</a>. The topics are the Serre spectral sequence and its applications, Serre classes, rational homotopy groups of spheres, Steenrod squares, vector bundles, characteristic classes, and bordism.</p>
   <ul class="facts">
     <li><b>Lectures</b>Mon 14:15–16:00, Kleiner Hörsaal<br>Wed 08:15–10:00, Zeichensaal</li>
-    <li><b>My part</b>October to end of November</li>
     <li><b>Exams</b>2 February 2027<br>8 March 2027</li>
   </ul>
   <div class="actions">
@@ -41,7 +40,7 @@ lede: Teaching has always been and will remain an important part of my mathemati
 </details>
 
 <details class="fold">
-  <summary>UCLA <span class="fold-meta">2017–2021 · 7 courses</span></summary>
+  <summary>UCLA <span class="fold-meta">2017–2021 · 21 courses</span></summary>
   <div class="fold-body">
     <ul class="course-list">
       <li><span><b>Math 33a</b> Linear Algebra</span><span class="when">Spring 2021, Winter 2021</span></li>
@@ -65,21 +64,13 @@ lede: Teaching has always been and will remain an important part of my mathemati
   </div>
 </details>
 
-## Seminars organized
-
-I organized several participating seminars and ran Juvitop for a while at UCLA. Syllabi I still have are linked below.
-
-<ul class="course-list">
-  <li><span><b>Computations in Stable Motivic Homotopy</b>, UCLA participating seminar. <a href="/MotivicSeminarSyllabus.pdf">Syllabus</a></span><span class="when">Fall 2021</span></li>
-  <li><span><b>Higher Real $K$-theories and the Slice Spectral Sequence</b>, UCLA participating seminar. <a href="/EO_nSyllabus.pdf">Syllabus</a></span><span class="when">Fall 2020</span></li>
-  <li><span><b>Stacks in Chromatic Homotopy</b>, UCLA participating seminar. <a href="/StacksSyllabus.pdf">Syllabus</a></span><span class="when">Winter 2020</span></li>
-  <li><span><b>Structured Ring Spectra</b>, UCLA Juvitop</span><span class="when">Winter 2019</span></li>
-  <li><span><b>Computations in Chromatic Homotopy</b>, UCLA Juvitop</span><span class="when">Winter 2019</span></li>
-</ul>
-
 ## Mentoring
 
 <ul class="course-list">
+  <li><span><b>Master's thesis:</b> Daniel Arone, <i>Vanishing in slice spectral sequences and nilpotence for the Real Brown–Peterson spectrum</i></span><span class="when">Bonn, 2026</span></li>
+  <li><span><b>Master's thesis:</b> Ben Steffan, <i>Smith ideals in higher algebra</i></span><span class="when">Bonn, 2026</span></li>
+  <li><span><b>Master's thesis:</b> Luca Dal Forno, <i>Day convolution for equivariant ∞-operads</i></span><span class="when">Utrecht, Spring 2024</span></li>
+  <li><span><b>Orientation to Mathematical Research:</b> Abelian and derived categories; advised four master's students on a research project in homological algebra</span><span class="when">Utrecht, Winter 2024</span></li>
   <li><span><b>UCLA Directed Reading Program</b>: mentored undergraduates on computations in chromatic homotopy</span><span class="when">Winter, Spring 2021</span></li>
-  <li><span><b>Bachelor's theses</b> with Gijs Heuts: Chris Vos and Jacco Hijmans, a flexible Ext resolver. <a href="/misc/">More</a></span><span class="when">Utrecht</span></li>
+  <li><span><b>Bachelor's thesis</b> with Gijs Heuts: Chris Vos and Jacco Hijmans, on the Adams spectral sequence and Ext over the Steenrod algebra, with a flexible Ext resolver. <a href="/misc/">More</a></span><span class="when">Utrecht, Spring 2024</span></li>
 </ul>

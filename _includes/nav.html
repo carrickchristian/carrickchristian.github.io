@@ -18,7 +18,7 @@
           <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.nav_title | default: node.title }}</a>
         {% endif %}
       {% endfor %}
-      <a class="nav-item nav-cv" href="/cv.pdf">CV</a>
+      <a class="nav-item nav-cv" href="/cv.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </div>
 </header>

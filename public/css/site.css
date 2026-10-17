@@ -753,3 +753,27 @@ details.fold[open] > summary { color: var(--accent-2); }
 .feature-event .btn-primary { background: #1f2d27; color: #f1efe4; }
 .feature-event details.abstract > p { background: rgba(255, 255, 255, .3); }
 .section-head .filter button[aria-pressed="true"] span { color: inherit; }
+
+/* --- Page transitions (cross-document View Transitions) --------------- */
+
+@view-transition { navigation: auto; }
+
+.masthead { view-transition-name: masthead; }
+main.wrap { view-transition-name: page; }
+
+::view-transition-old(page) { animation: page-out .18s ease-in both; }
+::view-transition-new(page) { animation: page-in .32s cubic-bezier(.2, .7, .2, 1) both; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .2s; }
+
+@keyframes page-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes page-in { from { opacity: 0; transform: translateY(14px); } }
+
+/* Browsers without View Transitions get a gentle fade-in on load. */
+@supports not (view-transition-name: none) {
+  main.wrap { animation: page-in .35s cubic-bezier(.2, .7, .2, 1) both; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  main.wrap { animation: none; }
+}
