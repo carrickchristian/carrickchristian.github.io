@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jekyll",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": [
+        "-c",
+        "export BUNDLE_GEMFILE=/Users/christiancarrick/Desktop/carrickchristian.github.io/.claude/Gemfile.preview BUNDLE_PATH=/Users/christiancarrick/Desktop/carrickchristian.github.io/vendor/bundle LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 PATH=/opt/homebrew/opt/ruby/bin:$(/opt/homebrew/opt/ruby/bin/ruby -e 'print Gem.user_dir')/bin:$PATH && cd /Users/christiancarrick/Desktop/carrickchristian.github.io && bundle _2.3.26_ exec jekyll serve --port ${PORT:-4000}"
+      ],
+      "port": 4000
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+# Publications and preprints, newest first. Abstracts from arXiv.
+# journal: leave out (or blank) for preprints; they show as "Preprint".
+
+- title: "The Real Brown–Peterson homology of $\\Omega^\\rho S^{\\rho+1}$"
+  authors: "Christian Carrick, Bert Guillou, and Sarah Petersen"
+  year: 2025
+  arxiv: "2512.18019"
+  abstract: >-
+    We compute the $RO(C_2)$-graded real Brown–Peterson homology of the representation-loop space $\Omega^\rho S^{\rho + 1}$, where $\rho$ is the regular representation of the cyclic group of order two. This calculation gives a $C_2$-equivariant analogue of the classical computation of Brown–Peterson homology of the double loop space $\Omega^2 S^3$ due to Ravenel. Along the way, we develop comodule Nishida relations for $\rho$-loop spaces.
+
+- title: "Slice spectral sequences through synthetic spectra"
+  authors: "Christian Carrick"
+  year: 2025
+  arxiv: "2510.19501"
+  links:
+    - name: "talk"
+      url: "https://www.youtube.com/watch?v=IX8JL4czkZc"
+  abstract: >-
+    We define a $t$-structure on the category of filtered $G$-spectra such that for a Borel $G$-spectrum $X$ the slice filtration of $X$ is the connective cover of the homotopy fixed-point filtration of $X$. Using this, we show that the slice spectral sequence for the norm $N_{C_2}^GMU_{\mathbb{R}}$ of Real bordism theory refines canonically to a $\mathbb{E}_\infty$-algebra in $MU$-synthetic spectra, when $G$ is a cyclic $2$-group. Concretely, this gives a map of multiplicative spectral sequences from the classical Adams–Novikov spectral sequence of $\mathbb{S}$ to the slice spectral sequence for $N_{C_2}^GMU_{\mathbb{R}}$ that respects the higher $\mathbb{E}_\infty$ structure, such as Toda brackets and power operations. We give a conjecture on the existence of vanishing lines in the equivariant Adams–Novikov spectral sequence based at tom Dieck's homotopical complex bordism $MU_G$. Conditional on this conjecture, our $t$-structure implies that the slice filtration for $N_{C_2}^GMU_{\mathbb{R}}$ lifts further to an $\mathcal{O}$-algebra in $MU_G$-synthetic spectra, where $\mathcal{O}$ is the $\mathbb{N}_\infty$-operad with all norms from nontrivial subgroups of $G$.
+
+- title: "On higher real $K$-theories and finite spectra"
+  authors: "Christian Carrick and Mike Hill"
+  year: 2025
+  arxiv: "2507.07051"
+  abstract: >-
+    We study higher chromatic height analogues $eo_h$ of the connective real $K$-theory spectrum $ko$. We show that $eo_h$ is an fp spectrum of type $h$ in the sense of Mahowald–Rezk. We use these to study an Euler characteristic for fp spectra introduced by Ishan Levy, and give a partial answer to a question of Levy regarding the algebraic $K$-theory of the category of finite type $h$ spectra. As a corollary, we prove that if the generalized Moore spectrum $\mathbb{S}/(2^{i_0},v_1^{i_1},\ldots,v_h^{i_h})$ exists, then the $2$-adic valuation of $\prod i_j$ must exceed that of the height $h$.
+
+- title: "On periodic families in the stable stems of height two"
+  authors: "Christian Carrick and Jack Davies"
+  year: 2025
+  arxiv: "2506.20507"
+  links:
+    - name: "talk by Jack"
+      url: "https://www.youtube.com/watch?v=rd-1vme0804"
+  abstract: >-
+    We discover a host of infinite periodic families in the 2-primary stable homotopy groups of spheres. We also confirm the existence of many families predicted by Hopkins–Mahowald. These families appear in nineteen different congruence classes of degrees modulo 192, seven of them consist of simple 4-torsion elements, and another four of simple 8-torsion. They all vanish in the homotopy groups of the spectrum TMF of topological modular forms, but we show that they are detected in the fixed-points of TMF with respect to an Atkin–Lehner involution. As a consequence, we confirm the existence of exotic spheres in all dimensions congruent to 72, 144, and 168 modulo 192.
+
+- title: "The descent spectral sequence for topological modular forms"
+  authors: "Christian Carrick, Jack Davies, and Sven van Nigtevecht"
+  year: 2024
+  arxiv: "2412.01640"
+  links:
+    - name: "MPIM lecture series"
+      url: "https://www.mpim-bonn.mpg.de/node/15121"
+    - name: "talk by Sven"
+      url: "https://www.youtube.com/watch?v=TVNUUgQLpzA&t=771s"
+  abstract: >-
+    We prove the Gap Theorem for the spectrum of topological modular forms $\mathrm{Tmf}$. This removes a longstanding circularity in the literature, thereby confirming the computation of $\pi_\ast \mathrm{tmf}$ from over two decades ago by Hopkins and Mahowald. Our approach is crucially a modern one, developing and refining many techniques in synthetic spectra.
+
+- title: "On $MU$-homology of connective models of higher real $K$-theories"
+  authors: "Christian Carrick and Mike Hill"
+  year: 2024
+  arxiv: "2411.02326"
+  journal: "Proceedings of the AMS"
+  abstract: >-
+    We use the slice filtration to study the $MU$-homology of the fixed points of connective models of Lubin–Tate theory studied by Hill–Hopkins–Ravenel and Beaudry–Hill–Shi–Zeng. We show that, unlike their periodic counterparts $EO_n$, the $MU$ homology of $BP^{((G))}\langle m\rangle^G$ usually fails to be even and torsion free. This can only happen when the height $n=m|G|/2$ is less than $3$, and in the edge case $n=2$, we show that this holds for $tmf_0(3)$ but not for $tmf_0(5)$, and we give a complete computation of the $MU_*MU$-comodule algebra $MU_*tmf_0(3)$.
+
+- title: "Nonvanishing of products in $v_2$-periodic families at the prime $3$"
+  authors: "Christian Carrick and Jack Davies"
+  year: 2024
+  arxiv: "2410.02564"
+  journal: "Advances in Mathematics"
+  abstract: >-
+    Many products amongst $v_2$-periodic families in the stable homotopy groups of spheres are shown not to vanish and some Toda brackets are shown not to contain zero. This is done by carefully studying the action of Adams operations on topological modular forms. A crucial ingredient is Pstragowski's category of synthetic spectra which affords us the necessary freedom to work with (modified) Adams–Novikov spectral sequences.
+
+- title: "Descent spectral sequences through synthetic spectra"
+  authors: "Christian Carrick, Jack Davies, and Sven van Nigtevecht"
+  year: 2024
+  arxiv: "2407.01507"
+  journal: "International Mathematics Research Notices"
+  abstract: >-
+    The synthetic analogue functor $\nu$ from spectra to synthetic spectra does not preserve all limits. In this paper, we give a necessary and sufficient criterion for $\nu$ to preserve the global sections of a derived stack. Even when these conditions are not satisfied, our framework still yields synthetic spectra that implement the descent spectral sequence for the structure sheaf, thus placing descent spectral sequences on good footing in the $\infty$-category of synthetic spectra. As an example, we introduce a new $\mathrm{MU}$-synthetic spectrum $\mathrm{Smf}$.
+
+- title: "Chromatic defect, Wood's theorem, and higher real $K$-theories"
+  authors: "Christian Carrick"
+  year: 2024
+  arxiv: "2402.17519"
+  journal: "Geometry & Topology"
+  links:
+    - name: "talk"
+      url: "https://www.youtube.com/watch?v=Km-ru0Y80Xw"
+  abstract: >-
+    Using Ravenel's Thom spectrum $X(n)$, we introduce the concept of chromatic defect, which measures how far a spectrum is from being complex-orientable. We compute the chromatic defect of various examples of interest, such as finite spectra, the Real Johnson–Wilson spectra $ER(n)$, fixed points of Morava $E$-theories (with respect to finite subgroups of the Morava stabilizer group), and the connective image of $J$ spectrum. Moreover, an obstruction theory is developed for determining chromatic defect. Having finite chromatic defect is closely related to the existence of analogues of the classical Wood equivalence. We show that such equivalences exist in a wide generality and use them to construct $\mathbb{Z}$-indexed Adams–Novikov towers.
+
+- title: "A synthetic approach to detecting $v_1$-periodic families"
+  authors: "Christian Carrick and Jack Davies"
+  year: 2024
+  arxiv: "2401.16508"
+  journal: "Transactions of the AMS"
+  abstract: >-
+    We provide a simple proof that the unit map from the sphere spectrum to the connective image-of-$J$ spectrum $\mathrm{j}$ is surjective on homotopy groups. This is achieved using a novel $t$-structure on the category of $E$-synthetic spectra and a specific construction of $\mathbf{F}_p$- and BP-synthetic lifts of $\mathrm{j}$. These synthetic lifts then easily produce modified Adams and Adams–Novikov spectral sequences for $\mathrm{j}$ which we use the prove the above detection statement, all without ever calculating $\mathbf{F}_p$- or BP-homology nor the associated Ext groups.
+
+- title: "The homological slice spectral sequence in motivic and Real bordism"
+  authors: "Christian Carrick, Mike Hill, and Doug Ravenel"
+  year: 2023
+  arxiv: "2304.01960"
+  journal: "Advances in Mathematics"
+  links:
+    - name: "talk"
+      url: "https://www.youtube.com/watch?v=MAiUwl7wEGk&t=310s"
+  abstract: >-
+    For a motivic spectrum $E\in \mathcal{SH}(k)$, let $\Gamma(E)$ denote the global sections spectrum, where $E$ is viewed as a sheaf of spectra on $\mathrm{Sm}_k$. Voevodsky's slice filtration determines a spectral sequence converging to the homotopy groups of $\Gamma(E)$. In this paper, we introduce a spectral sequence converging instead to the mod 2 homology of $\Gamma(E)$ and study the case $E=BPGL\langle m\rangle$ for $k=\mathbb R$ in detail. We show that this spectral sequence contains the $\mathcal{A}_*$-comodule algebra $(\mathcal{A}//\mathcal{A}(m))^*$ as permanent cycles, and we determine a family of differentials interpolating between $(\mathcal{A}//\mathcal{A}(0))^*$ and $(\mathcal{A}//\mathcal{A}(m))^*$. Using this, we compute the spectral sequence completely for $m\le 3$. In the height 2 case, the Betti realization of $BPGL\langle 2\rangle$ is the $C_2$-spectrum $BP_{\mathbb R}\langle 2\rangle$, a form of which was shown by Hill and Meier to be an equivariant model for $\mathrm{tmf}_1(3)$. Our spectral sequence therefore gives a computation of the comodule algebra $H_*\mathrm{tmf}_0(3)$. As a consequence, we deduce a new ($2$-local) Wood-type splitting \[\mathrm{tmf}\wedge X\simeq \mathrm{tmf}_0(3)\] of $\mathrm{tmf}$-modules predicted by Davis and Mahowald, for $X$ a certain 10-cell complex.
+
+- title: "Cofreeness in Real bordism theory and the Segal conjecture"
+  authors: "Christian Carrick"
+  year: 2021
+  arxiv: "2101.04891"
+  journal: "Proceedings of the AMS"
+  abstract: >-
+    We prove that the genuine $C_{2^n}$-spectrum $N_{C_{2}}^{C_{2^n}}MU_{\mathbb{R}}$ is cofree, for all $n$. Our proof is a formal argument using chromatic hypercubes and the Slice Theorem of Hill, Hopkins, and Ravenel. We show that this gives a new proof of the Segal conjecture for $C_2$, independent of Lin's theorem.
+
+- title: "Smashing localizations in equivariant stable homotopy"
+  authors: "Christian Carrick"
+  year: 2019
+  arxiv: "1909.08771"
+  journal: "Journal of Homotopy and Related Structures"
+  abstract: >-
+    We study how smashing Bousfield localizations behave under various equivariant functors. We show that the analogs of the smash product and chromatic convergence theorems for the Real Johnson-Wilson theories $E_{\mathbb{R}}(n)$ hold only after Borel completion. We establish analogous results for the $C_{2^n}$-equivariant Johnson-Wilson theories constructed by Beaudry, Hill, Shi, and Zeng. We show that induced localizations upgrade the available norms for an $N_\infty$-algebra, and we determine which new norms appear. Finally, we explore generalizations of our results on smashing localizations in the context of a quasi-Galois extension of $E_\infty$-rings.

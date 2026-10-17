@@ -1,0 +1,72 @@
+---
+layout: page
+title: Seminars & Conferences
+nav_title: Seminars & Conferences
+nav_order: 3
+lede: Workshops and seminars I organize or have organized.
+---
+
+<ul class="toc">
+  <li><a class="pill" href="#ss2027">SS2027: Synthetic Spectra, Wuppertal</a></li>
+  <li><a class="pill" href="#topics">TopICS, 2023–24</a></li>
+</ul>
+
+<h2 id="conferences">Conferences</h2>
+
+<section class="feature feature-event" id="ss2027">
+  <p class="kicker">Organizer &middot; Upcoming</p>
+  <h3>SS2027: Synthetic Spectra</h3>
+  <p>A five-day learning workshop on synthetic spectra at the University of Wuppertal, organized together with Sven van Nigtevecht and Fei Ren. It is aimed mainly at PhD students and postdocs.</p>
+  <ul class="facts">
+    <li><b>When</b>15–19 March 2027</li>
+    <li><b>Where</b>University of Wuppertal, Campus Grifflenberg</li>
+    <li><b>Lecture series</b>Dan Isaksen<br>Irakli Patchkoria</li>
+    <li><b>Deadlines</b>Speakers: 1 November 2026<br>Audience: 1 March 2027</li>
+  </ul>
+  <details class="abstract">
+    <summary>Programme</summary>
+    <p>Monday is reserved for participant background talks. Dan Isaksen and Irakli Patchkoria each give a series of three lectures. Two further series are given by participants: one on Lin–Wang–Xu's solution of the last Kervaire invariant problem, and one on Burklund's multiplicative structures on Moore spectra. Supported by GRK 2240 and the Wuppertal topology group.</p>
+  </details>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://sites.google.com/view/workshop-ss2027/">Official workshop page</a>
+    <a class="btn" href="https://forms.gle/AwLQq38qtyyRuFc67">Register</a>
+  </div>
+</section>
+
+<h2 id="topics">TopICS</h2>
+
+<p>TopICS is the <b>Top</b>ology <b>I</b>nter<b>c</b>ity <b>S</b>eminar, run jointly by Utrecht University, Radboud University Nijmegen and Vrije Universiteit Amsterdam. I organized it during 2023–24; the schedules from that period are below.</p>
+
+<ul class="toc">
+  <li><a class="pill" href="https://guyboyde.wordpress.com/topics-schedule-2024-25/">Current schedule (Guy Boyde)</a></li>
+  <li><a class="pill" href="https://mailman.science.uu.nl/mailman/listinfo/topics-l">Mailing list</a></li>
+  <li><a class="pill" href="https://www.math.ru.nl/~sagave/past-topics.html">Earlier editions</a></li>
+</ul>
+
+{% for sem in site.data.topics %}
+<details class="fold"{% if forloop.first %} open{% endif %}>
+  <summary>{{ sem.name }} <span class="fold-meta">{{ sem.days.size }} meetings</span></summary>
+  <div class="fold-body">
+    {% for day in sem.days %}
+    <details class="fold">
+      <summary>{{ day.date | split: ", " | first }}<span class="fold-meta">{% assign n = day.talks.size %}{{ n }} talk{% if n != 1 %}s{% endif %}</span></summary>
+      <div class="fold-body">
+        <p class="where">{{ day.where }}</p>
+        {% for t in day.talks %}
+        <div class="talk">
+          <p class="talk-title">{{ t.title }}</p>
+          <p class="talk-speaker">{{ t.speaker }}{% if t.affil %}, {{ t.affil }}{% endif %}{% if t.time %} &middot; {{ t.time }}{% endif %}{% if t.room %} ({{ t.room }}){% endif %}</p>
+          {% if t.abstract != "" %}
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>{{ t.abstract }}</p>
+          </details>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</details>
+{% endfor %}

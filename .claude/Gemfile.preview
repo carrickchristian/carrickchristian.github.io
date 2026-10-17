@@ -1,0 +1,7 @@
+# Local preview only: the site's Gemfile plus stdlib gems that Ruby 3.4+/4.0 no longer bundles.
+eval_gemfile File.expand_path("../Gemfile", __dir__)
+gem "logger"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "webrick"

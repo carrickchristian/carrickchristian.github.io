@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
   {% include head.html %}
 
-  <body class="theme-base-09">
+  <body class="{{ page.body_class }}">
 
-    {% include sidebar.html %}
+    {% include nav.html %}
 
-    <div class="content container">
+    <main class="wrap">
       {{ content }}
-    </div>
+    </main>
 
+    <footer class="site-foot">
+      <div class="wrap">
+        <span>&copy; {{ site.time | date: '%Y' }} Christian Carrick</span>
+        <span class="foot-sep" aria-hidden="true"></span>
+        <a href="mailto:carrick@math.uni-bonn.de">carrick@math.uni-bonn.de</a>
+      </div>
+    </footer>
+
+    {% include mathjax.html %}
   </body>
 </html>

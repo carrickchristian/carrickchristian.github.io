@@ -1,107 +1,73 @@
 ---
 layout: default
 title: Home
+body_class: home
 ---
 
-<img src="Pic3.JPG" width="35%" class="pic"
-    alt="Christian Carrick">
-<h2 id="about">About</h2>
+<section class="hero">
+  <div class="hero-chart">{% include ss-hero.svg %}</div>
+  <div class="hero-portrait">
+    <img src="/Pic3.jpg" alt="Christian Carrick">
+  </div>
 
-<p>I am a National Science Foundation (NSF) Postdoctoral Fellow at Universität Bonn, working with <a href="https://www.math.uni-bonn.de/people/hausmann/">Markus Hausmann</a>. Previously, I was a postdoc at Universiteit Utrecht with <a href="https://webspace.science.uu.nl/~meier007/">Lennart Meier</a> and a graduate student at UCLA, where my advisor was <a href="https://mikehill.math.umn.edu">Mike Hill</a>. My CV is <a href="https://carrickchristian.github.io/cv.pdf">here</a>.</p>
+  <div class="hero-text">
+    <p class="kicker">NSF Postdoctoral Fellow &middot; Universität Bonn</p>
+    <h1 class="hero-title">Christian Carrick</h1>
+    <p>I am a National Science Foundation (NSF) Postdoctoral Fellow at Universität Bonn, working with <a href="https://www.math.uni-bonn.de/people/hausmann/">Markus Hausmann</a>. Previously, I was a postdoc at Universiteit Utrecht with <a href="https://webspace.science.uu.nl/~meier007/">Lennart Meier</a> and a graduate student at UCLA, where my advisor was <a href="https://mikehill.math.umn.edu">Mike Hill</a>.</p>
+    <p>My research is in equivariant, chromatic, synthetic, and motivic homotopy. I am particularly interested in (connective) higher real $K$-theories and fp spectra, as well as the various computations related to these theories (e.g. slice, homotopy fixed points, Adams, Adams–Novikov, etc. spectral sequences).</p>
+    <p class="hero-actions">
+      <a class="btn btn-primary" href="/cv.pdf">Curriculum vitae</a>
+      <a class="btn" href="mailto:carrick@math.uni-bonn.de">carrick@math.uni-bonn.de</a>
+    </p>
+  </div>
+</section>
 
-<p>My research is in equivariant, chromatic, synthetic, and motivic homotopy. I am particularly interested in (connective) higher real $K$-theories and fp spectra, as well as the various computations related to these theories (e.g. slice, homotopy fixed points, Adams, Adams-Novikov, etc. spectral sequences).
+{% assign pubs = site.data.publications %}
+{% assign n_pub = pubs | where_exp: "p", "p.journal" | size %}
+{% assign n_pre = pubs.size | minus: n_pub %}
 
-<h2 id="publications">Publications and Preprints</h2>
+<section class="section" id="publications">
+  <div class="section-head">
+    <h2 class="section-title">Publications &amp; Preprints</h2>
+    <div class="filter" role="group" aria-label="Filter papers">
+      <button type="button" data-filter="all" aria-pressed="true">All <span>{{ pubs.size }}</span></button>
+      <button type="button" data-filter="published" aria-pressed="false">Published <span>{{ n_pub }}</span></button>
+      <button type="button" data-filter="preprint" aria-pressed="false">Preprints <span>{{ n_pre }}</span></button>
+    </div>
+  </div>
 
- <table>
-  <tr>
-    <th>Title</th>
-    <th>Author(s)</th>
-    <th>Link</th>
-    <th>Journal</th>
-  </tr>
-   <tr>
-    <td><b>The Real Brown--Peterson homology of $\Omega^\rho S^{\rho+1}$</b></td>
-    <td>Christian Carrick, Bert Guillou, and Sarah Petersen</td>
-    <td><a href="https://arxiv.org/abs/2512.18019">arxiv</a></td>
-    <td>Submitted</td>
-  </tr>
-    <tr>
-    <td><b>Slice spectral sequences through synthetic spectra</b></td>
-    <td>Christian Carrick</td>
-    <td><a href="https://arxiv.org/abs/2510.19501">arxiv</a>, <a href="https://www.youtube.com/watch?v=IX8JL4czkZc">talk</a></td>
-    <td>Submitted</td>
-  </tr>
-  <tr>
-    <td><b> On higher real K-theories and finite spectra</b></td>
-    <td>Christian Carrick and Mike Hill</td>
-    <td><a href="https://arxiv.org/abs/2507.07051">arxiv</a></td>
-    <td>Submitted</td>
-  </tr>
-    <tr>
-    <td><b> On periodic families in the stable stems of height two</b></td>
-    <td>Christian Carrick and Jack Davies</td>
-    <td><a href="https://arxiv.org/abs/2506.20507">arxiv</a>, <a href="https://www.youtube.com/watch?v=rd-1vme0804">talk by Jack</a></td>
-    <td>Submitted</td>
-  </tr>
-    <tr>
-    <td><b> The descent spectral sequence for topological modular forms</b></td>
-    <td>Christian Carrick, Jack Davies, and Sven van Nigtevecht</td>
-    <td> <a href="https://arxiv.org/abs/2412.01640">arxiv</a>, <a href="https://www.mpim-bonn.mpg.de/node/15121">MPIM Lecture Series</a>, <a href="https://www.youtube.com/watch?v=TVNUUgQLpzA&t=771s">talk by Sven</a></td>
-    <td>Submitted</td>
-  </tr>  
-  <tr>
-    <td><b> On MU homology of connective models of higher real K-theories</b></td>
-    <td>Christian Carrick and Mike Hill</td>
-    <td><a href="https://arxiv.org/abs/2411.02326">arxiv</a</td>
-    <td>Proceedings of the AMS</td>
-  </tr>
-  <tr>
-    <td><b> Nonvanishing of products in v_2 periodic families at the prime 3</b></td>
-    <td>Christian Carrick and Jack Davies</td>
-    <td><a href="https://arxiv.org/abs/2410.02564">arxiv</a></td>
-    <td>Submitted</td>
-  </tr>
-  <tr>
-    <td><b> Descent spectral sequences through synthetic spectra</b></td>
-    <td>Christian Carrick, Jack Davies, and Sven van Nigtevecht</td>
-    <td><a href="https://arxiv.org/abs/2407.01507">arxiv</a></td>
-    <td>International Mathematics Research Notices (IMRN)</td>
-  </tr>
-  <tr>
-    <td><b> Chromatic defect, Wood's theorem, and higher real K-theories</b></td>
-    <td>Christian Carrick</td>
-    <td><a href="https://arxiv.org/abs/2402.17519">arxiv</a>, <a href="https://www.youtube.com/watch?v=Km-ru0Y80Xw">talk</a></td>
-    <td>Geometry and Topology</td>
-  </tr>
-  <tr>
-    <td><b> A synthetic approach to detecting v_1 periodic families</b></td>
-    <td>Christian Carrick and Jack Davies</td>
-    <td><a href="https://arxiv.org/abs/2401.16508">arxiv</a></td>
-    <td>Transactions of the AMS</td>
-  </tr>
-  <tr>
-    <td><b> The homological slice spectral sequence in motivic and Real bordism</b></td>
-    <td>Christian Carrick, Mike Hill, and Doug Ravenel</td>
-    <td><a href="https://arxiv.org/abs/2304.01960">arxiv</a>, <a href="https://www.youtube.com/watch?v=MAiUwl7wEGk&t=310s">talk</a></td>
-    <td>Advances in Mathematics</td>
-  </tr>
-  <tr>
-    <td><b> Cofreeness in Real bordism theory and the Segal conjecture</b></td>
-    <td>Christian Carrick</td>
-    <td><a href="https://arxiv.org/abs/2101.04891">arxiv</a></td>
-    <td>Proceedings of the AMS</td>
-  </tr>
-  <tr>
-    <td><b> Smashing localizations in equivariant stable homotopy</b></td>
-    <td>Christian Carrick</td>
-    <td><a href="https://arxiv.org/abs/1909.08771">arxiv</a></td>
-    <td>Journal of Homotopy and Related Structures (JHRS)</td>
-  </tr>
-</table>
+  <ol class="pubs">
+    {% for p in pubs %}
+    <li class="pub" data-status="{% if p.journal %}published{% else %}preprint{% endif %}">
+      <div class="pub-year">{{ p.year }}</div>
+      <div class="pub-body">
+        <h3 class="pub-title">{{ p.title }}</h3>
+        <p class="pub-authors">{{ p.authors }}</p>
+        <p class="pub-meta">
+          {% if p.journal %}<span class="badge badge-journal">{{ p.journal }}</span>{% else %}<span class="badge badge-preprint">Preprint</span>{% endif %}
+          <a class="pill" href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>
+          {% for l in p.links %}<a class="pill" href="{{ l.url }}">{{ l.name }}</a>{% endfor %}
+        </p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>{{ p.abstract }}</p>
+        </details>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
 
-<h2 id="contact">Contact</h2>
-
-<ul>
-  <li>Email: carrick@math.uni-bonn.de</li>
-</ul>
+<script>
+  (function () {
+    var btns = document.querySelectorAll(".filter button");
+    var items = document.querySelectorAll(".pub");
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var f = b.dataset.filter;
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        items.forEach(function (it) { it.hidden = f !== "all" && it.dataset.status !== f; });
+      });
+    });
+  })();
+</script>

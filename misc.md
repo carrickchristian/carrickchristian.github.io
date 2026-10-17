@@ -1,7 +1,16 @@
 ---
 layout: page
 title: Misc
+nav_order: 5
+lede: Computational tools for spectral sequences.
 ---
+
+<ul class="toc">
+  <li><a class="pill" href="#ext-resolvers">Ext resolvers</a></li>
+  <li><a class="pill" href="#plotting-spectral-sequences">Plotting spectral sequences</a></li>
+  <li><a class="pill" href="#example-adams-spectral-sequence-for-ko">Example: ASS for ko</a></li>
+  <li><a class="pill" href="#example-slicek_mathbbr">Example: slice SS for k&#8477;</a></li>
+</ul>
 
 ## Ext Resolvers
 
@@ -114,11 +123,3 @@ Here's how this all looks in the Macaulay2 terminal:
 ![terminal2](/terminal2.png "M2Terminal2")
 
 We see the expected 8-fold Bott periodicity. By clicking the bars at the top, we can toggle the pages or display them simultaneously.
-
-
-
-
-
-
-
-

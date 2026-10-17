@@ -6,23 +6,21 @@ plugins: [jekyll-paginate]
 # Permalinks
 permalink:        pretty
 
-body_attrs:
-  class:"theme-base-08"
-
 # Setup
 title:            Christian Carrick
-description:      
-url:              carrickchristian.github.io
-baseurl:          /
+description:      Homotopy theory, Universität Bonn
+url:              https://carrickchristian.github.io
+baseurl:          ""
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           Christian Carrick
+  email:          carrick@math.uni-bonn.de
 
 paginate:         5
 
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - "Claude outputs"
+  - README.md
