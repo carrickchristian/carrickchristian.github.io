@@ -53,7 +53,7 @@
   authors: "Christian Carrick and Mike Hill"
   year: 2024
   arxiv: "2411.02326"
-  journal: "Proceedings of the AMS, Series B"
+  journal: "Proceedings of the AMS"
   doi: "10.1090/bproc/265"
   abstract: >-
     We use the slice filtration to study the $MU$-homology of the fixed points of connective models of Lubin–Tate theory studied by Hill–Hopkins–Ravenel and Beaudry–Hill–Shi–Zeng. We show that, unlike their periodic counterparts $EO_n$, the $MU$ homology of $BP^{((G))}\langle m\rangle^G$ usually fails to be even and torsion free. This can only happen when the height $n=m|G|/2$ is less than $3$, and in the edge case $n=2$, we show that this holds for $tmf_0(3)$ but not for $tmf_0(5)$, and we give a complete computation of the $MU_*MU$-comodule algebra $MU_*tmf_0(3)$.
