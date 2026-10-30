@@ -22,6 +22,7 @@
   authors: "Christian Carrick and Mike Hill"
   year: 2025
   arxiv: "2507.07051"
+  journal: "Compositio Mathematica (to appear)"
   abstract: >-
     We study higher chromatic height analogues $eo_h$ of the connective real $K$-theory spectrum $ko$. We show that $eo_h$ is an fp spectrum of type $h$ in the sense of Mahowald–Rezk. We use these to study an Euler characteristic for fp spectra introduced by Ishan Levy, and give a partial answer to a question of Levy regarding the algebraic $K$-theory of the category of finite type $h$ spectra. As a corollary, we prove that if the generalized Moore spectrum $\mathbb{S}/(2^{i_0},v_1^{i_1},\ldots,v_h^{i_h})$ exists, then the $2$-adic valuation of $\prod i_j$ must exceed that of the height $h$.
 
