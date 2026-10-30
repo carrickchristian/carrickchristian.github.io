@@ -1,5 +1,6 @@
 # Publications and preprints, newest first. Abstracts from arXiv.
 # journal: leave out (or blank) for preprints; they show as "Preprint".
+# doi: publisher DOI; makes the journal badge a link.
 
 - title: "The Real Brown–Peterson homology of $\\Omega^\\rho S^{\\rho+1}$"
   authors: "Christian Carrick, Bert Guillou, and Sarah Petersen"
@@ -52,7 +53,8 @@
   authors: "Christian Carrick and Mike Hill"
   year: 2024
   arxiv: "2411.02326"
-  journal: "Proceedings of the AMS"
+  journal: "Proceedings of the AMS, Series B"
+  doi: "10.1090/bproc/265"
   abstract: >-
     We use the slice filtration to study the $MU$-homology of the fixed points of connective models of Lubin–Tate theory studied by Hill–Hopkins–Ravenel and Beaudry–Hill–Shi–Zeng. We show that, unlike their periodic counterparts $EO_n$, the $MU$ homology of $BP^{((G))}\langle m\rangle^G$ usually fails to be even and torsion free. This can only happen when the height $n=m|G|/2$ is less than $3$, and in the edge case $n=2$, we show that this holds for $tmf_0(3)$ but not for $tmf_0(5)$, and we give a complete computation of the $MU_*MU$-comodule algebra $MU_*tmf_0(3)$.
 
@@ -61,6 +63,7 @@
   year: 2024
   arxiv: "2410.02564"
   journal: "Advances in Mathematics"
+  doi: "10.1016/j.aim.2026.111183"
   abstract: >-
     Many products amongst $v_2$-periodic families in the stable homotopy groups of spheres are shown not to vanish and some Toda brackets are shown not to contain zero. This is done by carefully studying the action of Adams operations on topological modular forms. A crucial ingredient is Pstragowski's category of synthetic spectra which affords us the necessary freedom to work with (modified) Adams–Novikov spectral sequences.
 
@@ -69,6 +72,7 @@
   year: 2024
   arxiv: "2407.01507"
   journal: "International Mathematics Research Notices"
+  doi: "10.1093/imrn/rnaf216"
   abstract: >-
     The synthetic analogue functor $\nu$ from spectra to synthetic spectra does not preserve all limits. In this paper, we give a necessary and sufficient criterion for $\nu$ to preserve the global sections of a derived stack. Even when these conditions are not satisfied, our framework still yields synthetic spectra that implement the descent spectral sequence for the structure sheaf, thus placing descent spectral sequences on good footing in the $\infty$-category of synthetic spectra. As an example, we introduce a new $\mathrm{MU}$-synthetic spectrum $\mathrm{Smf}$.
 
@@ -77,6 +81,7 @@
   year: 2024
   arxiv: "2402.17519"
   journal: "Geometry & Topology"
+  doi: "10.2140/gt.2026.30.1051"
   links:
     - name: "talk"
       url: "https://www.youtube.com/watch?v=Km-ru0Y80Xw"
@@ -88,6 +93,7 @@
   year: 2024
   arxiv: "2401.16508"
   journal: "Transactions of the AMS"
+  doi: "10.1090/tran/9526"
   abstract: >-
     We provide a simple proof that the unit map from the sphere spectrum to the connective image-of-$J$ spectrum $\mathrm{j}$ is surjective on homotopy groups. This is achieved using a novel $t$-structure on the category of $E$-synthetic spectra and a specific construction of $\mathbf{F}_p$- and BP-synthetic lifts of $\mathrm{j}$. These synthetic lifts then easily produce modified Adams and Adams–Novikov spectral sequences for $\mathrm{j}$ which we use the prove the above detection statement, all without ever calculating $\mathbf{F}_p$- or BP-homology nor the associated Ext groups.
 
@@ -96,6 +102,7 @@
   year: 2023
   arxiv: "2304.01960"
   journal: "Advances in Mathematics"
+  doi: "10.1016/j.aim.2024.109955"
   links:
     - name: "talk"
       url: "https://www.youtube.com/watch?v=MAiUwl7wEGk&t=310s"
@@ -107,6 +114,7 @@
   year: 2021
   arxiv: "2101.04891"
   journal: "Proceedings of the AMS"
+  doi: "10.1090/proc/15702"
   abstract: >-
     We prove that the genuine $C_{2^n}$-spectrum $N_{C_{2}}^{C_{2^n}}MU_{\mathbb{R}}$ is cofree, for all $n$. Our proof is a formal argument using chromatic hypercubes and the Slice Theorem of Hill, Hopkins, and Ravenel. We show that this gives a new proof of the Segal conjecture for $C_2$, independent of Lin's theorem.
 
@@ -115,5 +123,6 @@
   year: 2019
   arxiv: "1909.08771"
   journal: "Journal of Homotopy and Related Structures"
+  doi: "10.1007/s40062-022-00310-1"
   abstract: >-
     We study how smashing Bousfield localizations behave under various equivariant functors. We show that the analogs of the smash product and chromatic convergence theorems for the Real Johnson-Wilson theories $E_{\mathbb{R}}(n)$ hold only after Borel completion. We establish analogous results for the $C_{2^n}$-equivariant Johnson-Wilson theories constructed by Beaudry, Hill, Shi, and Zeng. We show that induced localizations upgrade the available norms for an $N_\infty$-algebra, and we determine which new norms appear. Finally, we explore generalizations of our results on smashing localizations in the context of a quasi-Galois extension of $E_\infty$-rings.

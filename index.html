@@ -44,7 +44,7 @@ body_class: home
         <h3 class="pub-title">{{ p.title }}</h3>
         <p class="pub-authors">{{ p.authors }}</p>
         <p class="pub-meta">
-          {% if p.journal %}<span class="badge badge-journal">{{ p.journal }}</span>{% else %}<span class="badge badge-preprint">Preprint</span>{% endif %}
+          {% if p.journal %}{% if p.doi %}<a class="badge badge-journal" href="https://doi.org/{{ p.doi }}" target="_blank" rel="noopener">{{ p.journal }}</a>{% else %}<span class="badge badge-journal">{{ p.journal }}</span>{% endif %}{% else %}<span class="badge badge-preprint">Preprint</span>{% endif %}
           <a class="pill" href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>
           {% for l in p.links %}<a class="pill" href="{{ l.url }}">{{ l.name }}</a>{% endfor %}
         </p>

@@ -777,3 +777,8 @@ main.wrap { view-transition-name: page; }
   @view-transition { navigation: none; }
   main.wrap { animation: none; }
 }
+
+/* Journal badges that link to the published version. */
+a.badge { text-decoration: none; transition: background-color .15s ease, color .15s ease; }
+a.badge-journal::after { content: " ↗"; font-weight: 400; }
+a.badge-journal:hover { background: var(--sleeve); color: var(--sleeve-ink); }
