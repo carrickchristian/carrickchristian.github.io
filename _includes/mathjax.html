@@ -5,9 +5,33 @@
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true,
       processEnvironments: true,
-      tags: 'ams'
+      tags: 'ams',
+      macros: {
+        Z: '\\mathbb{Z}', F: '\\mathbb{F}', Q: '\\mathbb{Q}', C: '\\mathbb{C}', R: '\\mathbb{R}',
+        CP: '\\mathbb{C}P', RP: '\\mathbb{R}P', HP: '\\mathbb{H}P', Zm: '\\mathbb{Z}^{-}',
+        lift: ['\\widetilde{#1}', 1], Sq: '\\mathrm{Sq}',
+        Hom: '\\operatorname{Hom}', Ext: '\\operatorname{Ext}', Tor: '\\operatorname{Tor}', coker: '\\operatorname{coker}'
+      }
     },
-    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] },
+    startup: {
+      ready: function () {
+        MathJax.startup.defaultReady();
+        // Inline formulas cannot wrap; let any that are wider than their column scroll on their own.
+        var fit = function () {
+          document.querySelectorAll('mjx-container:not([display])').forEach(function (c) {
+            c.classList.remove('mjx-wide');
+            if (c.closest('.sseq-stage, .sseq-bar')) return;
+            var host = c.parentElement, w = host.clientWidth;
+            if (w && c.getBoundingClientRect().width > w) c.classList.add('mjx-wide');
+          });
+        };
+        window.mjxFit = fit;
+        MathJax.startup.promise.then(fit);
+        var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 150); });
+        document.addEventListener('toggle', function () { setTimeout(fit, 0); }, true);
+      }
+    }
   };
 </script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"></script>

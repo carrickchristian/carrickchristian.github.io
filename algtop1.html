@@ -1,0 +1,521 @@
+---
+layout: course
+title: Algebraic Topology I (Bonn, Winter 2026/27)
+permalink: /algtop1/
+---
+
+<p>A companion page for <b>Algebraic Topology I (V4D1)</b> at the Universität Bonn, winter semester 2026/27, which I teach together with <a href="https://www.math.uni-bonn.de/people/hausmann/">Markus Hausmann</a>. For more information, see eCampus and <a href="https://www.math.uni-bonn.de/people/hausmann/AlgTop1_2026">Markus's course page</a>. This page collects extra material: worked examples, extra exercises and corrections.</p>
+
+<ul>
+  <li><b>Lectures:</b> Mon 14:15–16:00 (Kleiner Hörsaal) and Wed 08:15–10:00 (Zeichensaal).</li>
+  <li><b>Exams:</b> 2 February 2027 and 8 March 2027.</li>
+</ul>
+
+<h2 id="serre">A catalogue of Serre spectral sequences</h2>
+
+<p class="cat-lede">Worked examples of the cohomological Serre spectral sequence $E_2^{p,q} = H^p\big(B; \underline{H^q(F;A)}\big) \Rightarrow H^{p+q}(E;A)$, organized by the kind of decision you have to make: which differentials are nonzero, how the local coefficients look, and how to rebuild $H^\ast(E)$ from its associated graded. Each chart is interactive: switch pages, hover a class to see its bidegree and total degree, and flip between paired fibrations that share a page but not an answer.</p>
+
+<div class="cat-tools">
+  <div class="filter" role="group" aria-label="Filter examples">
+    <button type="button" data-tag="all" aria-pressed="true">All</button>
+    <button type="button" data-tag="differentials" aria-pressed="false">Differentials</button>
+    <button type="button" data-tag="local" aria-pressed="false">Local coefficients</button>
+    <button type="button" data-tag="additive" aria-pressed="false">Additive extensions</button>
+    <button type="button" data-tag="multiplicative" aria-pressed="false">Multiplicative extensions</button>
+    <button type="button" data-tag="edge" aria-pressed="false">Edge homomorphisms</button>
+    <button type="button" data-tag="paired" aria-pressed="false">Same page, different answer</button>
+  </div>
+  <button type="button" class="cat-expand pill" aria-pressed="false">Expand all</button>
+</div>
+
+<!-- ===================================================== Background -->
+
+<details class="fold bg" id="bg-local">
+  <summary>Background: determining the local system <span class="fold-meta">transport, mapping tori, group extensions</span></summary>
+  <div class="fold-body">
+    <p>To write down $E_2$ one needs the local systems $b \mapsto H^q(F_b;A)$; for $B$ path-connected with base point $b_0$, this is the same as the action of $\pi_1(B,b_0)$ on $H^q(F_{b_0};A)$. Recall how the transport along a path $\gamma$ from $b_0$ to $b_1$ is defined: pull $f$ back to $E_\gamma = [0,1] \times_B E \to [0,1]$, and let $j_0 \colon F_{b_0} \to E_\gamma$ and $j_1 \colon F_{b_1} \to E_\gamma$ be the inclusions of the fibers over $0$ and $1$. Both are weak equivalences, and the transport is $(j_1)_\ast^{-1}(j_0)_\ast$ in homology and $j_1^\ast (j_0^\ast)^{-1}$ in cohomology.</p>
+
+    <p>In practice the action is computed by one of the following principles.</p>
+    <ol class="principles">
+      <li><b>Trivial cases.</b> If $B$ is simply connected, the action is trivial. For a product $B \times F \to B$ it is trivial for every $B$: here $E_\gamma = [0,1] \times F$, and $j_0, j_1$ are the inclusions of the two ends, which are homotopic.</li>
+      <li><b>Mapping tori:</b> <a href="#lem-mapping-torus">the mapping torus lemma</a> below.</li>
+      <li><b>Bundles with path-connected structure group act trivially:</b> <a href="#rem-structure-group">the structure group remark</a> below.</li>
+      <li><b>Group extensions act by conjugation:</b> <a href="#lem-extensions">the group extension lemma</a> below.</li>
+      <li><b>Degree $0$.</b> $H^0(F_b;A) = A^{\pi_0(F_b)}$, and the action on it is induced by the permutation action of $\pi_1(B,b_0)$ on $\pi_0(F_{b_0})$ by path lifting: a loop $\gamma$ moves the component of $e \in F_{b_0}$ to the component containing the endpoint of a lift of $\gamma$ starting at $e$. For a covering map this is the usual monodromy permutation (<a href="#ex-o2">the double cover vs. $O(2)$</a>).</li>
+      <li><b>Pullbacks.</b> If $f$ is the pullback of $f' \colon E' \to B'$ along $g \colon B \to B'$, its local systems are the pullbacks along $g$ of those of $f'$.</li>
+    </ol>
+
+    <div class="thm" id="lem-mapping-torus">
+      <p><span class="thm-head">Lemma (mapping tori).</span> Let $\varphi \colon F \to F$ be a homeomorphism, and let $T_\varphi = F \times [0,1]/(x,1) \sim (\varphi(x),0)$, a fiber bundle over $S^1 = [0,1]/(0 \sim 1)$. Identify the fiber over the base point with $F$ via $x \mapsto [x,0]$, and let $\gamma(t) = [t]$ be the standard generator of $\pi_1(S^1)$. Then the transport along $\gamma$ is $\varphi_\ast$ on $H_\ast(F;A)$ and $(\varphi^\ast)^{-1}$ on $H^\ast(F;A)$.</p>
+      <details class="proof">
+        <summary>Proof</summary>
+        <p>The pullback along $\gamma \colon [0,1] \to S^1$ is $E_\gamma = F \times [0,1]$ (before the identification). The inclusion of the fiber over $0$ is $j_0(x) = (x,0)$. The point $[y,0]$ of the fiber over $\gamma(1)$ is the image of $(\varphi^{-1}(y),1)$, so $j_1(y) = (\varphi^{-1}(y),1)$. In $F \times [0,1]$ the map $x \mapsto (x,0)$ is homotopic to $x \mapsto (x,1) = j_1(\varphi(x))$, so $j_0 \simeq j_1 \circ \varphi$. Hence $(j_1)_\ast^{-1}(j_0)_\ast = \varphi_\ast$ and $j_1^\ast(j_0^\ast)^{-1} = j_1^\ast(\varphi^\ast j_1^\ast)^{-1} = (\varphi^\ast)^{-1}$.</p>
+      </details>
+    </div>
+
+    <div class="thm" id="rem-structure-group">
+      <p><span class="thm-head">Remark (structure groups).</span> Let $f$ be a fiber bundle with fiber $F$ and structure group $G$, a topological group acting continuously on $F$. The pullback of $f$ to $[0,1]$ is a trivial $G$-bundle, and the two identifications of the end fibers with $F$ (through the $G$-atlas) differ by an element of $G$; so the transport along a loop is $(g_\gamma)_\ast$ for the action of some $g_\gamma \in G$. If $G$ is path-connected, $g_\gamma$ is connected to the identity, so $(g_\gamma)_\ast = \mathrm{id}$ and <i>the action is trivial</i>. This applies to principal bundles with path-connected structure group, and to oriented vector bundles and their sphere bundles (structure group $SO(n)$). If $G$ is discrete, as for the bundle $\widetilde B \times_{\pi_1 B} F \to B$ associated to an action of $\pi_1(B)$ on $F$, the element $g_\gamma$ is the class of $\gamma$ (or its inverse, depending on conventions) and the action is the given one. We only sketch this standard argument.</p>
+    </div>
+
+    <div class="thm" id="lem-extensions">
+      <p><span class="thm-head">Lemma (group extensions).</span> Let $1 \to N \to G \to Q \to 1$ be a short exact sequence of discrete groups. In the fibration $BN \to BG \to BQ$, the element $gN \in Q = \pi_1(BQ)$ acts on $H_\ast(BN)$ and $H^\ast(BN)$ through the automorphism $c_g \colon N \to N$, $n \mapsto g^{-1}ng$ (up to replacing $g$ by $g^{-1}$). Inner automorphisms of $N$ act trivially, so the action factors through $Q \to \mathrm{Out}(N)$; in particular it is trivial if $N$ is central, e.g. if $G$ is abelian.</p>
+      <details class="proof">
+        <summary>Sketch</summary>
+        <p>Use the models $BN = EG/N$ and $BG \simeq (EG/N) \times_Q EQ$, where $Q$ acts freely on $EG/N$ by $xN \cdot gN = xgN$ (well defined since $N$ is normal). Then $BG \to BQ$ is the bundle with fiber $EG/N$ associated to this action, with discrete structure group $Q$, so by <a href="#rem-structure-group">the remark above</a> the element $gN$ acts through $R_g \colon xN \mapsto xgN$. Now $R_g(xn) = R_g(x)c_g(n)$ on $EG$, so $R_g$ induces $Bc_g$ on $EG/N \simeq BN$. For $g = n_0 \in N$, the map $R_{n_0}$ is the identity of $EG/N$; so inner automorphisms of $N$ act trivially.</p>
+      </details>
+    </div>
+  </div>
+</details>
+
+<details class="fold bg" id="bg-inputs">
+  <summary>Background: standard inputs <span class="fold-meta">facts used in the examples</span></summary>
+  <div class="fold-body">
+    <p>Besides the spectral sequence itself, we use the following standard facts.</p>
+    <ol class="principles">
+      <li id="in-proj">$H^\ast(\CP^n;\Z) = \Z[x]/(x^{n+1})$ with $|x| = 2$, and $H^\ast(\RP^n;\F_2) = \F_2[x]/(x^{n+1})$ with $|x| = 1$ [Hatcher, §3.2].</li>
+      <li id="in-lens">$H^k(B\Z/m;\Z)$ is $\Z$ for $k = 0$, $\Z/m$ for $k > 0$ even, and $0$ for $k$ odd; $H^\ast(B\Z/2;\F_2) = \F_2[z]$ with $|z| = 1$. Here $B\Z/m$ is the infinite lens space [Hatcher, §2.2 and Example 3.41].</li>
+      <li id="in-hom">For a group $G$, $H^1(BG;\F_2) \cong \Hom(G,\F_2)$, and, if $G$ is finite, $H^2(BG;\Z) \cong \Hom(G,\Q/\Z)$, naturally in $G$ (Hurewicz and universal coefficients: $H_1(BG) = G^{\mathrm{ab}}$, $H_2(BG)$ is finite, and $\Ext(G^{\mathrm{ab}},\Z) \cong \Hom(G^{\mathrm{ab}},\Q/\Z)$).</li>
+      <li id="in-lhs">A short exact sequence of groups $1 \to N \to G \to Q \to 1$ gives a fibration $BN \to BG \to BQ$, up to homotopy, in which $\pi_1(BQ) = Q$ acts on $H^\ast(BN)$ through conjugation in $G$. Its Serre spectral sequence is the Lyndon–Hochschild–Serre spectral sequence. The maps $BG \to BQ$ and $BN \to BG$ are induced by the group homomorphisms, so the edge homomorphisms are inflation and restriction.</li>
+      <li id="in-circle">For a local system $M$ on $S^1$, given by an abelian group $M$ and the action of the generator $t \in \pi_1(S^1)$,
+        \[ H^0(S^1;M) = \ker(t-1) = M^t, \qquad H^1(S^1;M) = \coker(t-1) = M/(t-1)M, \]
+        and $H^k(S^1;M) = 0$ for $k \geq 2$. The first is the invariants. For the others, $C^\bullet(S^1;M)$ is quasi-isomorphic to $\Hom_{\Z[t^{\pm 1}]}\big(C^{\mathrm{cell}}_\bullet(\R), M\big) = \big(M \xrightarrow{\,t-1\,} M\big)$, using the universal cover $\R$ with its $\Z[t^{\pm1}]$-free cellular chains [Hatcher, §3.H] (replacing $t$ by $t^{-1}$, which depends on conventions, changes neither kernel nor cokernel). In particular, for $\Zm$ (the group $\Z$ with $t = -1$), $H^0(S^1;\Zm) = 0$ and $H^1(S^1;\Zm) = \Z/2$; for $\Z^2$ with $t$ swapping the coordinates, $H^0 = \Z(1,1)$ and $H^1 = \Z^2/\Z(1,-1) \cong \Z$ via $(a,b) \mapsto a+b$.</li>
+    </ol>
+  </div>
+</details>
+
+<!-- ===================================================== Differentials -->
+
+<section class="cat-group" data-group="differentials">
+<h3 class="cat-head"><span>Differentials</span></h3>
+<p class="cat-intro">The basic mechanisms that decide differentials: sparseness, knowledge of the total space, and the Leibniz rule.</p>
+
+<details class="ex" id="ex-su3" data-tags="differentials">
+  <summary>
+    <span class="ex-title">$SU(3)$</span>
+    <span class="ex-fib">$S^3 \to SU(3) \to S^5$</span>
+    <span class="ex-sub">Collapse for degree reasons</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,5],"y":[0,3],"cw":64,"ch":46,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1","note":"\\(\\Z\\)"},{"id":"x3","p":0,"q":3,"label":"x_3","note":"\\(\\Z\\)"},{"id":"x5","p":5,"q":0,"label":"x_5","note":"\\(\\Z\\)"},{"id":"x35","p":5,"q":3,"label":"x_3x_5","note":"\\(\\Z\\)"}],
+       "result":"\\(H^\\ast(SU(3);\\Z) = \\Lambda(\\lift x_3, \\lift x_5)\\)"}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>The group $SU(3)$ acts transitively on the unit sphere $S^5 \subseteq \C^3$, with stabilizer $SU(2) \cong S^3$, so evaluation at $e_1$ is a fiber bundle $S^3 \to SU(3) \to S^5$. The base is simply connected and $H^\ast(S^3)$ is free, so
+      \[ E_2 = H^\ast(S^5) \otimes H^\ast(S^3) = \Lambda(x_5) \otimes \Lambda(x_3), \]
+      with $x_5 \in E_2^{5,0}$ and $x_3 \in E_2^{0,3}$: four copies of $\Z$, in bidegrees $(0,0)$, $(0,3)$, $(5,0)$, $(5,3)$.</p></div>
+    <div class="step"><h4>Differentials</h4>
+      <p>The only differential that could be nonzero must go from column $0$ to column $5$, i.e. it is a $d_5$, and it would land in row $q-4$. From row $3$ this is row $-1$. So $E_2 = E_\infty$.</p></div>
+    <div class="step"><h4>Extensions</h4>
+      <p>There are no extension problems of any kind: each total degree contains at most one nonzero group. Let $\lift x_3$, $\lift x_5$ be the (unique up to sign) generators of $H^3$ and $H^5$. Then $\lift x_3^2 \in H^6(SU(3)) = 0$ and $\lift x_5^2 \in H^{10} = 0$, and $\lift x_3 \lift x_5$ maps to the generator $x_3x_5$ of $E_\infty^{5,3} = F_5^8 = H^8$. Hence $H^\ast(SU(3);\Z) = \Lambda(\lift x_3, \lift x_5)$.</p></div>
+    <p class="takeaway">When the nonzero groups are far apart, there is nothing to decide.</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-hopf" data-tags="differentials paired">
+  <summary>
+    <span class="ex-title">Hopf fibration vs. product</span>
+    <span class="ex-fib">$S^1 \to S^3 \to S^2$ and $S^1 \to S^1 \times S^2 \to S^2$</span>
+    <span class="ex-sub">A differential forced by the total space</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,3],"y":[0,1],"cw":80,"ch":56,
+       "classes":[{"id":"1","p":0,"q":0,"label":"\\Z"},{"id":"a","p":0,"q":1,"label":"a"},{"id":"b","p":2,"q":0,"label":"b"},{"id":"ab","p":2,"q":1,"label":"ab"}],
+       "variants":[
+         {"name":"\\(S^3\\)","diffs":[{"from":"a","to":"b","page":2,"label":"\\pm 1"}],"result":"\\(H^\\ast(S^3) = \\Z,\\ 0,\\ 0,\\ \\Z\\)"},
+         {"name":"\\(S^1 \\times S^2\\)","diffs":[],"result":"\\(H^\\ast(S^1 \\times S^2) = \\Z,\\ \\Z,\\ \\Z,\\ \\Z\\)"}]}
+    </script></div>
+    <div class="step"><h4>Same $E_2$</h4>
+      <p>Both fibrations have $E_2 = \Lambda(b) \otimes \Lambda(a)$ with $b \in E_2^{2,0}$, $a \in E_2^{0,1}$. The only possible differential is $d_2 \colon E_2^{0,1} \to E_2^{2,0}$, $a \mapsto kb$.</p></div>
+    <div class="step"><h4>The total space decides</h4>
+      <p>For $S^3$, the groups $H^1(S^3) = H^2(S^3) = 0$ force $d_2$ to be an isomorphism, $k = \pm 1$. For $S^1 \times S^2$ it is zero, since $H^1(S^1 \times S^2) = \Z$.</p></div>
+    <p class="takeaway">The spectral sequence alone cannot tell the two apart; the input is the total space.</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-cpinf" data-tags="differentials">
+  <summary>
+    <span class="ex-title">$\CP^\infty$, computing the base</span>
+    <span class="ex-fib">$S^1 \to S^\infty \to \CP^\infty$</span>
+    <span class="ex-sub">One differential and the Leibniz rule</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,8],"y":[0,1],"cw":58,"ch":56,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1"},{"id":"a","p":0,"q":1,"label":"a"},{"id":"x","p":2,"q":0,"label":"x"},{"id":"xa","p":2,"q":1,"label":"xa"},{"id":"x2","p":4,"q":0,"label":"x^2"},{"id":"x2a","p":4,"q":1,"label":"x^2a"},{"id":"x3","p":6,"q":0,"label":"x^3"},{"id":"x3a","p":6,"q":1,"label":"x^3a"},{"id":"x4","p":8,"q":0,"label":"x^4"},{"id":"x4a","p":8,"q":1,"label":"x^4a"}],
+       "diffs":[{"from":"a","to":"x","page":2},{"from":"xa","to":"x2","page":2},{"from":"x2a","to":"x3","page":2},{"from":"x3a","to":"x4","page":2},{"from":"x4a","to":[10,0],"page":2}],
+       "result":"\\(H^\\ast(\\CP^\\infty) = \\Z[x],\\ |x| = 2\\)"}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>$S^\infty$ is the unit sphere in $\C^\infty$, which is contractible. Here the <i>base</i> is unknown. It is simply connected, so $E_2^{p,q} = H^p(\CP^\infty) \otimes H^q(S^1)$, and only rows $0$ and $1$ are nonzero; write $a \in E_2^{0,1}$ for the generator. The only differential is $d_2$, and $E_3 = E_\infty$ must be $\Z$ in bidegree $(0,0)$ and zero elsewhere.</p></div>
+    <div class="step"><h4>Differentials</h4>
+      <ul>
+        <li>$E_2^{1,0} = H^1(\CP^\infty)$ cannot be hit by anything, so it is zero.</li>
+        <li>$E_2^{0,1} = \Z a$ must die, and $E_2^{2,0}$ can only be hit by $d_2(a)$. So $d_2 \colon \Z a \to H^2(\CP^\infty)$ is an isomorphism. Put $x = d_2(a)$.</li>
+        <li>For $c \in E_2^{p,0}$ we have $d_2(c) = 0$, so the Leibniz rule gives $d_2(ca) = c\,x$. Thus $d_2 \colon E_2^{p,1} = H^p \cdot a \to E_2^{p+2,0} = H^{p+2}$ is multiplication by $x$, and since everything except $(0,0)$ must die, it is an isomorphism $H^p(\CP^\infty) \to H^{p+2}(\CP^\infty)$ for all $p \geq 0$.</li>
+      </ul></div>
+    <div class="step"><h4>Answer</h4>
+      <p>By induction $H^\ast(\CP^\infty) = \Z[x]$, $|x| = 2$, as a ring. The same argument with $S^1 \to S^{2n+1} \to \CP^n$ gives $\Z[x]/(x^{n+1})$.</p></div>
+    <p class="takeaway">One differential on a generator determines all the others, and the spectral sequence can compute the base from the total space and the fiber.</p>
+  </div>
+</details>
+</section>
+
+<!-- ===================================================== Local coefficients -->
+
+<section class="cat-group" data-group="local">
+<h3 class="cat-head"><span>Local coefficients</span></h3>
+<p class="cat-intro">When $\pi_1(B)$ acts nontrivially on $H^\ast(F)$, the $E_2$-page is cohomology with local coefficients, and ignoring the action gives wrong answers. In each example we first determine the local systems with the principles in <a href="#bg-local">the background box</a>.</p>
+
+<details class="ex" id="ex-klein" data-tags="local paired">
+  <summary>
+    <span class="ex-title">The Klein bottle</span>
+    <span class="ex-fib">$S^1 \to K \to S^1$</span>
+    <span class="ex-sub">Monodromy kills a class and creates torsion</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,1],"y":[0,1],"cw":110,"ch":56,
+       "variants":[
+         {"name":"Klein bottle","classes":[{"id":"a","p":0,"q":0,"label":"\\Z"},{"id":"b","p":1,"q":0,"label":"\\Z"},{"id":"c","p":0,"q":1,"label":"0","zero":true,"note":"\\(H^0(S^1;\\Zm) = 0\\)"},{"id":"d","p":1,"q":1,"label":"\\Z/2","note":"\\(H^1(S^1;\\Zm) = \\Z/2\\)"}],"result":"\\(H^\\ast(K;\\Z) = \\Z,\\ \\Z,\\ \\Z/2\\)"},
+         {"name":"Torus (action ignored)","classes":[{"id":"a","p":0,"q":0,"label":"\\Z"},{"id":"b","p":1,"q":0,"label":"\\Z"},{"id":"c","p":0,"q":1,"label":"\\Z"},{"id":"d","p":1,"q":1,"label":"\\Z"}],"result":"\\(H^\\ast(T^2;\\Z) = \\Z,\\ \\Z^2,\\ \\Z\\)"}]}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Let $K = T_\varphi$ be the mapping torus of complex conjugation $\varphi(z) = \bar z$ on $F = S^1$, i.e. $K = S^1 \times [0,1]/(z,1) \sim (\bar z,0)$, fibered over $S^1$ with fiber $S^1$.</p></div>
+    <div class="step"><h4>The local systems</h4>
+      <p>By <a href="#lem-mapping-torus">the mapping torus lemma</a>, the generator of $\pi_1(S^1)$ acts on $H^q(F)$ by $(\varphi^\ast)^{-1}$. On $H^0(F) = \Z$ this is the identity ($F$ is connected). On $H^1(F) = \Z$ it is $-1$, since $\varphi$ is a reflection of the circle and has degree $-1$. So $\underline{H^0F} = \Z$ is constant and $\underline{H^1F} = \Zm$. So
+      \[ E_2^{p,0} = H^p(S^1;\Z) = \Z, \Z, \qquad E_2^{p,1} = H^p(S^1;\Zm) = 0, \Z/2 \]
+      for $p = 0,1$ (<a href="#in-circle">local systems on $S^1$</a>).</p></div>
+    <div class="step"><h4>Answer</h4>
+      <p>The base has dimension $1$, so all differentials vanish (a $d_r$ with $r \geq 2$ raises $p$ by at least $2$), and each total degree contains one group: $H^\ast(K;\Z) = \Z,\ \Z,\ \Z/2$. This agrees with $H_1(K) = \Z \oplus \Z/2$, $H_2(K) = 0$ and universal coefficients. Ignoring the action would give $\Z, \Z^2, \Z$, the cohomology of the torus, which is what one gets for the trivial bundle $T^2 \to S^1$.</p>
+      <p>By the fiber edge homomorphism, $E_\infty^{0,1} = E_2^{0,1} = 0$ says that the restriction $H^1(K) \to H^1(S^1)$ to a fiber is zero. This is visible directly: the restriction lands in the invariants of the monodromy, and $-1$ has no nonzero invariants in $\Z$.</p></div>
+    <p class="takeaway">The monodromy can kill a class ($E_2^{0,1} = 0$: no class restricts to a generator of $H^1$ of the fiber) and create torsion ($E_2^{1,1} = \Z/2$).</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-o2" data-tags="local paired edge">
+  <summary>
+    <span class="ex-title">Disconnected fibers: the double cover vs. $O(2)$</span>
+    <span class="ex-fib">$\{1,-1\} \to S^1 \xrightarrow{z^2} S^1$ and $\{1,\sigma\} \to O(2) \to S^1$</span>
+    <span class="ex-sub">The local system in degree 0 is a permutation module</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,1],"y":[0,1],"cw":170,"ch":56,
+       "variants":[
+         {"name":"\\(z \\mapsto z^2\\)","classes":[{"id":"a","p":0,"q":0,"label":"\\Z(1,1)","note":"\\((\\Z^2)^t\\), \\(t\\) swaps the coordinates"},{"id":"b","p":1,"q":0,"label":"\\Z^2/\\Z(1,-1) \\cong \\Z"},{"id":"c","p":0,"q":1,"label":"0","zero":true},{"id":"d","p":1,"q":1,"label":"0","zero":true}],"result":"\\(H^\\ast(E) = \\Z,\\ \\Z\\): the total space is a circle"},
+         {"name":"\\(O(2)\\)","classes":[{"id":"a","p":0,"q":0,"label":"\\Z^2","note":"trivial action on \\(\\Z^2\\)"},{"id":"b","p":1,"q":0,"label":"\\Z^2"},{"id":"c","p":0,"q":1,"label":"0","zero":true},{"id":"d","p":1,"q":1,"label":"0","zero":true}],"result":"\\(H^\\ast(O(2)) = \\Z^2,\\ \\Z^2\\): two circles"}]}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Two fibrations over $S^1$ with the same fiber, two points, and different monodromy:</p>
+      <ol type="a">
+        <li>$f \colon S^1 \to S^1$, $z \mapsto z^2$, with fiber $F_1 = \{1,-1\}$.</li>
+        <li>$f \colon O(2) \to S^1$, $A \mapsto Ae_1$, with fiber $F_{e_1} = \{1,\sigma\}$, $\sigma = \mathrm{diag}(1,-1)$. This is a fiber bundle, since $O(2)$ acts transitively on $S^1$ with stabilizer $O(1) = \{1,\sigma\}$.</li>
+      </ol>
+      <p>Here $H^q(F) = 0$ for $q > 0$, so only row $0$ is nonzero and $E_2 = E_\infty$: $H^n(E) = H^n(S^1; \underline{H^0F})$.</p></div>
+    <div class="step"><h4>The local systems</h4>
+      <p>By <a href="#bg-local">principle (5)</a>, the generator $\gamma(t) = e^{2\pi i t}$ acts on $H^0(F) = \Z^2$ through the permutation of the two points given by path lifting. In (a), the lift of $\gamma$ starting at $1$ is $t \mapsto e^{\pi i t}$, which ends at $-1$: the two points are swapped, and $t$ acts on $\Z^2$ by swapping the coordinates. In (b), the lifts starting at $1$ and $\sigma$ are $t \mapsto R_{2\pi t}$ and $t \mapsto R_{2\pi t}\sigma$ (rotations $R_\theta$), which return to their starting points: the action is trivial.</p></div>
+    <div class="step"><h4>Answer</h4>
+      <p>By <a href="#in-circle">local systems on $S^1$</a>:</p>
+      <ol type="a">
+        <li>$H^0(E) = H^0(S^1;\Z^2) = (\Z^2)^t = \Z(1,1)$ and $H^1(E) = H^1(S^1;\Z^2) = \Z^2/\Z(1,-1) \cong \Z$. Correct: the total space is a circle.</li>
+        <li>$H^0(O(2)) = H^0(S^1;\Z) \times H^0(S^1;\Z) = \Z^2$ and $H^1(O(2)) = \Z^2$. Correct: $O(2)$ is two circles.</li>
+      </ol>
+      <p>In both cases $H^0(E)$ is the invariants of the permutation module $\Z^{\pi_0(F)}$, i.e. one $\Z$ for each orbit of $\pi_1(B)$ on $\pi_0(F)$: the local system detects whether $E$ is connected.</p></div>
+    <div class="step"><h4>The base edge homomorphism</h4>
+      <p>The fiber is not connected, so $E_2^{n,0} = H^n(B;\underline{H^0F})$ is no longer $H^n(B)$, and $f^\ast \colon H^1(S^1) \to H^1(E)$ is the composite of $H^1(S^1;\Z) \to H^1(S^1;\Z^2)$, induced by the diagonal $\Z \to \Z^2$ (constant functions on the fiber), with the base edge homomorphism. In (a) this is
+      \[ \Z \to \Z^2/\Z(1,-1) \cong \Z, \qquad 1 \mapsto [(1,1)] \mapsto 2, \]
+      so $f^\ast$ is multiplication by $2 = \deg(z \mapsto z^2)$, as it must be. In (b) it is the diagonal $\Z \to \Z^2$: each component of $O(2)$ maps homeomorphically to $S^1$.</p></div>
+    <p class="takeaway">For disconnected fibers the local system $\underline{H^0F}$ is a permutation module, computed by path lifting, and the base edge homomorphism passes through $A \to \underline{H^0(F;A)}$.</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-components" data-tags="local">
+  <summary>
+    <span class="ex-title">A base with several path components</span>
+    <span class="ex-fib">$E = T^2 \sqcup K \to S^1 \sqcup S^1$</span>
+    <span class="ex-sub">Work one component at a time</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,1],"y":[0,1],"cw":130,"ch":56,
+       "classes":[{"id":"a","p":0,"q":0,"label":"\\Z^2","note":"\\(\\Z \\times \\Z\\), one per component"},{"id":"b","p":1,"q":0,"label":"\\Z^2"},{"id":"c","p":0,"q":1,"label":"\\Z \\times 0","note":"\\(H^0(S^1;\\Z) \\times H^0(S^1;\\Zm)\\)"},{"id":"d","p":1,"q":1,"label":"\\Z \\times \\Z/2","note":"\\(H^1(S^1;\\Z) \\times H^1(S^1;\\Zm)\\)"}],
+       "result":"\\(H^\\ast(T^2 \\sqcup K) = \\Z^2,\\ \\Z^2 \\times \\Z,\\ \\Z \\times \\Z/2\\)"}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Let $B = \coprod_i B_i$ be the decomposition into path components, $b_i \in B_i$, and $E_i = f^{-1}(B_i)$. Then $E = \coprod_i E_i$, and the spectral sequence of $f$ is the product of their spectral sequences:
+      \[ E_2^{p,q} = \prod_i H^p\big(B_i; \underline{H^q(F;A)}|_{B_i}\big) \Longrightarrow \prod_i H^{p+q}(E_i;A) = H^{p+q}(E;A). \]</p></div>
+    <div class="step"><h4>Three things change compared to a connected base</h4>
+      <ul>
+        <li>A local system on $B$ is just a local system on each $B_i$, each with its own base point and its own group $\pi_1(B_i,b_i)$; for instance $H^0(B;M) = \prod_i M_{b_i}^{\pi_1(B_i,b_i)}$.</li>
+        <li>Fibers over different components need not be homotopy equivalent, so "the fiber $F$" is not defined. Any map to a discrete space is a Serre fibration; for $f \colon S^2 \sqcup S^3 \to \{0,1\}$ the spectral sequence is concentrated in column $0$, with $E_2^{0,q} = H^q(S^2) \oplus H^q(S^3)$.</li>
+        <li>The twisting can differ between components. For $E = T^2 \sqcup K \to S^1 \sqcup S^1$, the trivial bundle over the first circle and the Klein bottle over the second (<a href="#ex-klein">the Klein bottle</a>), the local system $\underline{H^1F}$ is $\Z$ on the first component and $\Zm$ on the second, so $E_2^{1,1} = H^1(S^1;\Z) \times H^1(S^1;\Zm) = \Z \times \Z/2$, and $H^\ast(E) = \Z^2,\ \Z^2 \times \Z,\ \Z \times \Z/2$.</li>
+      </ul>
+      <p>The edge homomorphisms are also componentwise: the restriction to "the fiber" is the product of the restrictions to the fibers $F_{b_i}$.</p></div>
+    <p class="takeaway">For a disconnected base, work one component at a time; the statement "$E_2^{p,q} = H^p(B;H^q(F))$" needs a connected base and trivial action on each component.</p>
+  </div>
+</details>
+</section>
+
+<!-- ===================================================== Additive extensions -->
+
+<section class="cat-group" data-group="additive">
+<h3 class="cat-head"><span>Additive extensions</span></h3>
+<p class="cat-intro">Here some total degree of $E_\infty$ contains two nonzero groups, so $H^n(E)$ is an extension that the spectral sequence does not determine: one case where it splits for a structural reason, one where it does not, and one where a Tor term appears.</p>
+
+<details class="ex" id="ex-d8" data-tags="additive local paired edge">
+  <summary>
+    <span class="ex-title">$BD_8$, $B\Z/4$ and $B\Z/2 \times B\Z/2$</span>
+    <span class="ex-fib">$BN \to BG \to B\Z/2$</span>
+    <span class="ex-sub">One $E_\infty$-page, two different groups</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,3],"y":[0,2],"cw":84,"ch":52,"highlight":2,
+       "classes":[{"id":"1","p":0,"q":0,"label":"\\Z"},{"id":"b","p":2,"q":0,"label":"\\Z/2","note":"\\(H^2(BQ;\\Z)\\): the image of the base edge \\(f^\\ast\\)"},{"id":"f","p":0,"q":2,"label":"\\Z/2","note":"\\(BD_8\\): the invariants \\((\\Z/4)^{\\{\\pm 1\\}} = \\{0,2\\}\\)"},{"id":"z1","p":1,"q":0,"label":"0","zero":true},{"id":"z2","p":0,"q":1,"label":"0","zero":true},{"id":"z3","p":1,"q":1,"label":"0","zero":true},{"id":"z4","p":3,"q":0,"label":"0","zero":true}],
+       "variants":[
+         {"name":"\\(BD_8\\)","result":"\\(H^2(BD_8;\\Z) \\cong \\Z/2 \\oplus \\Z/2\\): split by a section"},
+         {"name":"\\(B\\Z/4\\)","exts":[{"from":"f","to":"b","label":"\\times 2"}],"result":"\\(H^2(B\\Z/4;\\Z) = \\Z/4\\): the extension does not split"},
+         {"name":"\\(B\\Z/2 \\times B\\Z/2\\)","result":"\\(H^2 = (\\Z/2)^2\\): the product"}]}
+    </script></div>
+    <p class="chart-note">$E_2 = E_\infty$ in total degrees $\leq 2$; the highlighted diagonal is total degree $2$.</p>
+
+    <h4 class="sub">$BD_8$: a possible extension that splits</h4>
+    <div class="step"><h4>Setup</h4>
+      <p>Let $D_8 = \langle r, s \mid r^4 = s^2 = 1,\ srs^{-1} = r^{-1} \rangle$, with normal subgroup $N = \langle r \rangle \cong \Z/4$ and quotient $Q = D_8/N \cong \Z/2$. Consider the fibration $BN \to BD_8 \to BQ$ (<a href="#in-lhs">group extensions</a>).</p></div>
+    <div class="step"><h4>The local systems</h4>
+      <p>By <a href="#lem-extensions">the group extension lemma</a>, the generator $sN$ of $Q$ acts on $H^\ast(BN;\Z)$ through $Bc_s$, where $c_s(n) = s^{-1}ns$ is inversion on $N$ (and $c_s = c_s^{-1}$, so no convention issue arises). On $H^0(BN) = \Z$ it acts trivially. On $H^2(BN;\Z) \cong \Hom(N,\Q/\Z) \cong \Z/4$, the isomorphism being natural (<a href="#in-hom">standard inputs</a>), $Bc_s^\ast$ is precomposition with $c_s$, i.e. $\chi \mapsto \chi \circ c_s = -\chi$: so $s$ acts by $-1$. (On $H^{2k}(BN) \cong \Z/4$ it acts by $(-1)^k$, but we only need $k \leq 1$.) Note that $-1$ is not the identity on $\Z/4$, although it is on $\Z/2$: the action is genuinely nontrivial.</p></div>
+    <div class="step"><h4>$E_2$ and differentials</h4>
+      <p>In total degrees $\leq 2$ the $E_2$-page is
+      \[ E_2^{0,0} = \Z, \qquad E_2^{2,0} = H^2(BQ;\Z) = \Z/2, \qquad E_2^{0,2} = H^0\big(BQ; H^2(BN)\big) = (\Z/4)^{\{\pm 1\}} = \{0,2\} \cong \Z/2, \]
+      and $E_2^{p,1} = 0$ since $H^1(BN;\Z) = 0$; also $E_2^{1,0} = E_2^{3,0} = 0$. The class in $E_2^{0,2}$ can only support $d_2$ into $E_2^{2,1} = 0$ or $d_3$ into $E_2^{3,0} = 0$, and nothing can hit $E_2^{2,0}$. So $E_\infty$ in total degree $2$ consists of two copies of $\Z/2$, and
+      \[ 0 \to \Z/2 = F_2^2 \to H^2(BD_8;\Z) \to E_\infty^{0,2} = \Z/2 \to 0. \]
+      A priori $H^2(BD_8)$ could be $\Z/4$ or $\Z/2 \oplus \Z/2$.</p></div>
+    <div class="step"><h4>Resolution: a section</h4>
+      <p>The extension $N \to D_8 \to Q$ splits, $Q \cong \langle s \rangle$, so $BQ \to BD_8 \to BQ$ is homotopic to the identity. Hence $f^\ast \colon H^2(BQ) \to H^2(BD_8)$ has a left inverse. Since $E_2^{1,1} = 0$, the subgroup $F_2^2 = F_1^2$ is exactly the image of the base edge homomorphism $f^\ast$, so it is a direct summand, and $H^2(BD_8;\Z) \cong \Z/2 \oplus \Z/2$. This agrees with $H^2(BD_8;\Z) \cong \Hom(D_8,\Q/\Z)$ and $D_8^{\mathrm{ab}} \cong (\Z/2)^2$.</p></div>
+    <p class="takeaway">An extension in which the bottom piece is the image of the base edge splits as soon as the fibration has a section. Note also the invariants $(\Z/4)^{\{\pm 1\}}$: local coefficients again.</p>
+
+    <h4 class="sub" id="ex-z4">$B\Z/4$: a possible extension that does not split</h4>
+    <div class="step">
+      <p>Now take $N = 2\Z/4 \cong \Z/2$ in $G = \Z/4$, with $Q = \Z/2$. The group is abelian, so the action is trivial by <a href="#lem-extensions">the group extension lemma</a>, and the same reasoning as for $BD_8$ gives, in total degree $2$,
+      \[ E_\infty^{2,0} = H^2(B\Z/2;\Z) = \Z/2, \qquad E_\infty^{1,1} = 0, \qquad E_\infty^{0,2} = H^2(B\Z/2;\Z) = \Z/2, \]
+      so again $0 \to \Z/2 \to H^2(B\Z/4) \to \Z/2 \to 0$. But $H^2(B\Z/4;\Z) = \Z/4$ (<a href="#in-lens">lens spaces</a>): the extension is nontrivial. There is no section, since $\Z/4 \to \Z/2$ does not split.</p>
+      <p>The product fibration $B\Z/2 \to B\Z/2 \times B\Z/2 \to B\Z/2$ has the same $E_2$-page in total degrees $\leq 2$, with the same (absent) differentials, and there $H^2 = (\Z/2)^2$. So in this range nothing in the spectral sequence distinguishes $B\Z/4$ from $B\Z/2 \times B\Z/2$; the extension is decided by input from outside it, for instance $H^2(BG;\Z) \cong \Hom(G,\Q/\Z)$, or $\dim_{\F_2} H^1(BG;\F_2) = 1$ for $G = \Z/4$ and $2$ for $G = (\Z/2)^2$.</p></div>
+    <p class="takeaway">An $E_\infty$-page does not determine the group, even when all differentials are known.</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-rp2" data-tags="additive">
+  <summary>
+    <span class="ex-title">$\RP^2 \times \RP^2$</span>
+    <span class="ex-fib">$\RP^2 \to \RP^2 \times \RP^2 \to \RP^2$</span>
+    <span class="ex-sub">Tor terms on $E_2$</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,2],"y":[0,2],"cw":84,"ch":52,
+       "classes":[{"id":"00","p":0,"q":0,"label":"\\Z"},{"id":"10","p":1,"q":0,"label":"0","zero":true},{"id":"20","p":2,"q":0,"label":"\\Z/2"},{"id":"01","p":0,"q":1,"label":"0","zero":true},{"id":"11","p":1,"q":1,"label":"0","zero":true},{"id":"21","p":2,"q":1,"label":"0","zero":true},{"id":"02","p":0,"q":2,"label":"\\Z/2"},{"id":"12","p":1,"q":2,"label":"\\Z/2","note":"a Tor term: \\(H^1(\\RP^2;\\Z) \\otimes H^2(\\RP^2;\\Z) = 0\\), yet \\(E_2^{1,2} = H^1(\\RP^2;\\Z/2) = \\Z/2\\)"},{"id":"22","p":2,"q":2,"label":"\\Z/2"}],
+       "result":"\\(H^\\ast(\\RP^2 \\times \\RP^2;\\Z) = \\Z,\\ 0,\\ (\\Z/2)^2,\\ \\Z/2,\\ \\Z/2\\)"}
+    </script></div>
+    <div class="step"><h4>$E_2$</h4>
+      <p>The base has $\pi_1 = \Z/2$, but the action is trivial because the fibration is a product (<a href="#bg-local">principle (1)</a>), and $H^q(\RP^2;\Z) = \Z, 0, \Z/2$ for $q = 0,1,2$, so
+      \[ E_2^{p,0} = H^p(\RP^2;\Z) = \Z, 0, \Z/2, \qquad E_2^{p,1} = 0, \qquad E_2^{p,2} = H^p(\RP^2;\Z/2) = \Z/2, \Z/2, \Z/2. \]
+      Note $E_2^{1,2} = \Z/2$, although $H^1(\RP^2;\Z) \otimes H^2(\RP^2;\Z) = 0$: the $E_2$-page is not the tensor product of the cohomologies of base and fiber when both have torsion. (Over $\Z$, that description of $E_2$ needs $H^\ast(F)$ to be free, which fails here.)</p></div>
+    <div class="step"><h4>Differentials and extensions</h4>
+      <p>The only possible differential is $d_2 \colon E_2^{0,q} \to E_2^{2,q-1}$, and row $1$ is zero, so $E_2 = E_\infty$. In total degree $2$ there are two groups, $E_\infty^{2,0} = \Z/2$ and $E_\infty^{0,2} = \Z/2$. As for <a href="#ex-d8">$BD_8$</a>, the projection has a section, the bottom piece is the image of the base edge, and the extension splits. So $H^\ast(\RP^2 \times \RP^2;\Z) = \Z,\ 0,\ (\Z/2)^2,\ \Z/2,\ \Z/2$, which agrees with the Künneth formula; $H^3 = E_\infty^{1,2}$ is its Tor term $\Tor(H^2,H^2)$ [Hatcher, §3.B].</p></div>
+    <p class="takeaway">With integer coefficients, $E_2$ contains Tor-type terms invisible in $H^\ast(B) \otimes H^\ast(F)$.</p>
+  </div>
+</details>
+</section>
+
+<!-- ===================================================== Multiplicative extensions -->
+
+<section class="cat-group" data-group="multiplicative">
+<h3 class="cat-head"><span>Multiplicative extensions</span></h3>
+<p class="cat-intro">The additive structure is clear, but a product that vanishes in $E_\infty$ might or might not vanish in $H^\ast(E)$.</p>
+
+<details class="ex" id="ex-su4" data-tags="multiplicative">
+  <summary>
+    <span class="ex-title">$SU(4)$</span>
+    <span class="ex-fib">$SU(3) \to SU(4) \to S^7$</span>
+    <span class="ex-sub">A possible extension that is trivial</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,7],"y":[0,8],"cw":62,"ch":32,"highlight":10,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1"},{"id":"x3","p":0,"q":3,"label":"x_3"},{"id":"x5","p":0,"q":5,"label":"x_5"},{"id":"x35","p":0,"q":8,"label":"x_3x_5"},{"id":"x7","p":7,"q":0,"label":"x_7"},{"id":"x73","p":7,"q":3,"label":"x_7x_3","note":"\\(H^{10}(SU(4)) = E_\\infty^{7,3}\\), where \\(\\lift x_5^2\\) would have to live"},{"id":"x75","p":7,"q":5,"label":"x_7x_5"},{"id":"x735","p":7,"q":8,"label":"x_7x_3x_5"}],
+       "result":"\\(H^\\ast(SU(4);\\Z) = \\Lambda(\\lift x_3, \\lift x_5, \\lift x_7)\\)"}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Evaluation at $e_1$ gives a fiber bundle $SU(3) \to SU(4) \to S^7$. By <a href="#ex-su3">the $SU(3)$ example</a>, $H^\ast(SU(3)) = \Lambda(x_3,x_5)$ is free, so $E_2 = \Lambda(x_7) \otimes \Lambda(x_3,x_5)$ with $x_7 \in E_2^{7,0}$ and $x_3, x_5$ in column $0$. Again the only possible differential is $d_7$ from column $0$ to column $7$, landing in row $q - 6$; the classes in column $0$ sit in rows $0,3,5,8$, and $H^2(SU(3)) = 0$, so every $d_7$ is zero and $E_2 = E_\infty$. Each total degree contains at most one group, so there is no additive extension problem; let $\lift x_3$, $\lift x_5$, $\lift x_7$ be lifts.</p></div>
+    <div class="step"><h4>The possible extension</h4>
+      <p>In $E_\infty$ we have $x_5^2 = 0$, since $E_\infty^{0,10} = H^{10}(SU(3)) = 0$. But $H^{10}(SU(4)) = F_7^{10} = E_\infty^{7,3} = \Z\, x_7x_3$, so a priori $\lift x_5^2 = k\,\lift x_7 \lift x_3$ for some $k \in \Z$.</p></div>
+    <div class="step"><h4>Resolution: graded commutativity</h4>
+      <p>Since $|\lift x_5| = 5$ is odd, $\lift x_5^2 = -\lift x_5^2$, i.e. $2\lift x_5^2 = 0$. As $H^{10}(SU(4)) \cong \Z$ is torsion-free, $\lift x_5^2 = 0$. Similarly $\lift x_3^2 \in H^6 = 0$ and $\lift x_7^2 \in H^{14} = 0$. So there is a ring map $\Lambda(\lift x_3, \lift x_5, \lift x_7) \to H^\ast(SU(4))$, and it is an isomorphism because it induces an isomorphism on associated graded rings.</p></div>
+    <p class="takeaway">Odd-degree classes square to $2$-torsion, so the extension is trivial whenever the target group is torsion-free. The same argument gives $\lift x_3^2 = 0$ in $H^\ast(U(3))$.</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-cp3" data-tags="multiplicative paired">
+  <summary>
+    <span class="ex-title">$\CP^3 \to S^4$</span>
+    <span class="ex-fib">$S^2 \to \CP^3 \to S^4$ and $S^2 \to S^2 \times S^4 \to S^4$</span>
+    <span class="ex-sub">A nontrivial integral extension</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,4],"y":[0,2],"cw":72,"ch":52,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1"},{"id":"y","p":0,"q":2,"label":"y"},{"id":"u","p":4,"q":0,"label":"u"},{"id":"uy","p":4,"q":2,"label":"uy"}],
+       "variants":[
+         {"name":"\\(\\CP^3\\)","exts":[{"from":"y","to":"u","label":"\\lift y^2 = \\pm f^\\ast u"}],"result":"\\(H^\\ast(\\CP^3) = \\Z[x]/(x^4)\\): \\(\\lift y^2\\) generates \\(H^4\\)"},
+         {"name":"\\(S^2 \\times S^4\\)","exts":[],"result":"\\(H^\\ast(S^2 \\times S^4) = \\Lambda(\\lift y) \\otimes \\Lambda(u)\\): \\(\\lift y^2 = 0\\)"}]}
+    </script></div>
+    <p class="chart-note">The dashed arrow is the multiplicative extension: a product that is zero on $E_\infty$ but detected in a higher filtration.</p>
+    <div class="step"><h4>Setup</h4>
+      <p>View $\C^4 = \mathbb{H}^2$. Sending a complex line to the quaternionic line it spans gives a fiber bundle $\CP^3 \to \HP^1 = S^4$, whose fiber is the space of complex lines in $\mathbb{H} \cong \C^2$, i.e. $\CP^1 = S^2$. The base is simply connected, so $E_2 = \Lambda(u) \otimes \Lambda(y)$ with $u \in E_2^{4,0}$, $y \in E_2^{0,2}$. All nonzero groups are in even total degree, and every differential raises the total degree by $1$; so $E_2 = E_\infty$. Additively $H^\ast(\CP^3) = \Z$ in degrees $0,2,4,6$, with no extensions.</p></div>
+    <div class="step"><h4>The possible extension</h4>
+      <p>In $E_\infty$, $y^2 = 0$, since $E_\infty^{0,4} = H^4(S^2) = 0$. Let $\lift y \in H^2(\CP^3)$ be a lift; then $\lift y^2 \in F_1^4 = F_4^4 = \Z f^\ast(u)$, so $\lift y^2 = k\,f^\ast(u)$ for some $k$.</p></div>
+    <div class="step"><h4>Resolution</h4>
+      <p>$H^2(\CP^3) = \Z\lift y$ and $H^4(\CP^3) = \Z f^\ast u$ (the base edge image), while $H^\ast(\CP^3) = \Z[x]/(x^4)$ (<a href="#in-proj">projective spaces</a>). So $\lift y = \pm x$, and $\lift y^2 = x^2$ generates $H^4$: $k = \pm 1$. The extension is nontrivial.</p>
+      <p>Compare with the trivial bundle $S^2 \times S^4 \to S^4$: the same $E_\infty$-page, <i>as a ring</i>, but there $\lift y^2 = 0$. So even the multiplicative $E_\infty$-page does not determine the ring $H^\ast(E)$. Note also that $k$ is an invariant: $\lift y$ is unique up to sign, so $k$ is defined up to the sign of $f^\ast(u)$.</p></div>
+    <p class="takeaway">A product that vanishes on $E_\infty$ for filtration reasons can be a generator in cohomology; here $x^2$ is detected in filtration $4$, not $0$.</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-rp3" data-tags="multiplicative paired">
+  <summary>
+    <span class="ex-title">$\RP^3 \to S^2$ mod $2$</span>
+    <span class="ex-fib">$S^1 \to SO(3) \to S^2$ with $\F_2$ coefficients</span>
+    <span class="ex-sub">A nontrivial extension over a field</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,3],"y":[0,1],"cw":80,"ch":56,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1"},{"id":"a","p":0,"q":1,"label":"\\bar a"},{"id":"b","p":2,"q":0,"label":"\\bar b"},{"id":"ab","p":2,"q":1,"label":"\\bar a\\bar b"}],
+       "variants":[
+         {"name":"\\(\\RP^3\\)","exts":[{"from":"a","to":"b","label":"x^2 = f^\\ast \\bar b"}],"result":"\\(H^\\ast(\\RP^3;\\F_2) = \\F_2[x]/(x^4)\\)"},
+         {"name":"\\(S^1 \\times S^2\\)","exts":[],"result":"\\(H^\\ast(S^1 \\times S^2;\\F_2) = \\Lambda(\\lift a) \\otimes \\Lambda(\\bar b)\\): \\(\\lift a^2 = 0\\)"}]}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Let $f \colon SO(3) \to S^2$, $A \mapsto Ae_1$. This is a fiber bundle with fiber $SO(2) \cong S^1$, and $SO(3) \cong \RP^3$. Integrally its $d_2 \colon E_2^{0,1} \to E_2^{2,0}$ is multiplication by $\pm 2$ (<a href="#ex-so3">the $SO(3)$ example</a>). With $\F_2$ coefficients, the map of spectral sequences induced by $\Z \to \F_2$ shows that $d_2(\bar a) = 2\bar b = 0$, so $E_2 = E_\infty = \Lambda(\bar b) \otimes \Lambda(\bar a)$, with $\bar a \in E_2^{0,1}$, $\bar b \in E_2^{2,0}$.</p></div>
+    <div class="step"><h4>The extension</h4>
+      <p>Over a field there are no additive extensions. Multiplicatively, $\bar a^2 = 0$ in $E_\infty$ (bidegree $(0,2)$). But $H^\ast(\RP^3;\F_2) = \F_2[x]/(x^4)$, with $H^1 = \F_2 x$ the lift of $\bar a$ and $H^2 = F_2^2 = \F_2 f^\ast(\bar b)$; since $x^2 \neq 0$, $x^2 = f^\ast(\bar b)$.</p>
+      <p>Again $S^1 \times S^2 \to S^2$ has the same $E_\infty$-ring mod $2$, with $\lift a^2 = 0$. (Once Steenrod squares are available, $x^2 = \Sq^1 x$ is the reduction of the integral Bockstein of $x$, which is nonzero since $H^1(\RP^3;\Z) = 0$; this explains the extension.)</p></div>
+    <p class="takeaway">Working over a field removes additive extension problems, but not multiplicative ones.</p>
+  </div>
+</details>
+</section>
+
+<!-- ===================================================== Edge homomorphisms -->
+
+<section class="cat-group" data-group="edge">
+<h3 class="cat-head"><span>Edge homomorphisms</span></h3>
+<p class="cat-intro">The edge homomorphisms connect the spectral sequence to the maps $f^\ast$ and $i^\ast$. Knowing something about these maps from outside the spectral sequence often decides a differential.</p>
+
+<details class="ex" id="ex-so3" data-tags="edge differentials">
+  <summary>
+    <span class="ex-title">$SO(3) \to S^2$</span>
+    <span class="ex-fib">$S^1 \to SO(3) \to S^2$ with $\Z$ coefficients</span>
+    <span class="ex-sub">The kernel of the base edge is the Euler class</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,3],"y":[0,1],"cw":80,"ch":56,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1"},{"id":"a","p":0,"q":1,"label":"a","note":"killed: \\(d_2\\) is injective"},{"id":"b","p":2,"q":0,"label":"b","note":"survives as \\(\\Z/2\\): the image of \\(f^\\ast\\)"},{"id":"ab","p":2,"q":1,"label":"ab"}],
+       "diffs":[{"from":"a","to":"b","page":2,"label":"\\cdot 2","tgt":"keep","tgtLabel":"\\Z/2"}],
+       "result":"\\(H^\\ast(SO(3);\\Z) = \\Z,\\ 0,\\ \\Z/2,\\ \\Z\\)"}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Take the fibration $S^1 \to SO(3) \to S^2$ of <a href="#ex-rp3">the $\RP^3$ example</a>, now with $\Z$ coefficients. The base is simply connected, so the local systems are constant (also, the structure group $SO(2)$ is connected: <a href="#rem-structure-group">the structure group remark</a>). Here $E_2 = \Lambda(b) \otimes \Lambda(a)$, with $b \in E_2^{2,0}$ and $a \in E_2^{0,1}$, and $d_2(a) = e\,b$ for some $e \in \Z$. Then
+      \[ H^1(SO(3)) = \ker(e), \qquad H^2(SO(3)) = \Z/e, \qquad H^3(SO(3)) = E_\infty^{2,1} = \Z. \]</p></div>
+    <div class="step"><h4>Determining $e$</h4>
+      <p>Since $SO(3) \cong \RP^3$ has $H_1 = \Z/2$, universal coefficients give $H^2(SO(3);\Z) = \Z/2$, so $e = \pm 2$. The base edge homomorphism
+      \[ f^\ast \colon H^2(S^2) = E_2^{2,0} \twoheadrightarrow E_\infty^{2,0} = \Z/2 = H^2(SO(3)) \]
+      is reduction mod $2$: its kernel is the image of $d_2$.</p></div>
+    <div class="step"><h4>Geometrically</h4>
+      <p>$A \mapsto (Ae_1, Ae_2)$ identifies $SO(3)$ with the unit tangent bundle of $S^2$. For the unit sphere bundle of an oriented rank-$2$ vector bundle, $d_2$ of the fiber generator is the Euler class, and the kernel of $f^\ast$ in degree $2$ is generated by it (the start of the Gysin sequence). So the computation says that the Euler number of $TS^2$ is $\pm 2 = \pm\chi(S^2)$.</p></div>
+    <p class="takeaway">The kernel of the base edge homomorphism is exactly what the differentials kill in the bottom row. The same $d_2$ is zero mod $2$ (<a href="#ex-rp3">the $\RP^3$ example</a>).</p>
+  </div>
+</details>
+
+<details class="ex" id="ex-q8" data-tags="edge differentials">
+  <summary>
+    <span class="ex-title">$BQ_8$</span>
+    <span class="ex-fib">$B\Z/2 \to BQ_8 \to B(\Z/2)^2$ mod $2$</span>
+    <span class="ex-sub">The fiber edge forces a differential; a dimension count forces another</span>
+  </summary>
+  <div class="ex-body">
+    <div class="sseq"><script type="application/json">
+      {"x":[0,3],"y":[0,2],"cw":128,"ch":56,
+       "classes":[{"id":"1","p":0,"q":0,"label":"1"},{"id":"ab","p":1,"q":0,"label":"\\{a,b\\}"},{"id":"q2","p":2,"q":0,"label":"\\{a^2,ab,b^2\\}"},{"id":"q3","p":3,"q":0,"label":"\\{a^3,\\dots\\}"},{"id":"z","p":0,"q":1,"label":"z","note":"must die: the fiber edge vanishes in degree 1"},{"id":"az","p":1,"q":1,"label":"\\{az,bz\\}"},{"id":"z2","p":0,"q":2,"label":"z^2","note":"survives \\(d_2\\) since \\(d_2(z^2) = 2zw = 0\\), but must die by the dimension count"}],
+       "diffs":[{"from":"z","to":"q2","page":2,"label":"w","tgt":"keep","tgtLabel":"\\F_2^2"},{"from":"az","to":"q3","page":2,"tgt":"keep"},{"from":"z2","to":"q3","page":3,"label":"\\neq 0","tgt":"keep"}],
+       "result":"\\(H^2(BQ_8;\\F_2) \\cong \\F_2^2\\), so \\(E_\\infty^{0,2} = 0\\)"}
+    </script></div>
+    <div class="step"><h4>Setup</h4>
+      <p>Let $Q_8 = \{\pm 1, \pm i, \pm j, \pm k\}$, with center $N = \{\pm 1\} \cong \Z/2$ and $Q = Q_8/N \cong (\Z/2)^2$. The extension is central, so $Q$ acts trivially on $H^\ast(BN)$ by <a href="#lem-extensions">the group extension lemma</a>. With $\F_2$ coefficients,
+      \[ E_2 = H^\ast(BQ;\F_2) \otimes H^\ast(BN;\F_2) = \F_2[a,b] \otimes \F_2[z], \qquad |a| = |b| = |z| = 1, \]
+      with $a, b$ in row $0$ and $z \in E_2^{0,1}$ (<a href="#in-lens">lens spaces</a>, Künneth over $\F_2$).</p></div>
+    <div class="step"><h4>$d_2(z) \neq 0$</h4>
+      <p>The fiber edge homomorphism in degree $1$ is the restriction $\Hom(Q_8,\F_2) \to \Hom(N,\F_2)$ (<a href="#in-hom">standard inputs</a>). It is zero: every homomorphism $\varphi \colon Q_8 \to \F_2$ satisfies $\varphi(-1) = \varphi(i^2) = 2\varphi(i) = 0$. So $E_\infty^{0,1} = 0$. The only differential leaving $E_2^{0,1}$ is $d_2 \colon E_2^{0,1} \to E_2^{2,0}$, so $w := d_2(z) \in \F_2\{a^2,ab,b^2\}$ is nonzero.</p></div>
+    <div class="step"><h4>Total degree 2</h4>
+      <p>$E_3^{2,0} = \F_2\{a^2,ab,b^2\}/(w)$ has dimension $2$. On $E_2^{1,1} = \F_2\{az,bz\}$, $d_2(az) = aw$ and $d_2(bz) = bw$ are linearly independent (since $\F_2[a,b]$ is a domain), so $E_3^{1,1} = 0$. Finally $d_2(z^2) = 2zw = 0$, so $z^2$ survives to $E_3^{0,2}$.</p></div>
+    <div class="step"><h4>A dimension count forces $d_3(z^2) \neq 0$</h4>
+      <p>The group $Q_8$ acts freely on $S^3$ (unit quaternions), and $M = S^3/Q_8$ is a closed orientable $3$-manifold with $\pi_1 = Q_8$. The classifying map $M \to BQ_8$ has homotopy fiber $S^3$, so it is an isomorphism on $H_{\leq 2}$, and by Poincaré duality $H_2(BQ_8;\Z) = H_2(M) \cong H^1(M;\Z) = \Hom(Q_8^{\mathrm{ab}},\Z) = 0$. By universal coefficients, $H^2(BQ_8;\F_2) \cong \Ext(Q_8^{\mathrm{ab}},\F_2) = \F_2^2$. Since $E_\infty^{2,0}$ already has dimension $2$ and $E_\infty^{1,1} = 0$, we need $E_\infty^{0,2} = 0$: the class $z^2$ supports a nonzero $d_3 \colon E_3^{0,2} \to E_3^{3,0}$.</p>
+      <p class="aside">One can show that $w = a^2 + ab + b^2$ and $d_3(z^2) = \Sq^1 w = a^2b + ab^2$; the second formula is an instance of the transgression theorem for Steenrod squares. We do not need either.</p></div>
+    <p class="takeaway">Knowing that restriction to the fiber vanishes in some degree forces the differentials out of the left column; and a dimension count from outside forces a higher differential whose value we do not even need to know.</p>
+  </div>
+</details>
+</section>
+
+<!-- ===================================================== Summary -->
+
+<section class="cat-summary" data-group="summary">
+<h3 class="cat-head"><span>Same pages, different answers</span></h3>
+<p class="cat-intro">These pairs have identical pages but different cohomology. They are the clearest way to see what the spectral sequence leaves undetermined.</p>
+<div class="cards">
+  <a class="card" href="#ex-hopf"><span class="card-tag">Different $d_2$</span><h3>$S^3$ vs. $S^1 \times S^2$</h3><p>over $S^2$: same $E_2$.</p></a>
+  <a class="card" href="#ex-d8"><span class="card-tag">Additive extension</span><h3>$B\Z/4$ vs. $B\Z/2 \times B\Z/2$</h3><p>over $B\Z/2$: same $E_\infty$ in total degree $2$.</p></a>
+  <a class="card" href="#ex-cp3"><span class="card-tag">Multiplicative extension</span><h3>$\CP^3$ vs. $S^2 \times S^4$</h3><p>over $S^4$: same $E_\infty$ as a ring.</p></a>
+  <a class="card" href="#ex-rp3"><span class="card-tag">Multiplicative extension</span><h3>$\RP^3$ vs. $S^1 \times S^2$</h3><p>over $S^2$, mod $2$: same $E_\infty$ as a ring.</p></a>
+  <a class="card" href="#ex-klein"><span class="card-tag">Local coefficients</span><h3>Klein bottle vs. torus</h3><p>over $S^1$: the same "naive" $E_2$ if one forgets the action.</p></a>
+  <a class="card" href="#ex-o2"><span class="card-tag">Action on $\pi_0(F)$</span><h3>Double cover vs. $O(2)$</h3><p>over $S^1$: the same fiber, different permutation action.</p></a>
+</div>
+<p class="refs">Reference: A. Hatcher, <i>Algebraic Topology</i>, Cambridge University Press, 2002.</p>
+</section>
+
+<script src="/public/js/sseq.js?v={{ site.time | date: '%s' }}"></script>
+<script>
+  (function () {
+    var exs = [].slice.call(document.querySelectorAll("details.ex"));
+    var groups = [].slice.call(document.querySelectorAll(".cat-group"));
+    var btns = [].slice.call(document.querySelectorAll(".cat-tools .filter button"));
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var t = b.dataset.tag;
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        exs.forEach(function (e) { e.hidden = t !== "all" && e.dataset.tags.split(" ").indexOf(t) < 0; });
+        groups.forEach(function (g) {
+          g.hidden = !g.querySelector("details.ex:not([hidden])");
+        });
+      });
+    });
+    var exp = document.querySelector(".cat-expand");
+    exp.addEventListener("click", function () {
+      var open = exp.getAttribute("aria-pressed") !== "true";
+      exs.forEach(function (e) { e.open = open; });
+      exp.setAttribute("aria-pressed", open);
+      exp.textContent = open ? "Collapse all" : "Expand all";
+    });
+    function openHash() {
+      if (!location.hash) return;
+      var t = document.getElementById(location.hash.slice(1));
+      if (!t) return;
+      for (var n = t; n; n = n.parentElement) if (n.tagName === "DETAILS") n.open = true;
+      setTimeout(function () { t.scrollIntoView({ behavior: "smooth", block: "start" }); }, 30);
+    }
+    window.addEventListener("hashchange", openHash);
+    openHash();
+  })();
+</script>
