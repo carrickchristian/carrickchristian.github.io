@@ -883,7 +883,7 @@ h4.sub { font-size: 1.1rem; margin: 1.8rem 0 .4rem; }
 .refs { font-size: .88rem; color: var(--muted); margin-top: 1.5rem; }
 
 /* Charts */
-.sseq { margin: 1rem 0 .4rem; }
+.sseq { position: relative; margin: 1rem 0 .4rem; }
 .sseq-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; margin-bottom: .6rem; }
 .sseq-variants, .sseq-pages { display: inline-flex; flex-wrap: wrap; gap: .3rem; }
 .sseq-pages.single .sseq-btn { pointer-events: none; }
@@ -906,9 +906,9 @@ h4.sub { font-size: 1.1rem; margin: 1.8rem 0 .4rem; }
 .ssq-grid line { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 2 4; }
 .ssq-axes line { stroke: var(--muted); stroke-width: 1.5; }
 .ssq-ticks text { fill: var(--muted); font: 500 12px var(--font-meta); }
-.ssq-band { stroke: var(--accent-3); stroke-width: 20; stroke-linecap: round; opacity: .22; }
-.ssq-band.fixed { opacity: .16; }
-.ssq-band-label, .ssq-band.fixed-label, .ssq-band.hover-label { fill: var(--accent); font: 600 11px var(--font-meta); }
+.ssq-band { stroke: var(--accent-3); stroke-width: 22; stroke-linecap: butt; }
+.ssq-diagonal.hover .ssq-band { opacity: .24; }
+.ssq-diagonal.fixed .ssq-band { opacity: .15; }
 .ssq-d { fill: none; stroke: #c2603f; stroke-width: 2; transition: stroke-dashoffset .55s cubic-bezier(.3, .7, .2, 1); }
 .ssq-d.off { stroke-dasharray: 4 4 !important; opacity: .6; }
 .ssq-head { fill: #c2603f; }
@@ -935,7 +935,7 @@ h4.sub { font-size: 1.1rem; margin: 1.8rem 0 .4rem; }
 }
 .sseq-dlabel.ext { color: var(--accent-2); }
 .sseq-tip {
-  position: absolute; z-index: 3; transform: translate(-50%, -100%);
+  position: absolute; z-index: 5;
   width: max-content; max-width: 260px;
   padding: .45rem .65rem; border-radius: 8px;
   background: var(--sleeve); color: var(--sleeve-ink);

@@ -72,10 +72,12 @@
     for (var q = spec.y[0]; q <= spec.y[1]; q++) svgEl("text", { x: padL - 12, y: Y(q) + 4, "text-anchor": "middle" }, ticks).textContent = q;
     svgEl("text", { x: padL + nx * cw - 4, y: padT + ny * ch + 19, "text-anchor": "end", class: "ssq-axis-name" }, ticks).textContent = "";
 
+    var cid = "ssq-clip-" + n;
+    svgEl("rect", { x: padL, y: padT, width: nx * cw, height: ny * ch }, svgEl("clipPath", { id: cid }, defs));
     var diag = svgEl("g", { class: "ssq-diag" }, svg);
     var arrows = svgEl("g", { class: "ssq-arrows" }, svg);
     var overlay = htmlEl("div", "sseq-overlay", stage);
-    var tip = htmlEl("div", "sseq-tip", stage);
+    var tip = htmlEl("div", "sseq-tip", root);
     var result = htmlEl("div", "sseq-result", root);
 
     function current() {
@@ -96,14 +98,17 @@
       return ps;
     }
 
-    function drawDiagonal(nn, cls) {
+    // Highlight the total-degree diagonal p + q = nn ("fixed" or "hover").
+    function drawDiagonal(nn, kind) {
       var pmin = Math.max(spec.x[0], nn - spec.y[1]), pmax = Math.min(spec.x[1], nn - spec.y[0]);
       if (pmin > pmax) return;
       var x1 = padL + (pmin - spec.x[0]) * cw, y1 = padT + (spec.y[1] - (nn - pmin)) * ch;
       var x2 = padL + (pmax - spec.x[0] + 1) * cw, y2 = padT + (spec.y[1] - (nn - pmax) + 1) * ch;
-      svgEl("line", { x1: x1, y1: y1, x2: x2, y2: y2, class: cls }, diag);
-      var lab = svgEl("text", { x: x2 - 4, y: Math.min(y2, padT + ny * ch) - 6, "text-anchor": "end", class: cls + "-label" }, diag);
-      lab.textContent = "n = " + nn;
+      var g = svgEl("g", { class: "ssq-diagonal " + kind }, diag);
+      svgEl("line", { x1: x1, y1: y1, x2: x2, y2: y2, class: "ssq-band", "clip-path": "url(#" + cid + ")" }, g);
+    }
+    function clearHover() {
+      diag.querySelectorAll(".ssq-diagonal.hover").forEach(function (e) { e.remove(); });
     }
 
     function arrow(sx, sy, tx, ty, opts) {
@@ -166,7 +171,7 @@
       arrows.innerHTML = "";
       diag.innerHTML = "";
       tip.classList.remove("show");
-      if (cur.highlight != null) drawDiagonal(cur.highlight, "ssq-band fixed");
+      if (cur.highlight != null) drawDiagonal(cur.highlight, "fixed");
 
       var nodes = {};
       cur.classes.forEach(function (c) {
@@ -178,17 +183,28 @@
         var nn = c.p + c.q;
         node.setAttribute("aria-label", "(" + c.p + ", " + c.q + "), total degree " + nn);
         var show = function () {
-          diag.querySelectorAll(".hover").forEach(function (e) { e.remove(); });
-          drawDiagonal(nn, "ssq-band hover");
+          clearHover();
+          drawDiagonal(nn, "hover");
           tip.innerHTML = "<b>(p, q) = (" + c.p + ", " + c.q + ")</b> · total degree " + nn +
             (s.dead ? " · <i>gone by this page</i>" : "") + (c.note ? "<br>" + c.note : "");
-          tip.style.left = X(c.p) + "px";
-          tip.style.top = (Y(c.q) - ch / 2 - 6) + "px";
           tip.classList.add("show");
-          typeset([tip]);
+          var place = function () {
+            var rr = root.getBoundingClientRect(), nr = node.getBoundingClientRect();
+            var tw = tip.offsetWidth, th = tip.offsetHeight;
+            var left = nr.left - rr.left + nr.width / 2 - tw / 2;
+            left = Math.max(0, Math.min(left, rr.width - tw));
+            var top = nr.top - rr.top - th - 8;
+            var below = top < 0;
+            if (below) top = nr.bottom - rr.top + 8;
+            tip.style.left = left + "px";
+            tip.style.top = top + "px";
+            tip.classList.toggle("below", below);
+          };
+          place();
+          if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([tip]).then(place).catch(function () {});
         };
         var hide = function () {
-          diag.querySelectorAll(".hover").forEach(function (e) { e.remove(); });
+          clearHover();
           tip.classList.remove("show");
         };
         node.addEventListener("mouseenter", show);
