@@ -2,6 +2,13 @@
 # journal: leave out (or blank) for preprints; they show as "Preprint".
 # doi: publisher DOI; makes the journal badge a link.
 
+- title: "On the Adams spectral sequence of $\\mathrm{eo}_2(C_4)$"
+  authors: "Christian Carrick"
+  year: 2026
+  arxiv: "2611.16531"
+  abstract: >-
+    We calculate the mod $2$-homology of the fixed points of the $C_4$-equivariant Hill–Hopkins–Ravenel theory $BP^{((C_4))}\langle 1\rangle$, as an $\mathcal{A}_*$-comodule algebra. $2$-locally these fixed points are $\mathrm{tmf}_0(5)$ by a theorem of Quinn. We deduce that $\mathrm{tmf}_0(5)$ is an indecomposable $\mathrm{tmf}$-module that is an extension of two $\mathrm{tmf}$-modules of the form $\mathrm{tmf}\otimes K$ for a finite spectrum $K$. The $K(2)$-localization of $\mathrm{tmf}_0(5)$ is $32$-periodic, and we compute the Adams spectral sequence of $\mathrm{tmf}_0(5)$ through the $32$-stem.
+
 - title: "The Real Brown–Peterson homology of $\\Omega^\\rho S^{\\rho+1}$"
   authors: "Christian Carrick, Bert Guillou, and Sarah Petersen"
   year: 2025
